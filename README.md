@@ -418,6 +418,11 @@ This repository is currently being prepared as the public-facing layer of the sy
 
 For now it remains private while the architecture, automation, and publication rules are being developed.
 
+Planned: status legend + freshness
+
+- Status meanings are owned by `projects-command-center` (`docs/STATUS-LEGEND.md`). Daily CI there should **copy** that legend into this repo so the two never drift.
+- Each successful publish should write `last_generated_at` (and the expected interval, e.g. 24h). If the stamp is older than the interval, viewers (and later a small CI check here) can treat the dashboard as **stale / pipeline broken**. Implement and test when the publish pipeline is live.
+
 Next steps
 
 - [ ] Define the public project schema
@@ -425,7 +430,9 @@ Next steps
 - [ ] Create the initial project pages/data
 - [ ] Define the generated-vs-manual content boundary
 - [ ] Design the Mission Control → public projection workflow
-- [ ] Add the scheduled GitHub Action to "command-center-project"
+- [ ] Add the scheduled GitHub Action to projects-command-center
+- [ ] Copy STATUS-LEGEND.md from command-center on each CI run
+- [ ] Stamp `last_generated_at`; optional stale-label CI here
 - [ ] Configure narrowly scoped GitHub authentication
 - [ ] Test the publication boundary with private/NDA-sensitive projects
 - [ ] Verify that no secrets or private metadata can leak
