@@ -2,7 +2,7 @@
 
 Allowed `status` values for every project’s `project.json`.
 
-**Edit only this file** when adding or removing a status. Later, CI copies this file into `what-am-building` on each run so the two stay aligned.
+**Edit only this file** when adding or removing a status. The dashboard publisher copies this file into `what-am-building` on each run so the two stay aligned.
 
 | Status | Meaning |
 |--------|---------|
