@@ -404,7 +404,7 @@ This repository stays private until a listed publish has been inspected for leak
 Next steps
 
 - [x] Define the public project schema (`project.json` + GitHub description)
-- [ ] Decide which projects should initially be listed
+- [x] Decide which projects should initially be listed (`dongle-internet-interface-checker`, `pty-shuttle`)
 - [x] Create the generated project pages (`now.md`, `projects/`)
 - [x] Define the generated-vs-manual content boundary (this README is manual; `now.md` and `projects/` are generated)
 - [x] Design the command-center → public projection workflow
