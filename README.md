@@ -13,7 +13,7 @@ What is this?
 
 I work on multiple projects at the same time. Some are public, some are private, some are experiments, and some may eventually become commercial products.
 
-"what-im-building" is intended to keep track of all of them in one place.
+"what-am-building" is intended to keep track of all of them in one place.
 
 The goal isn't to expose everything.
 
@@ -35,7 +35,7 @@ The bigger system
 
 The system is split into two concepts.
 
-"command-center-project"
+"projects-command-center"
 
 This is the private source of truth and development control center.
 
@@ -51,7 +51,7 @@ It knows about projects whether they are:
 - under NDA
 - not ready to announce
 
-"what-im-building"
+"what-am-building"
 
 This repository is the public projection.
 
@@ -61,7 +61,7 @@ Conceptually:
 
                  PRIVATE
         ┌─────────────────────────┐
-        │   command-center-project│
+        │ projects-command-center │
         │                         │
         │  Project Registry       │
         │  Project State          │
@@ -74,7 +74,7 @@ Conceptually:
                      ▼
                  PUBLIC
         ┌─────────────────────────┐
-        │     what-im-building    │
+        │     what-am-building    │
         │                         │
         │  Public Project List    │
         │  Approved Descriptions  │
@@ -93,7 +93,7 @@ Automatic updates
 
 The eventual goal is for this repository to update itself.
 
-The planned architecture is for the GitHub Action to live in "command-center-project", rather than here.
+The planned architecture is for the GitHub Action to live in "projects-command-center", rather than here.
 
 A scheduled workflow there would run periodically — initially something like once per day — and:
 
@@ -102,7 +102,7 @@ A scheduled workflow there would run periodically — initially something like o
 3. Collect only the approved public metadata.
 4. Optionally inspect selected project repositories for approved status information.
 5. Generate/update the corresponding content in this repository.
-6. Commit and push the changes to "what-im-building".
+6. Commit and push the changes to "what-am-building".
 
 The private repository therefore remains the automation and source-of-truth layer, while this repository becomes the generated/public-facing layer.
 
@@ -116,11 +116,11 @@ Private project repositories
         │
         │ Contents: Read
         ▼
- command-center-project
+ projects-command-center
         │
         │ Contents: Write
         ▼
- what-im-building
+ what-am-building
 
 The credential should not have broad account-wide access.
 
@@ -138,29 +138,18 @@ The automation should never simply scrape private repositories and let an AI dec
 
 Instead, the private project registry should explicitly define the public information for each project.
 
-For example:
+Each project repo holds a `project.json`. The GitHub **description** is the short blurb (not stored in JSON). The allowlist flag lives in JSON:
 
 {
-  "slug": "ai-workspace",
-  "name": "AI Workspace",
-  "visibility": "private",
+  "schema_version": 1,
+  "status": "building",
+  "tags": ["android"],
   "public": {
-    "listed": true,
-    "description": "An AI-powered workspace for Android.",
-    "status": "building",
-    "show_activity": true,
-    "show_roadmap": false,
-    "show_changelog": false
+    "listed": true
   }
 }
 
-A project that should remain completely invisible could simply have:
-
-{
-  "public": {
-    "listed": false
-  }
-}
+A project that should remain completely invisible uses `"listed": false` (the default).
 
 This gives the system an explicit publication contract.
 
@@ -205,7 +194,7 @@ A future version of the system could look approximately like:
                     GitHub Actions
                          │
                          ▼
-              command-center-project
+              projects-command-center
                          │
                  Read project registry
                          │
@@ -221,7 +210,7 @@ A future version of the system could look approximately like:
                   Generated content
                          │
                          ▼
-                 what-im-building
+                 what-am-building
                          │
                          ▼
                   Git commit + push
@@ -238,7 +227,7 @@ The structure will evolve as the system becomes functional.
 
 A possible starting point:
 
-what-im-building/
+what-am-building/
 ├── README.md
 ├── now.md
 ├── projects/
@@ -250,7 +239,7 @@ what-im-building/
 
 The repository may eventually become more data-driven, for example:
 
-what-im-building/
+what-am-building/
 ├── README.md
 ├── projects/
 ├── data/
@@ -318,29 +307,22 @@ Eventually, the system should be able to answer questions such as:
 
 The intention is that I should not have to manually maintain all of this information.
 
-The private Mission Control system should maintain the underlying state, while this repository presents the selected public view.
+The private command center should maintain the underlying state, while this repository presents the selected public view.
 
 ---
 
-Future: Mission Control integration
+Future: command center integration
 
-The following are potential changes to make later in "command-center-project".
+The following are potential changes to make later in "projects-command-center".
 
 These are suggestions, not yet implemented decisions.
 
-1. Add explicit public metadata to the project registry
+1. Keep the public allowlist on each project’s `project.json`
 
-Each project could define a "public" section containing the fields that are safe to publish.
-
-For example:
+The schema already has this. Status and tags live on the project; the GitHub description is the blurb. The only publication switch is:
 
 "public": {
-  "listed": true,
-  "description": "...",
-  "status": "building",
-  "show_activity": true,
-  "show_roadmap": false,
-  "show_changelog": false
+  "listed": true
 }
 
 2. Add a public projection/export script
@@ -358,7 +340,7 @@ public projection script
 sanitized project data
       │
       ▼
-what-im-building
+what-am-building
 
 3. Add a scheduled GitHub Action
 
@@ -370,7 +352,7 @@ The workflow would:
 - collect approved metadata
 - optionally inspect approved repositories
 - generate public content
-- push changes to "what-im-building"
+- push changes to "what-am-building"
 
 4. Keep credentials tightly scoped
 
@@ -379,14 +361,14 @@ The automation should use credentials with only the permissions it actually need
 Initial target:
 
 Project repositories → read
-what-im-building     → write
+what-am-building     → write
 Everything else      → no access
 
 A GitHub App could eventually replace the PAT if more granular or scalable access becomes useful.
 
 5. Separate public data from private activity
 
-Mission Control may eventually contain considerably more information than should ever appear here.
+The command center may eventually contain considerably more information than should ever appear here.
 
 It may therefore be useful to distinguish between:
 
@@ -420,7 +402,7 @@ For now it remains private while the architecture, automation, and publication r
 
 Planned: status legend + freshness
 
-- Status meanings are owned by `projects-command-center` (`docs/STATUS-LEGEND.md`). Daily CI there should **copy** that legend into this repo so the two never drift.
+- Status meanings are owned by `projects-command-center` (`STATUS.md`). Daily CI there should **copy** that legend into this repo so the two never drift.
 - Each successful publish should write `last_generated_at` (and the expected interval, e.g. 24h). If the stamp is older than the interval, viewers (and later a small CI check here) can treat the dashboard as **stale / pipeline broken**. Implement and test when the publish pipeline is live.
 
 Next steps
@@ -429,9 +411,9 @@ Next steps
 - [ ] Decide which projects should initially be listed
 - [ ] Create the initial project pages/data
 - [ ] Define the generated-vs-manual content boundary
-- [ ] Design the Mission Control → public projection workflow
+- [ ] Design the command-center → public projection workflow
 - [ ] Add the scheduled GitHub Action to projects-command-center
-- [ ] Copy STATUS-LEGEND.md from command-center on each CI run
+- [ ] Copy STATUS.md from command-center on each CI run
 - [ ] Stamp `last_generated_at`; optional stale-label CI here
 - [ ] Configure narrowly scoped GitHub authentication
 - [ ] Test the publication boundary with private/NDA-sensitive projects
