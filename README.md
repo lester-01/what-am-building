@@ -4,8 +4,9 @@ A living dashboard of the projects, experiments, and ideas I'm building.
 
 This repository is intended to become the public window into my work — a simple way to see what I'm currently working on without exposing the private source code, infrastructure, business details, or sensitive information behind those projects.
 
-«Status: 🚧 Private / Work in Progress
-Goal: Make this repository public once the system is functional and the publication boundary has been properly tested.»
+The current allowlisted list is in [now.md](now.md). Status meanings are copied from the command center into [STATUS.md](STATUS.md). Freshness is in `last_generated_at`.
+
+This repository stays private until the publication boundary has been tested.
 
 ---
 
@@ -396,26 +397,21 @@ It should not receive unrestricted private repository contents and decide what i
 
 Current status
 
-This repository is currently being prepared as the public-facing layer of the system.
+The publisher lives in `projects-command-center` (`scripts/publish_dashboard.py` and the **Publish dashboard** workflow). Generated files here are `now.md`, `projects/`, `STATUS.md`, `last_generated_at`, and `last_generated_interval`. Do not edit those by hand.
 
-For now it remains private while the architecture, automation, and publication rules are being developed.
-
-Planned: status legend + freshness
-
-- Status meanings are owned by `projects-command-center` (`STATUS.md`). Daily CI there should **copy** that legend into this repo so the two never drift.
-- Each successful publish should write `last_generated_at` (and the expected interval, e.g. 24h). If the stamp is older than the interval, viewers (and later a small CI check here) can treat the dashboard as **stale / pipeline broken**. Implement and test when the publish pipeline is live.
+This repository stays private until a listed publish has been inspected for leaks.
 
 Next steps
 
-- [ ] Define the public project schema
+- [x] Define the public project schema (`project.json` + GitHub description)
 - [ ] Decide which projects should initially be listed
-- [ ] Create the initial project pages/data
-- [ ] Define the generated-vs-manual content boundary
-- [ ] Design the command-center → public projection workflow
-- [ ] Add the scheduled GitHub Action to projects-command-center
-- [ ] Copy STATUS.md from command-center on each CI run
-- [ ] Stamp `last_generated_at`; optional stale-label CI here
-- [ ] Configure narrowly scoped GitHub authentication
+- [x] Create the generated project pages (`now.md`, `projects/`)
+- [x] Define the generated-vs-manual content boundary (this README is manual; `now.md` and `projects/` are generated)
+- [x] Design the command-center → public projection workflow
+- [x] Add the scheduled GitHub Action to projects-command-center
+- [x] Copy STATUS.md from command-center on each CI run
+- [x] Stamp `last_generated_at`
+- [ ] Configure narrowly scoped GitHub authentication (`DASHBOARD_PUBLISH_TOKEN` secret)
 - [ ] Test the publication boundary with private/NDA-sensitive projects
 - [ ] Verify that no secrets or private metadata can leak
 - [ ] Make this repository public once the system is functional and the boundary has been validated
