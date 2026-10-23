@@ -35,6 +35,26 @@
     h1 { font-size: 1.6rem; margin: 0 0 0.35rem; }
     .lead, .empty, .stamp, .legend { color: var(--muted); }
     .stamp { font-size: 0.85rem; margin: 1.5rem 0 0; }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0 0.25rem;
+    }
+    .filters button {
+      min-height: 44px;
+      min-width: 44px;
+      padding: 0.45rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--card);
+      color: var(--fg);
+      font: inherit;
+    }
+    .filters button[aria-pressed="true"] {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
     .card {
       background: var(--card);
       border: 1px solid var(--line);
@@ -45,6 +65,14 @@
     .card h2 { font-size: 1.1rem; margin: 0 0 0.35rem; }
     .card a { color: var(--accent); }
     .meta { font-size: 0.9rem; color: var(--muted); }
+    .vis {
+      display: inline-block;
+      font-size: 0.75rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.15rem 0.5rem;
+      text-transform: lowercase;
+    }
     .tags { margin: 0.5rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem; }
     .tags li {
       font-size: 0.75rem;
@@ -60,7 +88,12 @@
 </head>
 <body>
   <h1>What I am building</h1>
-  <p class="lead">Allowlisted projects only. Status and tags come from each project’s tracking file.</p>
+  <p class="lead">Projects I chose to list. Public repos have a link. Private ones show a label only.</p>
+  <div class="filters" role="group" aria-label="Visibility filter">
+    <button type="button" data-filter="all" aria-pressed="true">All</button>
+    <button type="button" data-filter="public" aria-pressed="false">Public</button>
+    <button type="button" data-filter="private" aria-pressed="false">Private</button>
+  </div>
   <div id="list"></div>
   <section class="legend">
     <h2>Status meanings</h2>
@@ -74,35 +107,57 @@
       if (text) node.textContent = text;
       return node;
     }
+    function visOf(item) {
+      return item.visibility || (item.private ? "private" : "public");
+    }
+    function cardFor(item) {
+      const card = el("article", { class: "card" });
+      const title = el("h2");
+      if (item.html_url) {
+        const a = el("a", { href: item.html_url }, item.name);
+        title.appendChild(a);
+      } else {
+        title.textContent = item.name;
+      }
+      card.appendChild(title);
+      if (item.description) card.appendChild(el("p", {}, item.description));
+      const meta = el("p", { class: "meta" });
+      meta.appendChild(document.createTextNode("Status: " + (item.status || "idea") + " · "));
+      meta.appendChild(el("span", { class: "vis" }, visOf(item)));
+      card.appendChild(meta);
+      if (item.tags && item.tags.length) {
+        const ul = el("ul", { class: "tags" });
+        item.tags.forEach(t => ul.appendChild(el("li", {}, t)));
+        card.appendChild(ul);
+      }
+      return card;
+    }
     Promise.all([
       fetch("data/projects.json").then(r => r.json()),
       fetch("data/status.json").then(r => r.json())
     ]).then(([bundle, statuses]) => {
       const list = document.getElementById("list");
       const projects = bundle.projects || [];
-      if (!projects.length) {
-        list.appendChild(el("p", { class: "empty" }, "Nothing listed yet."));
+      let filter = "all";
+      function draw() {
+        list.replaceChildren();
+        const shown = projects.filter(item => filter === "all" || visOf(item) === filter);
+        if (!shown.length) {
+          list.appendChild(el("p", { class: "empty" }, "Nothing listed yet."));
+          return;
+        }
+        shown.forEach(item => list.appendChild(cardFor(item)));
       }
-      projects.forEach(item => {
-        const card = el("article", { class: "card" });
-        const title = el("h2");
-        if (item.html_url) {
-          const a = el("a", { href: item.html_url }, item.name);
-          title.appendChild(a);
-        } else {
-          title.textContent = item.name;
-        }
-        card.appendChild(title);
-        if (item.description) card.appendChild(el("p", {}, item.description));
-        const vis = item.visibility || (item.private ? "private" : "public");
-        card.appendChild(el("p", { class: "meta" }, "Status: " + item.status + " · " + vis));
-        if (item.tags && item.tags.length) {
-          const ul = el("ul", { class: "tags" });
-          item.tags.forEach(t => ul.appendChild(el("li", {}, t)));
-          card.appendChild(ul);
-        }
-        list.appendChild(card);
+      document.querySelectorAll(".filters button").forEach(btn => {
+        btn.addEventListener("click", () => {
+          filter = btn.getAttribute("data-filter") || "all";
+          document.querySelectorAll(".filters button").forEach(other => {
+            other.setAttribute("aria-pressed", other === btn ? "true" : "false");
+          });
+          draw();
+        });
       });
+      draw();
       const legend = document.getElementById("legend");
       const table = el("table");
       (statuses.statuses || []).forEach(row => {
