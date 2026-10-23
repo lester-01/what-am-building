@@ -1,6 +1,107 @@
 {
-  "generated_at": "2026-10-23T21:36:15Z",
+  "generated_at": "2026-10-23T22:10:29Z",
   "projects": [
+    {
+      "name": "youtube-commentguard",
+      "description": "YouTube comment moderation CLI via Data API v3",
+      "status": "idea",
+      "tags": [],
+      "private": true,
+      "visibility": "private",
+      "featured": true,
+      "fork": false,
+      "pushed_at": "2026-10-23T22:09:37Z"
+    },
+    {
+      "name": "wireguard-without-encryption",
+      "description": "Private lab: WireGuard-shaped UDP tunnel without encryption for IoT speed assessment (both ends modded).",
+      "status": "idea",
+      "tags": [],
+      "private": true,
+      "visibility": "private",
+      "featured": true,
+      "fork": false,
+      "pushed_at": "2026-10-23T22:09:36Z"
+    },
+    {
+      "name": "universal-ev-evse-power-adapter-kit",
+      "description": "Hardware spec for a universal EVSE-to-AC power adapter kit (Type 2 / J1772).",
+      "status": "idea",
+      "tags": [],
+      "private": true,
+      "visibility": "private",
+      "featured": true,
+      "fork": false,
+      "pushed_at": "2026-10-23T22:09:34Z"
+    },
+    {
+      "name": "stealth-browser-anti-bot-automation-lab",
+      "description": "Private research on anti-bot detection layers and stealth browser automation.",
+      "status": "idea",
+      "tags": [],
+      "private": true,
+      "visibility": "private",
+      "featured": true,
+      "fork": false,
+      "pushed_at": "2026-10-23T22:09:33Z"
+    },
+    {
+      "name": "startup-devops-masterclass",
+      "description": "Syllabus for a hands-on localhost-to-production DevOps tutorial series.",
+      "status": "idea",
+      "tags": [],
+      "private": true,
+      "visibility": "private",
+      "featured": true,
+      "fork": false,
+      "pushed_at": "2026-10-23T22:09:31Z"
+    },
+    {
+      "name": "sinc_crm",
+      "description": "CRM for education agencies placing students abroad. Manage student inquiries, conversations, and application pipelines in one place. Sales team coordinates placements; managers oversee progress.",
+      "status": "idea",
+      "tags": [],
+      "private": false,
+      "visibility": "public",
+      "featured": true,
+      "fork": false,
+      "pushed_at": "2026-10-23T22:09:29Z",
+      "html_url": "https://github.com/lester-01/sinc_crm"
+    },
+    {
+      "name": "signalstack",
+      "description": "Realtime fullstack chat platform built with Go(backend), React/Next.js(frontend), and WebSockets. Developed to showcase scalable realtime architecture, bidirectional communication, and modern fullstack engineering.",
+      "status": "idea",
+      "tags": [],
+      "private": false,
+      "visibility": "public",
+      "featured": true,
+      "fork": false,
+      "pushed_at": "2026-10-23T22:09:28Z",
+      "html_url": "https://github.com/lester-01/signalstack"
+    },
+    {
+      "name": "laptop-power-bank",
+      "description": "Hardware blueprints for a high-density laptop power bank (Stealth Brick).",
+      "status": "idea",
+      "tags": [],
+      "private": true,
+      "visibility": "private",
+      "featured": true,
+      "fork": false,
+      "pushed_at": "2026-10-23T22:09:26Z"
+    },
+    {
+      "name": "fineract-rafiki-bridge",
+      "description": "Enables real-time inter-bank transfers over the Interledger network by bridging Apache Fineract (open-source core banking) and Rafiki (Open Payments node) \u2014 a lean, standards-based alternative to enterprise payment middleware.",
+      "status": "idea",
+      "tags": [],
+      "private": true,
+      "visibility": "private",
+      "featured": true,
+      "fork": false,
+      "pushed_at": "2026-10-23T22:09:24Z"
+    },
     {
       "name": "projects-command-center",
       "description": "Private command center for project registry, agent rules, and workspace control \u2014 source of truth behind what-am-building.",
@@ -14,7 +115,7 @@
       "visibility": "private",
       "featured": true,
       "fork": false,
-      "pushed_at": "2026-10-23T21:35:57Z"
+      "pushed_at": "2026-10-23T21:37:36Z"
     },
     {
       "name": "android-ai-agent-environment",
@@ -55,28 +156,6 @@
       "pushed_at": "2026-10-23T21:07:02Z"
     },
     {
-      "name": "youtube-commentguard",
-      "description": "YouTube comment moderation CLI via Data API v3",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:06:59Z"
-    },
-    {
-      "name": "wireguard-without-encryption",
-      "description": "Private lab: WireGuard-shaped UDP tunnel without encryption for IoT speed assessment (both ends modded).",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:06:57Z"
-    },
-    {
       "name": "upwork-assistant",
       "description": "Design notes for an automated Upwork job monitor and filter (Python anti-detect). Separate from the Chrome extension.",
       "status": "idea",
@@ -86,28 +165,6 @@
       "featured": false,
       "fork": false,
       "pushed_at": "2026-10-23T21:06:48Z"
-    },
-    {
-      "name": "universal-ev-evse-power-adapter-kit",
-      "description": "Hardware spec for a universal EVSE-to-AC power adapter kit (Type 2 / J1772).",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:06:46Z"
-    },
-    {
-      "name": "tor-box",
-      "description": "Tor/Privoxy SOCKS routing box install and iptables helpers",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:06:41Z"
     },
     {
       "name": "termux-cursor",
@@ -147,39 +204,6 @@
       "featured": false,
       "fork": false,
       "pushed_at": "2026-10-23T21:06:34Z"
-    },
-    {
-      "name": "stealth-browser-anti-bot-automation-lab",
-      "description": "Private research on anti-bot detection layers and stealth browser automation.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:06:28Z"
-    },
-    {
-      "name": "startup-devops-masterclass",
-      "description": "Syllabus for a hands-on localhost-to-production DevOps tutorial series.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:06:26Z"
-    },
-    {
-      "name": "socks5-reverse-tunnel",
-      "description": "SOCKS5 over a reverse tunnel: public VPS tunnel plus NAT-side socks5 server (Go).",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:06:17Z"
     },
     {
       "name": "senior-engineering-checklist",
@@ -248,17 +272,6 @@
       "pushed_at": "2026-10-23T21:06:01Z"
     },
     {
-      "name": "proxy-modem-ops-screenshots",
-      "description": "Reference screenshots for modem and Proxywave operational workflows",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:05:58Z"
-    },
-    {
       "name": "opencode-termux",
       "description": "OpenCode AI coding agent prebuilt for Termux Android ARM64",
       "status": "idea",
@@ -298,39 +311,6 @@
       "pushed_at": "2026-10-23T21:05:43Z"
     },
     {
-      "name": "mt5-price-follower-ea",
-      "description": "MetaTrader 5 price-interval follower Expert Advisor",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:05:41Z"
-    },
-    {
-      "name": "mitm-box",
-      "description": "mitmproxy box with nginx TLS and basic-auth mitmweb UI",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:05:38Z"
-    },
-    {
-      "name": "laptop-power-bank",
-      "description": "Hardware blueprints for a high-density laptop power bank (Stealth Brick).",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:05:36Z"
-    },
-    {
       "name": "iperf3-proxy",
       "description": "iperf3 fork scaffold: SOCKS5 and HTTP CONNECT proxy support for proxy labs",
       "status": "idea",
@@ -342,17 +322,6 @@
       "pushed_at": "2026-10-23T21:05:31Z"
     },
     {
-      "name": "huawei-hilink-go-client",
-      "description": "Go client library and CLIs for Huawei HiLink modems",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:05:27Z"
-    },
-    {
       "name": "horizon-scanner",
       "description": "Seed spec for TLD and SSL-log entity discovery, classification, and lead generation.",
       "status": "idea",
@@ -362,17 +331,6 @@
       "featured": false,
       "fork": false,
       "pushed_at": "2026-10-23T21:05:26Z"
-    },
-    {
-      "name": "histdata-eurusd-tick-merger-backtests",
-      "description": "HistData EURUSD tick bid/ask merger and scalper backtests",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:05:24Z"
     },
     {
       "name": "guardian-agent",
@@ -397,17 +355,6 @@
       "pushed_at": "2026-10-23T21:05:20Z"
     },
     {
-      "name": "go-http-bind-interface",
-      "description": "Bind Go HTTP clients to a specific network interface or IP",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:05:15Z"
-    },
-    {
       "name": "gcp-vm-provisioner",
       "description": "Temporary GCP VM provisioning helpers and season docs",
       "status": "idea",
@@ -417,17 +364,6 @@
       "featured": false,
       "fork": false,
       "pushed_at": "2026-10-23T21:05:13Z"
-    },
-    {
-      "name": "fleet-security-architecture",
-      "description": "Fleet TLS, kernel IMA, and remote attestation architecture \u2014 demo seed, course later if useful.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:05:10Z"
     },
     {
       "name": "flask-mysql-car-rental",
@@ -441,17 +377,6 @@
       "pushed_at": "2026-10-23T21:05:07Z"
     },
     {
-      "name": "fb-android-automation",
-      "description": "Architecture notes for a Facebook group scraper on Android via Termux.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:05:04Z"
-    },
-    {
       "name": "cursor-termux",
       "description": "Cursor Agent CLI on Termux (Android ARM64) \u2014 native TUI, resume, and worker mode",
       "status": "idea",
@@ -462,40 +387,6 @@
       "fork": false,
       "pushed_at": "2026-10-23T21:05:00Z",
       "html_url": "https://github.com/lester-01/cursor-termux"
-    },
-    {
-      "name": "cloud-mt5-forex-docker-setup",
-      "description": "Dockerized MetaTrader 5 forex stack with remote desktop and Caddy",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:04:52Z"
-    },
-    {
-      "name": "bruk-cursor-termux-fork",
-      "description": "Cursor Agent CLI installer for Termux (Android ARM64). npm: bruk-cursor-termux",
-      "status": "idea",
-      "tags": [],
-      "private": false,
-      "visibility": "public",
-      "featured": false,
-      "fork": true,
-      "pushed_at": "2026-10-23T21:04:46Z",
-      "html_url": "https://github.com/lester-01/bruk-cursor-termux-fork"
-    },
-    {
-      "name": "binary-options-forex-tick-experiments",
-      "description": "Python tick-data strategy experiments for forex/binary options",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:04:42Z"
     },
     {
       "name": "android-headless-chromium",
@@ -542,52 +433,6 @@
       "pushed_at": "2026-10-23T21:04:29Z"
     },
     {
-      "name": "upwork_assistant_lite",
-      "description": "Browser extension to help with jobs filtering at upwork.com",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:00:32Z"
-    },
-    {
-      "name": "upwork-jobs-filter",
-      "description": "This is a Chrome extension built for personal use to enhance job browsing on Upwork. The native search interface lacks advanced filtering, causing unnecessary scroll fatigue. This tool injects a custom filter UI directly into the Upwork job listings page, automatically hides irrelevant results, and helps surface the gigs you actually care about.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:00:30Z"
-    },
-    {
-      "name": "sinc_crm",
-      "description": "CRM for education agencies placing students abroad. Manage student inquiries, conversations, and application pipelines in one place. Sales team coordinates placements; managers oversee progress.",
-      "status": "idea",
-      "tags": [],
-      "private": false,
-      "visibility": "public",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:00:25Z",
-      "html_url": "https://github.com/lester-01/sinc_crm"
-    },
-    {
-      "name": "signalstack",
-      "description": "Realtime fullstack chat platform built with Go(backend), React/Next.js(frontend), and WebSockets. Developed to showcase scalable realtime architecture, bidirectional communication, and modern fullstack engineering.",
-      "status": "idea",
-      "tags": [],
-      "private": false,
-      "visibility": "public",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:00:23Z",
-      "html_url": "https://github.com/lester-01/signalstack"
-    },
-    {
       "name": "remoteTerminal",
       "description": "remote Linux terminal access over websocket connection. No ssh used. Works even without public IP(NAT).check README for more details",
       "status": "idea",
@@ -597,17 +442,6 @@
       "featured": false,
       "fork": false,
       "pushed_at": "2026-10-23T21:00:21Z"
-    },
-    {
-      "name": "price_follower2",
-      "description": "mt5 fx ea that attempts to follow market direction and rake in a few pips at a time",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:00:17Z"
     },
     {
       "name": "portfolio-website",
@@ -621,28 +455,6 @@
       "pushed_at": "2026-10-23T21:00:16Z"
     },
     {
-      "name": "p2p-crypto-verification-witness",
-      "description": "Reverse-engineering third-party verification flows for P2P crypto transactions \u2013 solving the 'sent but not received' dispute by anchoring both parties in a witness app (inspired by Sharpe Pay/SharPay)",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:00:14Z"
-    },
-    {
-      "name": "n_only_at_intervals",
-      "description": "fx mt5 ea attempt to scrape a few pips off the market, using a strategy that doesnt wipe demo account as often as i thought it would. maybe this is it?",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:00:13Z"
-    },
-    {
       "name": "nodered-mqtt-esp32-dashboard",
       "description": "A project on IOT, showcasing how node-red can be used to build a dashboard for display and control of iot devices like the esp32. mqtt is used as it is the go-to solution for most iot projects.",
       "status": "idea",
@@ -653,17 +465,6 @@
       "fork": false,
       "pushed_at": "2026-10-23T21:00:11Z",
       "html_url": "https://github.com/lester-01/nodered-mqtt-esp32-dashboard"
-    },
-    {
-      "name": "mobile-proxy-market-strategy",
-      "description": "Go-to-market plan, B2B digital marketing agency outbound playbook, and commercial deployment models for an unmetered, private 4G/5G mobile proxy orchestration platform.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:00:09Z"
     },
     {
       "name": "go_usb_modeswitch",
@@ -687,17 +488,6 @@
       "featured": false,
       "fork": false,
       "pushed_at": "2026-10-23T21:00:04Z"
-    },
-    {
-      "name": "fineract-rafiki-bridge",
-      "description": "Enables real-time inter-bank transfers over the Interledger network by bridging Apache Fineract (open-source core banking) and Rafiki (Open Payments node) \u2014 a lean, standards-based alternative to enterprise payment middleware.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:00:03Z"
     },
     {
       "name": "cursor-worker-setup",
@@ -758,22 +548,6 @@
       "featured": false,
       "fork": false,
       "pushed_at": "2026-10-22T16:16:26Z"
-    },
-    {
-      "name": "dongle-internet-interface-checker",
-      "description": "Checks which USB modem/dongle network interfaces can reach the internet and lists their public IPs",
-      "status": "active",
-      "tags": [
-        "shell",
-        "modem",
-        "networking",
-        "cli"
-      ],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-22T16:16:23Z"
     }
   ]
 }

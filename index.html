@@ -33,7 +33,7 @@
       color: var(--fg);
     }
     h1 { font-size: 1.6rem; margin: 0 0 0.35rem; }
-    .lead, .empty, .stamp, .legend { color: var(--muted); }
+    .lead, .empty, .stamp { color: var(--muted); }
     .stamp { font-size: 0.85rem; margin: 1.5rem 0 0; }
     .filters {
       display: flex;
@@ -71,7 +71,6 @@
       border: 1px solid var(--line);
       border-radius: 999px;
       padding: 0.15rem 0.5rem;
-      text-transform: lowercase;
     }
     .tags { margin: 0.5rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem; }
     .tags li {
@@ -80,25 +79,18 @@
       border-radius: 999px;
       padding: 0.1rem 0.5rem;
     }
-    .legend { font-size: 0.9rem; margin-top: 2.5rem; }
-    .legend table { border-collapse: collapse; width: 100%; }
-    .legend td, .legend th { text-align: left; padding: 0.25rem 0.4rem 0.25rem 0; }
-    code { font-size: 0.9em; }
   </style>
 </head>
 <body>
   <h1>What I am building</h1>
-  <p class="lead">Projects I chose to list. Public repos have a link. Private ones show a label only.</p>
+  <p class="lead">This is a selection of work I am glad to show. It is not a complete list of my projects — only a handful I have chosen to share here.</p>
+  <p class="lead">Public repositories link through to GitHub. Private work is named and described, without a repository URL.</p>
   <div class="filters" role="group" aria-label="Visibility filter">
     <button type="button" data-filter="all" aria-pressed="true">All</button>
     <button type="button" data-filter="public" aria-pressed="false">Public</button>
     <button type="button" data-filter="private" aria-pressed="false">Private</button>
   </div>
   <div id="list"></div>
-  <section class="legend">
-    <h2>Status meanings</h2>
-    <div id="legend"></div>
-  </section>
   <p class="stamp" id="stamp"></p>
   <script>
     function el(tag, attrs, text) {
@@ -110,7 +102,15 @@
     function visOf(item) {
       return item.visibility || (item.private ? "private" : "public");
     }
-    function cardFor(item) {
+    function visLabel(item) {
+      return visOf(item) === "private" ? "Private" : "Public";
+    }
+    function statusMeaning(item, statuses) {
+      const id = item.status || "idea";
+      const row = (statuses.statuses || []).find(s => s.id === id);
+      return row && row.meaning ? row.meaning : id;
+    }
+    function cardFor(item, statuses) {
       const card = el("article", { class: "card" });
       const title = el("h2");
       if (item.html_url) {
@@ -122,8 +122,8 @@
       card.appendChild(title);
       if (item.description) card.appendChild(el("p", {}, item.description));
       const meta = el("p", { class: "meta" });
-      meta.appendChild(document.createTextNode("Status: " + (item.status || "idea") + " · "));
-      meta.appendChild(el("span", { class: "vis" }, visOf(item)));
+      meta.appendChild(document.createTextNode(statusMeaning(item, statuses) + " · "));
+      meta.appendChild(el("span", { class: "vis" }, visLabel(item)));
       card.appendChild(meta);
       if (item.tags && item.tags.length) {
         const ul = el("ul", { class: "tags" });
@@ -143,10 +143,10 @@
         list.replaceChildren();
         const shown = projects.filter(item => filter === "all" || visOf(item) === filter);
         if (!shown.length) {
-          list.appendChild(el("p", { class: "empty" }, "Nothing listed yet."));
+          list.appendChild(el("p", { class: "empty" }, "No projects in this view."));
           return;
         }
-        shown.forEach(item => list.appendChild(cardFor(item)));
+        shown.forEach(item => list.appendChild(cardFor(item, statuses)));
       }
       document.querySelectorAll(".filters button").forEach(btn => {
         btn.addEventListener("click", () => {
@@ -158,21 +158,12 @@
         });
       });
       draw();
-      const legend = document.getElementById("legend");
-      const table = el("table");
-      (statuses.statuses || []).forEach(row => {
-        const tr = el("tr");
-        tr.appendChild(el("td", {}, "")).appendChild(el("code", {}, row.id));
-        tr.appendChild(el("td", {}, row.meaning));
-        table.appendChild(tr);
-      });
-      legend.appendChild(table);
       if (bundle.generated_at) {
-        document.getElementById("stamp").textContent = "Generated " + bundle.generated_at;
+        document.getElementById("stamp").textContent = "Updated " + bundle.generated_at;
       }
     }).catch(() => {
       document.getElementById("list").appendChild(
-        el("p", { class: "empty" }, "Could not load project data.")
+        el("p", { class: "empty" }, "The project list could not be loaded.")
       );
     });
   </script>
