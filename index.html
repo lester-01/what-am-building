@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What I am building</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f4ef;
+      --fg: #1c1917;
+      --muted: #57534e;
+      --card: #fff;
+      --line: #e7e5e4;
+      --accent: #0f766e;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1c1917;
+        --fg: #f5f5f4;
+        --muted: #a8a29e;
+        --card: #292524;
+        --line: #44403c;
+        --accent: #5eead4;
+      }
+    }
+    body {
+      margin: 0 auto;
+      max-width: 44rem;
+      padding: 2rem 1.25rem 4rem;
+      font: 16px/1.5 system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+    }
+    h1 { font-size: 1.6rem; margin: 0 0 0.35rem; }
+    .lead, .empty, .stamp, .legend { color: var(--muted); }
+    .stamp { font-size: 0.85rem; margin: 1.5rem 0 0; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      margin: 0.85rem 0;
+    }
+    .card h2 { font-size: 1.1rem; margin: 0 0 0.35rem; }
+    .card a { color: var(--accent); }
+    .meta { font-size: 0.9rem; color: var(--muted); }
+    .tags { margin: 0.5rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .tags li {
+      font-size: 0.75rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.1rem 0.5rem;
+    }
+    .legend { font-size: 0.9rem; margin-top: 2.5rem; }
+    .legend table { border-collapse: collapse; width: 100%; }
+    .legend td, .legend th { text-align: left; padding: 0.25rem 0.4rem 0.25rem 0; }
+    code { font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <h1>What I am building</h1>
+  <p class="lead">Allowlisted projects only. Status and tags come from each project’s tracking file.</p>
+  <div id="list"></div>
+  <section class="legend">
+    <h2>Status meanings</h2>
+    <div id="legend"></div>
+  </section>
+  <p class="stamp" id="stamp"></p>
+  <script>
+    function el(tag, attrs, text) {
+      const node = document.createElement(tag);
+      Object.entries(attrs || {}).forEach(([k, v]) => node.setAttribute(k, v));
+      if (text) node.textContent = text;
+      return node;
+    }
+    Promise.all([
+      fetch("data/projects.json").then(r => r.json()),
+      fetch("data/status.json").then(r => r.json())
+    ]).then(([bundle, statuses]) => {
+      const list = document.getElementById("list");
+      const projects = bundle.projects || [];
+      if (!projects.length) {
+        list.appendChild(el("p", { class: "empty" }, "Nothing listed yet."));
+      }
+      projects.forEach(item => {
+        const card = el("article", { class: "card" });
+        const title = el("h2");
+        if (item.html_url) {
+          const a = el("a", { href: item.html_url }, item.name);
+          title.appendChild(a);
+        } else {
+          title.textContent = item.name;
+        }
+        card.appendChild(title);
+        if (item.description) card.appendChild(el("p", {}, item.description));
+        const vis = item.visibility || (item.private ? "private" : "public");
+        card.appendChild(el("p", { class: "meta" }, "Status: " + item.status + " · " + vis));
+        if (item.tags && item.tags.length) {
+          const ul = el("ul", { class: "tags" });
+          item.tags.forEach(t => ul.appendChild(el("li", {}, t)));
+          card.appendChild(ul);
+        }
+        list.appendChild(card);
+      });
+      const legend = document.getElementById("legend");
+      const table = el("table");
+      (statuses.statuses || []).forEach(row => {
+        const tr = el("tr");
+        tr.appendChild(el("td", {}, "")).appendChild(el("code", {}, row.id));
+        tr.appendChild(el("td", {}, row.meaning));
+        table.appendChild(tr);
+      });
+      legend.appendChild(table);
+      if (bundle.generated_at) {
+        document.getElementById("stamp").textContent = "Generated " + bundle.generated_at;
+      }
+    }).catch(() => {
+      document.getElementById("list").appendChild(
+        el("p", { class: "empty" }, "Could not load project data.")
+      );
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-10-23T14:28:35Z",
+  "projects": [
+    {
+      "name": "dongle-internet-interface-checker",
+      "description": "Checks which USB modem/dongle network interfaces can reach the internet and lists their public IPs",
+      "status": "active",
+      "tags": [
+        "shell",
+        "modem",
+        "networking",
+        "cli"
+      ],
+      "private": true,
+      "visibility": "private"
+    },
+    {
+      "name": "pty-shuttle",
+      "description": "PTY host with thin clients. Spawn TUI programs and attach from the CLI, Android, or a browser.",
+      "status": "building",
+      "tags": [
+        "python",
+        "android",
+        "cli",
+        "web"
+      ],
+      "private": true,
+      "visibility": "private"
+    }
+  ]
+}

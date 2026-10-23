@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "statuses": [
+    {
+      "id": "idea",
+      "meaning": "Early concept; little or no code yet"
+    },
+    {
+      "id": "exploring",
+      "meaning": "Researching or validating an approach"
+    },
+    {
+      "id": "building",
+      "meaning": "Active development"
+    },
+    {
+      "id": "testing",
+      "meaning": "Being tested or validated"
+    },
+    {
+      "id": "launching",
+      "meaning": "Preparing for release or first real use"
+    },
+    {
+      "id": "active",
+      "meaning": "Running / actively maintained"
+    },
+    {
+      "id": "paused",
+      "meaning": "Temporarily inactive"
+    },
+    {
+      "id": "shipped",
+      "meaning": "Finished or released for its intended use"
+    },
+    {
+      "id": "archived",
+      "meaning": "No longer pursued"
+    }
+  ]
+}
