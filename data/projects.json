@@ -1,6 +1,21 @@
 {
-  "generated_at": "2026-10-23T22:10:29Z",
+  "generated_at": "2026-10-23T22:31:33Z",
   "projects": [
+    {
+      "name": "projects-command-center",
+      "description": "Private command center for project registry, agent rules, and workspace control \u2014 source of truth behind what-am-building.",
+      "status": "building",
+      "tags": [
+        "docs",
+        "ai",
+        "infra"
+      ],
+      "private": true,
+      "visibility": "private",
+      "featured": true,
+      "fork": false,
+      "pushed_at": "2026-10-23T22:18:09Z"
+    },
     {
       "name": "youtube-commentguard",
       "description": "YouTube comment moderation CLI via Data API v3",
@@ -101,21 +116,6 @@
       "featured": true,
       "fork": false,
       "pushed_at": "2026-10-23T22:09:24Z"
-    },
-    {
-      "name": "projects-command-center",
-      "description": "Private command center for project registry, agent rules, and workspace control \u2014 source of truth behind what-am-building.",
-      "status": "building",
-      "tags": [
-        "docs",
-        "ai",
-        "infra"
-      ],
-      "private": true,
-      "visibility": "private",
-      "featured": true,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:37:36Z"
     },
     {
       "name": "android-ai-agent-environment",
