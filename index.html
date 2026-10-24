@@ -259,8 +259,6 @@
       z-index: 2;
       background: var(--color-bg-page);
       padding-block: var(--space-3);
-      margin-inline: calc(var(--space-4) * -1);
-      padding-inline: var(--space-4);
       display: flex;
       flex-wrap: wrap;
       gap: var(--space-4);
@@ -339,6 +337,7 @@
     .clear[hidden] { display: none; }
 
     .meta-bar {
+      position: relative;
       display: flex;
       flex-wrap: wrap;
       gap: var(--space-4);
@@ -415,8 +414,7 @@
       border-radius: var(--radius-chip);
       font-size: var(--text-caption);
       line-height: var(--leading-caption);
-      white-space: nowrap;
-      text-box: trim-both cap alphabetic;
+      overflow-wrap: anywhere;
     }
     .chip-vis {
       background: var(--color-bg-subtle);
@@ -425,8 +423,6 @@
     .row {
       padding-block: var(--space-5);
       border-block-end: 1px solid var(--color-border-separator);
-      content-visibility: auto;
-      contain-intrinsic-size: auto 8rem;
       min-width: 0;
     }
     .row:first-child {
@@ -472,6 +468,9 @@
       .field input:hover,
       .field select:hover {
         background-color: var(--color-bg-surface-hover);
+      }
+      .clear:hover {
+        color: var(--color-accent-solid-hover);
       }
       .vis button[aria-pressed="true"]:hover {
         background-color: var(--color-accent-solid-hover);
@@ -519,7 +518,7 @@
       <div class="elsewhere">
         <nav aria-label="Elsewhere">
           <a href="https://benlester.me">Portfolio</a>
-          <a href="https://github.com/lester-01">GitHub</a>
+          <a href="https://github.com/lester-01">GitHub profile</a>
           <a href="mailto:contact@benlester.me">Email</a>
         </nav>
         <button type="button" class="theme" id="theme-toggle">Use dark theme</button>
@@ -562,7 +561,7 @@
       </div>
 
       <p class="loading" id="loading">Loading projects…</p>
-      <div id="error" hidden></div>
+      <div id="error" role="alert" hidden></div>
 
       <section id="featured-section" hidden>
         <h2>Featured</h2>
@@ -658,13 +657,19 @@
         history.replaceState(null, "", next);
       }
     }
-    function matches(item, state) {
+    function matches(item, state, statuses) {
       if (state.vis !== "all" && visOf(item) !== state.vis) return false;
       if (state.status && (item.status || "idea") !== state.status) return false;
       if (state.tag && !(item.tags || []).includes(state.tag)) return false;
       if (state.q) {
         const q = state.q.toLowerCase();
-        const hay = [item.name, item.description, ...(item.tags || [])].join(" ").toLowerCase();
+        const hay = [
+          item.name,
+          item.description,
+          item.status,
+          statusMeaning(item, statuses),
+          ...(item.tags || [])
+        ].join(" ").toLowerCase();
         if (!hay.includes(q)) return false;
       }
       return true;
@@ -771,7 +776,7 @@
       function draw() {
         const state = stateFromUi();
         writeParams(state);
-        const shown = projects.filter(item => matches(item, state));
+        const shown = projects.filter(item => matches(item, state, statuses));
         const featured = shown.filter(item => item.featured);
         const rest = shown.filter(item => !item.featured);
         const filtersOn = state.vis !== "all" || state.q || state.status || state.tag;
@@ -833,6 +838,7 @@
       const retry = el("button", { type: "button", class: "retry" }, "Try again");
       retry.addEventListener("click", () => location.reload());
       box.appendChild(retry);
+      retry.focus();
     });
   </script>
 </body>
