@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T09:23:34Z",
+  "generated_at": "2026-10-29T09:31:09Z",
   "projects": [
     {
       "name": "projects-command-center",
@@ -14,7 +14,7 @@
       "visibility": "private",
       "featured": true,
       "fork": false,
-      "pushed_at": "2026-10-27T08:44:38Z"
+      "pushed_at": "2026-10-28T09:24:49Z"
     },
     {
       "name": "youtube-commentguard",
@@ -442,17 +442,6 @@
       "featured": false,
       "fork": false,
       "pushed_at": "2026-10-23T21:00:21Z"
-    },
-    {
-      "name": "portfolio-website",
-      "description": "My portfolio and resume website built using nextjs , shadcn/ui and tailwind css",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "featured": false,
-      "fork": false,
-      "pushed_at": "2026-10-23T21:00:16Z"
     },
     {
       "name": "nodered-mqtt-esp32-dashboard",
