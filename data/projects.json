@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T14:57:39Z",
+  "generated_at": "2026-11-03T15:02:24Z",
   "projects": [
     {
       "name": "proxyhut",
@@ -81,7 +81,7 @@
       "rank": 1400,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T14:47:56Z"
+      "pushed_at": "2026-11-03T15:00:59Z"
     },
     {
       "name": "youtube-commentguard",
@@ -199,20 +199,6 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-03T14:18:06Z"
-    },
-    {
-      "name": "fineract-rafiki-bridge",
-      "description": "Enables real-time inter-bank transfers over the Interledger network by bridging Apache Fineract (open-source core banking) and Rafiki (Open Payments node) \u2014 a lean, standards-based alternative to enterprise payment middleware.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 1200,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T14:57:36Z"
     },
     {
       "name": "youtube-comments-scraper",
