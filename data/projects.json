@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T10:31:21Z",
+  "generated_at": "2026-11-03T13:38:01Z",
   "projects": [
     {
       "name": "projects-command-center",
@@ -12,9 +12,12 @@
       ],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": true,
+      "rank": 1000,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-11-02T10:40:52Z"
+      "pushed_at": "2026-11-03T13:37:59Z"
     },
     {
       "name": "youtube-commentguard",
@@ -23,9 +26,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": true,
+      "rank": 1100,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T22:09:37Z"
+      "pushed_at": "2026-11-03T13:26:41Z"
     },
     {
       "name": "wireguard-without-encryption",
@@ -34,9 +40,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": true,
+      "rank": 1200,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T22:09:36Z"
+      "pushed_at": "2026-11-03T13:26:43Z"
     },
     {
       "name": "universal-ev-evse-power-adapter-kit",
@@ -45,9 +54,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": true,
+      "rank": 1300,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T22:09:34Z"
+      "pushed_at": "2026-11-03T13:26:45Z"
     },
     {
       "name": "stealth-browser-anti-bot-automation-lab",
@@ -56,9 +68,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": true,
+      "rank": 1400,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T22:09:33Z"
+      "pushed_at": "2026-11-03T13:26:47Z"
     },
     {
       "name": "startup-devops-masterclass",
@@ -67,9 +82,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": true,
+      "rank": 1500,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T22:09:31Z"
+      "pushed_at": "2026-11-03T13:26:49Z"
     },
     {
       "name": "sinc_crm",
@@ -78,9 +96,12 @@
       "tags": [],
       "private": false,
       "visibility": "public",
+      "listed": true,
       "featured": true,
+      "rank": 1600,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T22:09:29Z",
+      "pushed_at": "2026-11-03T13:26:50Z",
       "html_url": "https://github.com/lester-01/sinc_crm"
     },
     {
@@ -90,9 +111,12 @@
       "tags": [],
       "private": false,
       "visibility": "public",
+      "listed": true,
       "featured": true,
+      "rank": 1700,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T22:09:28Z",
+      "pushed_at": "2026-11-03T13:26:52Z",
       "html_url": "https://github.com/lester-01/signalstack"
     },
     {
@@ -102,9 +126,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": true,
+      "rank": 1800,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T22:09:26Z"
+      "pushed_at": "2026-11-03T13:26:54Z"
     },
     {
       "name": "fineract-rafiki-bridge",
@@ -113,9 +140,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": true,
+      "rank": 1900,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T22:09:24Z"
+      "pushed_at": "2026-11-03T13:26:56Z"
     },
     {
       "name": "android-ai-agent-environment",
@@ -128,9 +158,12 @@
       ],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": true,
+      "rank": 2000,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:35:41Z"
+      "pushed_at": "2026-11-03T13:26:59Z"
     },
     {
       "name": "jasiri",
@@ -139,9 +172,12 @@
       "tags": [],
       "private": false,
       "visibility": "public",
+      "listed": true,
       "featured": true,
+      "rank": 2100,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:35:38Z",
+      "pushed_at": "2026-11-03T13:27:01Z",
       "html_url": "https://github.com/lester-01/jasiri"
     },
     {
@@ -151,9 +187,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 7100,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:07:02Z"
+      "pushed_at": "2026-11-03T13:28:38Z"
     },
     {
       "name": "upwork-assistant",
@@ -162,9 +201,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 7200,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:06:48Z"
+      "pushed_at": "2026-11-03T13:28:40Z"
     },
     {
       "name": "termux-cursor",
@@ -173,9 +215,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 7300,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:06:39Z"
+      "pushed_at": "2026-11-03T13:28:42Z"
     },
     {
       "name": "termux-ai-tui-agents-workspace",
@@ -190,9 +235,12 @@
       ],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 7400,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:06:37Z"
+      "pushed_at": "2026-11-03T13:28:44Z"
     },
     {
       "name": "telegram-notifications-bot",
@@ -201,9 +249,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 7500,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:06:34Z"
+      "pushed_at": "2026-11-03T13:28:45Z"
     },
     {
       "name": "senior-engineering-checklist",
@@ -212,9 +263,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 7600,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:06:13Z"
+      "pushed_at": "2026-11-03T13:28:47Z"
     },
     {
       "name": "rpi-phone-kiosk",
@@ -223,9 +277,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 7700,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:06:11Z"
+      "pushed_at": "2026-11-03T13:28:50Z"
     },
     {
       "name": "recall",
@@ -234,9 +291,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 7800,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:06:07Z"
+      "pushed_at": "2026-11-03T13:28:52Z"
     },
     {
       "name": "rambian",
@@ -245,9 +305,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 7900,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:06:06Z"
+      "pushed_at": "2026-11-03T13:28:54Z"
     },
     {
       "name": "quic-inside-linux-kernel",
@@ -256,9 +319,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 8000,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:06:04Z"
+      "pushed_at": "2026-11-03T13:28:56Z"
     },
     {
       "name": "quant-research-lab",
@@ -267,9 +333,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 8100,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:06:01Z"
+      "pushed_at": "2026-11-03T13:28:57Z"
     },
     {
       "name": "opencode-termux",
@@ -278,9 +347,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 8200,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:05:50Z"
+      "pushed_at": "2026-11-03T13:29:00Z"
     },
     {
       "name": "natbridge",
@@ -295,9 +367,12 @@
       ],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 8300,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:05:47Z"
+      "pushed_at": "2026-11-03T13:29:02Z"
     },
     {
       "name": "multiplexed-proxy-transport",
@@ -306,9 +381,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 8400,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:05:43Z"
+      "pushed_at": "2026-11-03T13:29:04Z"
     },
     {
       "name": "iperf3-proxy",
@@ -317,9 +395,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 8500,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:05:31Z"
+      "pushed_at": "2026-11-03T13:29:06Z"
     },
     {
       "name": "horizon-scanner",
@@ -328,9 +409,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 8600,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:05:26Z"
+      "pushed_at": "2026-11-03T13:29:07Z"
     },
     {
       "name": "guardian-agent",
@@ -339,9 +423,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 8700,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:05:22Z"
+      "pushed_at": "2026-11-03T13:29:09Z"
     },
     {
       "name": "google-gce-spot-vms-provisioner",
@@ -350,9 +437,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 8800,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:05:20Z"
+      "pushed_at": "2026-11-03T13:29:11Z"
     },
     {
       "name": "gcp-vm-provisioner",
@@ -361,9 +451,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 8900,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:05:13Z"
+      "pushed_at": "2026-11-03T13:29:14Z"
     },
     {
       "name": "flask-mysql-car-rental",
@@ -372,9 +465,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 9000,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:05:07Z"
+      "pushed_at": "2026-11-03T13:29:16Z"
     },
     {
       "name": "cursor-termux",
@@ -383,9 +479,12 @@
       "tags": [],
       "private": false,
       "visibility": "public",
+      "listed": true,
       "featured": false,
+      "rank": 9100,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:05:00Z",
+      "pushed_at": "2026-11-03T13:29:18Z",
       "html_url": "https://github.com/lester-01/cursor-termux"
     },
     {
@@ -395,9 +494,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 9200,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:04:40Z"
+      "pushed_at": "2026-11-03T13:29:20Z"
     },
     {
       "name": "android-adb-fleet-manager",
@@ -406,9 +508,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 9300,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:04:35Z"
+      "pushed_at": "2026-11-03T13:29:22Z"
     },
     {
       "name": "ai-content-moderation",
@@ -417,9 +522,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 9400,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:04:31Z"
+      "pushed_at": "2026-11-03T13:29:24Z"
     },
     {
       "name": "ai-agent-harness-research",
@@ -428,9 +536,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 9500,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:04:29Z"
+      "pushed_at": "2026-11-03T13:29:26Z"
     },
     {
       "name": "remoteTerminal",
@@ -439,9 +550,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 9600,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:00:21Z"
+      "pushed_at": "2026-11-03T13:29:28Z"
     },
     {
       "name": "nodered-mqtt-esp32-dashboard",
@@ -450,9 +564,12 @@
       "tags": [],
       "private": false,
       "visibility": "public",
+      "listed": true,
       "featured": false,
+      "rank": 9700,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:00:11Z",
+      "pushed_at": "2026-11-03T13:29:30Z",
       "html_url": "https://github.com/lester-01/nodered-mqtt-esp32-dashboard"
     },
     {
@@ -462,9 +579,12 @@
       "tags": [],
       "private": false,
       "visibility": "public",
+      "listed": true,
       "featured": false,
+      "rank": 9800,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:00:06Z",
+      "pushed_at": "2026-11-03T13:29:32Z",
       "html_url": "https://github.com/lester-01/go_usb_modeswitch"
     },
     {
@@ -474,9 +594,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 9900,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:00:04Z"
+      "pushed_at": "2026-11-03T13:29:34Z"
     },
     {
       "name": "cursor-worker-setup",
@@ -485,9 +608,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 10000,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T21:00:01Z"
+      "pushed_at": "2026-11-03T13:29:35Z"
     },
     {
       "name": "cursor-cloud-context7",
@@ -496,9 +622,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 10100,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T20:59:59Z"
+      "pushed_at": "2026-11-03T13:29:37Z"
     },
     {
       "name": "ai-file-manager",
@@ -507,9 +636,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 10200,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T20:59:55Z"
+      "pushed_at": "2026-11-03T13:29:40Z"
     },
     {
       "name": "ai-engineering-from-scratch",
@@ -518,9 +650,12 @@
       "tags": [],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 10300,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-23T20:59:53Z"
+      "pushed_at": "2026-11-03T13:29:43Z"
     },
     {
       "name": "pty-shuttle",
@@ -534,9 +669,12 @@
       ],
       "private": true,
       "visibility": "private",
+      "listed": true,
       "featured": false,
+      "rank": 10500,
+      "website": null,
       "fork": false,
-      "pushed_at": "2026-10-22T16:16:26Z"
+      "pushed_at": "2026-11-03T13:29:45Z"
     }
   ]
 }

@@ -2,100 +2,606 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>What I am building</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>What I am building – Ben Lester</title>
+  <meta name="description" content="A curated list of projects Ben Lester shares publicly. Repository and website links appear when each exists.">
+  <meta property="og:title" content="What I am building – Ben Lester">
+  <meta property="og:description" content="A curated list of projects Ben Lester shares publicly. Repository and website links appear when each exists.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lester-01.github.io/what-am-building/">
+  <meta property="og:image" content="https://lester-01.github.io/what-am-building/assets/profile.jpg">
+  <meta name="theme-color" content="#F2F0EB" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161814" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://lester-01.github.io/what-am-building/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap">
+  <script>
+    (function () {
+      var stored = null;
+      try { stored = localStorage.getItem("theme"); } catch (e) {}
+      var theme = stored === "light" || stored === "dark"
+        ? stored
+        : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
   <style>
+    /*
+      Design plan
+      Subject: curated public project board for a freelance systems engineer.
+      Look: warm paper + charcoal ink + forest accent (not purple, not cream-terracotta).
+      Type: Newsreader for the name lockup; Source Sans 3 for UI and body.
+      Hierarchy: identity first, then filters, then featured grid, then ranked list.
+      Motion: theme cross-fade suppression, press scale, soft section reveal.
+    */
     :root {
-      color-scheme: light dark;
-      --bg: #f6f4ef;
-      --fg: #1c1917;
-      --muted: #57534e;
-      --card: #fff;
-      --line: #e7e5e4;
-      --accent: #0f766e;
+      --paper: #F2F0EB;
+      --paper-2: #E7E4DC;
+      --ink: #1A1C18;
+      --ink-soft: #4A5248;
+      --line: #C9C4B8;
+      --surface: #FBFAF7;
+      --forest: #1F5C45;
+      --forest-deep: #174836;
+      --forest-soft: #D7E6DE;
+      --on-forest: #F7FBF8;
+
+      --color-bg-page: var(--paper);
+      --color-bg-subtle: var(--paper-2);
+      --color-bg-surface: var(--surface);
+      --color-bg-surface-hover: #F4F1EA;
+      --color-text-primary: var(--ink);
+      --color-text-secondary: var(--ink-soft);
+      --color-text-on-accent: var(--on-forest);
+      --color-border-subtle: var(--line);
+      --color-border: #9AA194;
+      --color-border-focus: var(--forest);
+      --color-border-separator: var(--line);
+      --color-accent-subtle: var(--forest-soft);
+      --color-accent-solid: var(--forest);
+      --color-accent-solid-hover: var(--forest-deep);
+      --color-accent-text: var(--forest-deep);
+
+      --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", serif;
+      --font-sans: "Source Sans 3", "Segoe UI", sans-serif;
+      --text-caption: 0.875rem;
+      --text-body: 1.0625rem;
+      --text-heading: 1.125rem;
+      --text-title: 1.375rem;
+      --text-display: clamp(1.75rem, 4vw, 2.35rem);
+      --leading-display: 1.12;
+      --leading-title: 1.25;
+      --leading-heading: 1.3;
+      --leading-body: 1.55;
+      --leading-caption: 1.4;
+      --weight-body: 400;
+      --weight-medium: 500;
+      --weight-semibold: 600;
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --measure: 38rem;
+      --wrap: 68rem;
+      --target: 2.75rem;
+      --radius-control: 0.35rem;
+      --radius-chip: 0.25rem;
+      --radius-photo: 0.4rem;
     }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #1c1917;
-        --fg: #f5f5f4;
-        --muted: #a8a29e;
-        --card: #292524;
-        --line: #44403c;
-        --accent: #5eead4;
-      }
+
+    html[data-theme="dark"] {
+      --paper: #161814;
+      --paper-2: #1E211C;
+      --ink: #EDEBE4;
+      --ink-soft: #A8AFA4;
+      --line: #343A32;
+      --surface: #1B1E19;
+      --forest: #6FBF9A;
+      --forest-deep: #8FD0B0;
+      --forest-soft: #24352C;
+      --on-forest: #102018;
+      --color-bg-page: var(--paper);
+      --color-bg-subtle: var(--paper-2);
+      --color-bg-surface: var(--surface);
+      --color-bg-surface-hover: #242821;
+      --color-text-primary: var(--ink);
+      --color-text-secondary: var(--ink-soft);
+      --color-text-on-accent: var(--on-forest);
+      --color-border-subtle: var(--line);
+      --color-border: #5A6356;
+      --color-border-focus: var(--forest);
+      --color-border-separator: var(--line);
+      --color-accent-subtle: var(--forest-soft);
+      --color-accent-solid: var(--forest);
+      --color-accent-solid-hover: var(--forest-deep);
+      --color-accent-text: var(--forest);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
     }
     body {
-      margin: 0 auto;
-      max-width: 44rem;
-      padding: 2rem 1.25rem 4rem;
-      font: 16px/1.5 system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--fg);
+      margin: 0;
+      min-height: 100dvh;
+      font-family: var(--font-sans);
+      font-size: var(--text-body);
+      font-weight: var(--weight-body);
+      line-height: var(--leading-body);
+      color: var(--color-text-primary);
+      background:
+        radial-gradient(120% 80% at 100% -10%, color-mix(in srgb, var(--color-accent-subtle) 55%, transparent), transparent 55%),
+        linear-gradient(180deg, var(--color-bg-page), var(--color-bg-subtle));
+      background-attachment: fixed;
     }
-    h1 { font-size: 1.6rem; margin: 0 0 0.35rem; }
-    .lead, .empty, .stamp { color: var(--muted); }
-    .stamp { font-size: 0.85rem; margin: 1.5rem 0 0; }
-    .filters {
+    img { max-width: 100%; height: auto; display: block; }
+    a {
+      color: var(--color-accent-text);
+      text-underline-offset: 0.15em;
+    }
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible {
+      outline: 2px solid var(--color-border-focus);
+      outline-offset: 2px;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .skip {
+      position: absolute;
+      left: var(--space-4);
+      top: var(--space-4);
+      transform: translateY(-200%);
+      z-index: 10;
+      padding: var(--space-2) var(--space-3);
+      background: var(--color-bg-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-control);
+    }
+    .skip:focus {
+      transform: none;
+    }
+    .wrap {
+      width: min(100% - 2 * var(--space-4), var(--wrap));
+      margin-inline: auto;
+      padding-block: var(--space-8) var(--space-12);
+    }
+    @media (min-width: 720px) {
+      .wrap { padding-block: var(--space-10) var(--space-12); }
+    }
+
+    .masthead {
+      display: grid;
+      gap: var(--space-6);
+      margin-block-end: var(--space-10);
+      padding-block-end: var(--space-8);
+      border-block-end: 1px solid var(--color-border-separator);
+      animation: rise 520ms ease-out both;
+    }
+    @media (min-width: 720px) {
+      .masthead {
+        grid-template-columns: auto 1fr auto;
+        align-items: end;
+        gap: var(--space-8);
+      }
+    }
+    .portrait {
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: var(--radius-photo);
+      object-fit: cover;
+      border: 1px solid var(--color-border-subtle);
+      box-shadow: 0 10px 28px color-mix(in srgb, var(--color-text-primary) 8%, transparent);
+    }
+    @media (min-width: 720px) {
+      .portrait { width: 6.5rem; height: 6.5rem; }
+    }
+    .who {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: var(--text-display);
+      font-weight: 600;
+      line-height: var(--leading-display);
+      letter-spacing: -0.02em;
+      color: var(--color-text-primary);
+    }
+    .role {
+      margin: var(--space-2) 0 0;
+      color: var(--color-text-secondary);
+      font-size: var(--text-body);
+      font-weight: var(--weight-medium);
+    }
+    .elsewhere {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 1rem 0 0.25rem;
+      gap: var(--space-3) var(--space-5);
+      align-items: center;
     }
-    .filters button {
-      min-height: 44px;
-      min-width: 44px;
-      padding: 0.45rem 0.9rem;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--card);
-      color: var(--fg);
+    .elsewhere nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3) var(--space-4);
+    }
+    .elsewhere a {
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      border-block-end: 1px solid transparent;
+    }
+    .elsewhere a:hover {
+      color: var(--color-accent-text);
+      border-block-end-color: color-mix(in srgb, var(--color-accent-text) 45%, transparent);
+    }
+    .theme {
+      min-height: var(--target);
+      padding-inline: var(--space-3);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-control);
+      background: var(--color-bg-surface);
+      color: var(--color-text-secondary);
+      font: inherit;
+      font-size: var(--text-caption);
+      font-weight: var(--weight-medium);
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    h1 {
+      margin: 0 0 var(--space-3);
+      font-family: var(--font-display);
+      font-size: var(--text-title);
+      font-weight: 600;
+      line-height: var(--leading-title);
+      letter-spacing: -0.015em;
+      animation: rise 560ms ease-out both;
+      animation-delay: 40ms;
+    }
+    .lead {
+      margin: 0 0 var(--space-8);
+      max-width: var(--measure);
+      color: var(--color-text-secondary);
+      animation: rise 600ms ease-out both;
+      animation-delay: 70ms;
+    }
+
+    .toolbar {
+      display: grid;
+      gap: var(--space-4);
+      margin-block-end: var(--space-6);
+      padding: var(--space-4);
+      background: color-mix(in srgb, var(--color-bg-surface) 88%, transparent);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: calc(var(--radius-control) + 0.15rem);
+      animation: rise 640ms ease-out both;
+      animation-delay: 90ms;
+    }
+    @media (min-width: 860px) {
+      .toolbar {
+        grid-template-columns: minmax(12rem, 1.4fr) auto minmax(8rem, 0.8fr) minmax(8rem, 0.8fr) auto;
+        align-items: end;
+      }
+    }
+    .field {
+      display: grid;
+      gap: var(--space-2);
+      min-width: 0;
+    }
+    .field label {
+      font-size: var(--text-caption);
+      font-weight: var(--weight-medium);
+      color: var(--color-text-secondary);
+    }
+    .field input,
+    .field select {
+      min-height: var(--target);
+      width: 100%;
+      padding-inline: var(--space-3);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-control);
+      background: var(--color-bg-surface);
+      color: var(--color-text-primary);
       font: inherit;
     }
-    .filters button[aria-pressed="true"] {
-      border-color: var(--accent);
-      color: var(--accent);
+    .vis {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+    .vis button {
+      min-height: var(--target);
+      padding-inline: var(--space-3);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-control);
+      background: var(--color-bg-surface);
+      color: var(--color-text-secondary);
+      font: inherit;
+      font-weight: var(--weight-medium);
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .vis button[aria-pressed="true"] {
+      background: var(--color-accent-solid);
+      border-color: var(--color-accent-solid);
+      color: var(--color-text-on-accent);
+    }
+    .clear {
+      min-height: var(--target);
+      border: 0;
+      background: transparent;
+      color: var(--color-accent-text);
+      font: inherit;
+      font-weight: var(--weight-medium);
+      text-align: start;
+      padding: 0;
+      touch-action: manipulation;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: var(--space-2) var(--space-4);
+      margin-block-end: var(--space-6);
+      color: var(--color-text-secondary);
+      font-size: var(--text-caption);
+    }
+    .count { margin: 0; font-weight: var(--weight-medium); color: var(--color-text-primary); }
+    #stamp { margin: 0; }
+
+    h2 {
+      margin: 0 0 var(--space-4);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .featured-grid {
+      display: grid;
+      gap: var(--space-4);
+      margin-block-end: var(--space-10);
+    }
+    @media (min-width: 720px) {
+      .featured-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 1rem 1.1rem;
-      margin: 0.85rem 0;
+      min-width: 0;
+      padding: var(--space-5);
+      background: var(--color-bg-surface);
+      border: 1px solid var(--color-border-subtle);
+      border-inline-start: 3px solid var(--color-accent-solid);
+      border-radius: var(--radius-control);
     }
-    .card h2 { font-size: 1.1rem; margin: 0 0 0.35rem; }
-    .card a { color: var(--accent); }
-    .meta { font-size: 0.9rem; color: var(--muted); }
-    .vis {
-      display: inline-block;
-      font-size: 0.75rem;
-      border: 1px solid var(--line);
-      border-radius: 999px;
+    .card h3,
+    .row h3 {
+      margin: 0 0 var(--space-2);
+      font-size: var(--text-heading);
+      font-weight: var(--weight-semibold);
+      line-height: var(--leading-heading);
+      overflow-wrap: anywhere;
+    }
+    .card h3 a,
+    .row h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .blurb {
+      margin: 0 0 var(--space-4);
+      color: var(--color-text-secondary);
+      max-width: var(--measure);
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3) var(--space-4);
+      margin: 0 0 var(--space-4);
+      padding: 0;
+      list-style: none;
+      font-size: var(--text-caption);
+      font-weight: var(--weight-medium);
+    }
+    .links a { text-decoration: none; }
+    .links a:hover { text-decoration: underline; }
+    .facts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.75rem;
       padding: 0.15rem 0.5rem;
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-chip);
+      font-size: var(--text-caption);
+      line-height: var(--leading-caption);
+      overflow-wrap: anywhere;
+      background: color-mix(in srgb, var(--color-bg-subtle) 70%, transparent);
     }
-    .tags { margin: 0.5rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem; }
-    .tags li {
-      font-size: 0.75rem;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 0.1rem 0.5rem;
+    .chip-vis { background: var(--color-accent-subtle); }
+
+    .row {
+      padding-block: var(--space-5);
+      border-block-end: 1px solid var(--color-border-separator);
+      min-width: 0;
+    }
+    .row:first-child {
+      border-block-start: 1px solid var(--color-border-separator);
+    }
+
+    .empty, .error, .loading {
+      color: var(--color-text-secondary);
+      max-width: var(--measure);
+    }
+    .error { color: var(--color-text-primary); }
+    .retry {
+      min-height: var(--target);
+      margin-block-start: var(--space-3);
+      padding-inline: var(--space-4);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-control);
+      background: var(--color-accent-solid);
+      color: var(--color-text-on-accent);
+      font: inherit;
+      font-weight: var(--weight-medium);
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .site-foot {
+      margin-block-start: var(--space-12);
+      color: var(--color-text-secondary);
+      font-size: var(--text-caption);
+      line-height: var(--leading-caption);
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(0.45rem); }
+      to { opacity: 1; transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .masthead, h1, .lead, .toolbar { animation: none; }
+    }
+    @media (hover: hover) {
+      .card h3 a:hover,
+      .row h3 a:hover { color: var(--color-accent-solid-hover); }
+      .theme:hover,
+      .vis button:hover,
+      .field input:hover,
+      .field select:hover { background-color: var(--color-bg-surface-hover); }
+      .clear:hover { color: var(--color-accent-solid-hover); }
+      .vis button[aria-pressed="true"]:hover {
+        background-color: var(--color-accent-solid-hover);
+        border-color: var(--color-accent-solid-hover);
+      }
+      .theme, .vis button, .retry {
+        transition-property: background-color, border-color, color;
+        transition-duration: 150ms;
+        transition-timing-function: ease-out;
+      }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .theme:not(:disabled):active,
+      .vis button:not(:disabled):active,
+      .retry:not(:disabled):active,
+      .clear:not(:disabled):active {
+        transform: scale(0.96);
+        transition-property: transform, background-color, border-color, color;
+        transition-duration: 150ms;
+        transition-timing-function: ease-out;
+      }
+    }
+    @media (forced-colors: active) {
+      .card, .theme, .vis button, .field input, .field select, .retry, .chip, .portrait {
+        border: 1px solid CanvasText;
+      }
+      .card { border-inline-start: 4px solid Mark; }
     }
   </style>
 </head>
 <body>
-  <h1>What I am building</h1>
-  <p class="lead">This is a selection of work I am glad to show. It is not a complete list of my projects — only a handful I have chosen to share here.</p>
-  <p class="lead">Public repositories link through to GitHub. Private work is named and described, without a repository URL.</p>
-  <div class="filters" role="group" aria-label="Visibility filter">
-    <button type="button" data-filter="all" aria-pressed="true">All</button>
-    <button type="button" data-filter="public" aria-pressed="false">Public</button>
-    <button type="button" data-filter="private" aria-pressed="false">Private</button>
+  <a class="skip" href="#main">Skip to projects</a>
+  <div class="wrap">
+    <header class="masthead">
+      <img class="portrait" src="assets/profile.jpg" width="1254" height="1254" alt="Portrait of Ben Lester">
+      <div>
+        <p class="who">Ben Lester</p>
+        <p class="role">Freelance Software &amp; Systems Engineer</p>
+      </div>
+      <div class="elsewhere">
+        <nav aria-label="Elsewhere">
+          <a href="https://benlester.me">Portfolio</a>
+          <a href="https://github.com/lester-01">GitHub</a>
+          <a href="mailto:contact@benlester.me">Email</a>
+        </nav>
+        <button type="button" class="theme" id="theme-toggle">Use dark theme</button>
+      </div>
+    </header>
+
+    <main id="main" aria-busy="true">
+      <h1>What I am building</h1>
+      <p class="lead">A curated list of projects I share publicly. Repository and website links appear when each exists.</p>
+
+      <form class="toolbar" id="filters" aria-label="Filter projects">
+        <div class="field">
+          <label for="q">Search projects</label>
+          <input id="q" name="q" type="search" inputmode="search" placeholder="natbridge…" spellcheck="false" autocomplete="off" enterkeyhint="search">
+        </div>
+        <div class="vis" role="group" aria-label="Visibility">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="public" aria-pressed="false">Public</button>
+          <button type="button" data-filter="private" aria-pressed="false">Private</button>
+        </div>
+        <div class="field field-narrow">
+          <label for="status">Status</label>
+          <select id="status" name="status" autocomplete="off">
+            <option value="">Any status</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="tag">Tag</label>
+          <select id="tag" name="tag" autocomplete="off">
+            <option value="">Any tag</option>
+          </select>
+        </div>
+        <button type="button" class="clear" id="clear" hidden>Clear filters</button>
+      </form>
+
+      <div class="meta-bar">
+        <p class="count" id="count"></p>
+        <p id="count-live" class="sr-only" role="status"></p>
+        <p id="stamp"></p>
+      </div>
+
+      <p class="loading" id="loading">Loading projects…</p>
+      <div id="error" role="alert" hidden></div>
+
+      <section id="featured-section" hidden>
+        <h2>Featured</h2>
+        <div class="featured-grid" id="featured"></div>
+      </section>
+      <section id="rest-section" hidden>
+        <h2 id="rest-heading">More work</h2>
+        <div id="rest"></div>
+      </section>
+      <div id="empty" hidden></div>
+    </main>
+
+    <footer class="site-foot">
+      <p>This page lists only work I have chosen to share.</p>
+    </footer>
   </div>
-  <div id="list"></div>
-  <p class="stamp" id="stamp"></p>
+  <noscript>
+    <p class="wrap">This page needs JavaScript to load the project list.</p>
+  </noscript>
   <script>
     function el(tag, attrs, text) {
       const node = document.createElement(tag);
-      Object.entries(attrs || {}).forEach(([k, v]) => node.setAttribute(k, v));
+      Object.entries(attrs || {}).forEach(([k, v]) => {
+        if (v === false || v == null) return;
+        if (v === true) node.setAttribute(k, "");
+        else node.setAttribute(k, v);
+      });
       if (text) node.textContent = text;
       return node;
     }
@@ -110,61 +616,252 @@
       const row = (statuses.statuses || []).find(s => s.id === id);
       return row && row.meaning ? row.meaning : id;
     }
-    function cardFor(item, statuses) {
-      const card = el("article", { class: "card" });
-      const title = el("h2");
-      if (item.html_url) {
-        const a = el("a", { href: item.html_url }, item.name);
-        title.appendChild(a);
-      } else {
-        title.textContent = item.name;
-      }
-      card.appendChild(title);
-      if (item.description) card.appendChild(el("p", {}, item.description));
-      const meta = el("p", { class: "meta" });
-      meta.appendChild(document.createTextNode(statusMeaning(item, statuses) + " · "));
-      meta.appendChild(el("span", { class: "vis" }, visLabel(item)));
-      card.appendChild(meta);
-      if (item.tags && item.tags.length) {
-        const ul = el("ul", { class: "tags" });
-        item.tags.forEach(t => ul.appendChild(el("li", {}, t)));
-        card.appendChild(ul);
-      }
-      return card;
+    function currentTheme() {
+      return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
     }
-    Promise.all([
-      fetch("data/projects.json").then(r => r.json()),
-      fetch("data/status.json").then(r => r.json())
-    ]).then(([bundle, statuses]) => {
-      const list = document.getElementById("list");
-      const projects = bundle.projects || [];
-      let filter = "all";
-      function draw() {
-        list.replaceChildren();
-        const shown = projects.filter(item => filter === "all" || visOf(item) === filter);
-        if (!shown.length) {
-          list.appendChild(el("p", { class: "empty" }, "No projects in this view."));
-          return;
-        }
-        shown.forEach(item => list.appendChild(cardFor(item, statuses)));
+    function suppressThemeTransitions(fn) {
+      const style = document.createElement("style");
+      style.appendChild(document.createTextNode("*,*::before,*::after{transition:none !important}"));
+      document.head.appendChild(style);
+      fn();
+      void document.body.offsetHeight;
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => style.remove());
+      });
+    }
+    function syncThemeChrome() {
+      const theme = currentTheme();
+      const btn = document.getElementById("theme-toggle");
+      btn.textContent = theme === "dark" ? "Use light theme" : "Use dark theme";
+      let meta = document.querySelector('meta[name="theme-color"][data-live]');
+      if (!meta) {
+        meta = document.createElement("meta");
+        meta.setAttribute("name", "theme-color");
+        meta.setAttribute("data-live", "");
+        document.head.appendChild(meta);
       }
-      document.querySelectorAll(".filters button").forEach(btn => {
+      meta.setAttribute("content", theme === "dark" ? "#161814" : "#F2F0EB");
+    }
+    function setTheme(theme) {
+      suppressThemeTransitions(() => {
+        document.documentElement.setAttribute("data-theme", theme);
+        document.documentElement.style.colorScheme = theme;
+        try { localStorage.setItem("theme", theme); } catch (e) {}
+      });
+      syncThemeChrome();
+    }
+    function params() {
+      const u = new URL(location.href);
+      return {
+        vis: u.searchParams.get("vis") || "all",
+        q: u.searchParams.get("q") || "",
+        status: u.searchParams.get("status") || "",
+        tag: u.searchParams.get("tag") || ""
+      };
+    }
+    function writeParams(state) {
+      const u = new URL(location.href);
+      [["vis", state.vis, "all"], ["q", state.q, ""], ["status", state.status, ""], ["tag", state.tag, ""]].forEach(([k, v, empty]) => {
+        if (!v || v === empty) u.searchParams.delete(k);
+        else u.searchParams.set(k, v);
+      });
+      const next = u.pathname + u.search + u.hash;
+      if (next !== location.pathname + location.search + location.hash) {
+        history.replaceState(null, "", next);
+      }
+    }
+    function matches(item, state, statuses) {
+      if (state.vis !== "all" && visOf(item) !== state.vis) return false;
+      if (state.status && (item.status || "idea") !== state.status) return false;
+      if (state.tag && !(item.tags || []).includes(state.tag)) return false;
+      if (state.q) {
+        const q = state.q.toLowerCase();
+        const hay = [
+          item.name,
+          item.description,
+          item.status,
+          statusMeaning(item, statuses),
+          item.website,
+          ...(item.tags || [])
+        ].join(" ").toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    }
+    function projectCount(n) {
+      const num = new Intl.NumberFormat().format(n);
+      const word = new Intl.PluralRules(document.documentElement.lang).select(n) === "one" ? "project" : "projects";
+      return num + " " + word;
+    }
+    function factsFor(item, statuses) {
+      const ul = el("ul", { class: "facts" });
+      ul.appendChild(el("li", { class: "chip" }, statusMeaning(item, statuses)));
+      ul.appendChild(el("li", { class: "chip chip-vis" }, visLabel(item)));
+      (item.tags || []).forEach(t => ul.appendChild(el("li", { class: "chip" }, t)));
+      return ul;
+    }
+    function linksFor(item) {
+      const links = el("ul", { class: "links" });
+      if (item.website) {
+        const li = el("li");
+        li.appendChild(el("a", { href: item.website, rel: "noopener noreferrer" }, "Website"));
+        links.appendChild(li);
+      }
+      if (item.html_url) {
+        const li = el("li");
+        li.appendChild(el("a", { href: item.html_url, rel: "noopener noreferrer" }, "GitHub"));
+        links.appendChild(li);
+      }
+      return links.childNodes.length ? links : null;
+    }
+    function cardFor(item, statuses, featured) {
+      const node = el("article", { class: featured ? "card" : "row" });
+      const title = el("h3");
+      title.appendChild(el("bdi", { translate: "no" }, item.name));
+      node.appendChild(title);
+      if (item.description) node.appendChild(el("p", { class: "blurb" }, item.description));
+      const links = linksFor(item);
+      if (links) node.appendChild(links);
+      node.appendChild(factsFor(item, statuses));
+      return node;
+    }
+    function fillSelect(select, values, current) {
+      const keep = select.querySelector("option[value='']");
+      select.replaceChildren(keep);
+      values.forEach(v => {
+        const opt = el("option", { value: v.id || v }, v.meaning || v);
+        if ((v.id || v) === current) opt.selected = true;
+        select.appendChild(opt);
+      });
+    }
+
+    syncThemeChrome();
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      setTheme(currentTheme() === "dark" ? "light" : "dark");
+    });
+
+    Promise.all([
+      fetch("data/projects.json").then(r => { if (!r.ok) throw new Error("projects"); return r.json(); }),
+      fetch("data/status.json").then(r => { if (!r.ok) throw new Error("status"); return r.json(); })
+    ]).then(([bundle, statuses]) => {
+      const projects = bundle.projects || [];
+      const loading = document.getElementById("loading");
+      const featuredRoot = document.getElementById("featured");
+      const restRoot = document.getElementById("rest");
+      const featuredSection = document.getElementById("featured-section");
+      const restSection = document.getElementById("rest-section");
+      const restHeading = document.getElementById("rest-heading");
+      const empty = document.getElementById("empty");
+      const count = document.getElementById("count");
+      const countLive = document.getElementById("count-live");
+      let countTimer = 0;
+      function showCount(n) {
+        const text = projectCount(n);
+        count.textContent = text;
+        window.clearTimeout(countTimer);
+        countTimer = window.setTimeout(() => {
+          if (countLive.textContent !== text) countLive.textContent = text;
+        }, 400);
+      }
+      const q = document.getElementById("q");
+      const status = document.getElementById("status");
+      const tag = document.getElementById("tag");
+      const clear = document.getElementById("clear");
+      const visBtns = [...document.querySelectorAll(".vis button")];
+
+      fillSelect(status, statuses.statuses || [], params().status);
+      const tags = [...new Set(projects.flatMap(p => p.tags || []))].sort();
+      fillSelect(tag, tags, params().tag);
+
+      if (bundle.generated_at) {
+        const d = new Date(bundle.generated_at);
+        if (!Number.isNaN(d.getTime())) {
+          document.getElementById("stamp").textContent =
+            "Updated " + new Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(d);
+        }
+      }
+
+      function stateFromUi() {
+        const pressed = visBtns.find(b => b.getAttribute("aria-pressed") === "true");
+        return {
+          vis: pressed ? pressed.getAttribute("data-filter") : "all",
+          q: q.value.trim(),
+          status: status.value,
+          tag: tag.value
+        };
+      }
+      function applyStateToUi(state) {
+        visBtns.forEach(b => b.setAttribute("aria-pressed", b.getAttribute("data-filter") === state.vis ? "true" : "false"));
+        if (q.value !== state.q) q.value = state.q;
+        status.value = state.status;
+        tag.value = state.tag;
+      }
+      function draw() {
+        const state = stateFromUi();
+        writeParams(state);
+        const shown = projects.filter(item => matches(item, state, statuses));
+        const featured = shown.filter(item => item.featured);
+        const rest = shown.filter(item => !item.featured);
+        const filtersOn = state.vis !== "all" || state.q || state.status || state.tag;
+        clear.hidden = !filtersOn;
+        loading.hidden = true;
+        empty.replaceChildren();
+        empty.hidden = true;
+        featuredRoot.replaceChildren();
+        restRoot.replaceChildren();
+        featuredSection.hidden = !featured.length;
+        restSection.hidden = !rest.length;
+        restHeading.textContent = featured.length ? "More work" : "Projects";
+        featured.forEach(item => featuredRoot.appendChild(cardFor(item, statuses, true)));
+        rest.forEach(item => restRoot.appendChild(cardFor(item, statuses, false)));
+        document.getElementById("main").setAttribute("aria-busy", "false");
+        showCount(shown.length);
+        if (!shown.length) {
+          empty.hidden = false;
+          const title = el("p", { class: "empty" }, filtersOn ? "No projects in this view." : "No projects to show.");
+          empty.appendChild(title);
+          if (filtersOn) {
+            const b = el("button", { type: "button", class: "clear" }, "Clear filters");
+            b.addEventListener("click", reset);
+            empty.appendChild(b);
+          }
+        }
+      }
+      function reset() {
+        visBtns.forEach(b => b.setAttribute("aria-pressed", b.getAttribute("data-filter") === "all" ? "true" : "false"));
+        q.value = "";
+        status.value = "";
+        tag.value = "";
+        draw();
+        q.focus();
+      }
+      applyStateToUi(params());
+      visBtns.forEach(btn => {
         btn.addEventListener("click", () => {
-          filter = btn.getAttribute("data-filter") || "all";
-          document.querySelectorAll(".filters button").forEach(other => {
-            other.setAttribute("aria-pressed", other === btn ? "true" : "false");
-          });
+          visBtns.forEach(other => other.setAttribute("aria-pressed", other === btn ? "true" : "false"));
           draw();
         });
       });
+      q.addEventListener("input", draw);
+      status.addEventListener("change", draw);
+      tag.addEventListener("change", draw);
+      clear.addEventListener("click", reset);
+      document.getElementById("filters").addEventListener("submit", ev => {
+        ev.preventDefault();
+        draw();
+      });
       draw();
-      if (bundle.generated_at) {
-        document.getElementById("stamp").textContent = "Updated " + bundle.generated_at;
-      }
     }).catch(() => {
-      document.getElementById("list").appendChild(
-        el("p", { class: "empty" }, "The project list could not be loaded.")
-      );
+      document.getElementById("main").setAttribute("aria-busy", "false");
+      document.getElementById("loading").hidden = true;
+      const box = document.getElementById("error");
+      box.hidden = false;
+      box.replaceChildren();
+      box.appendChild(el("p", { class: "error" }, "The project list could not be loaded. Check your connection and try again."));
+      const retry = el("button", { type: "button", class: "retry" }, "Try again");
+      retry.addEventListener("click", () => location.reload());
+      box.appendChild(retry);
+      retry.focus();
     });
   </script>
 </body>
