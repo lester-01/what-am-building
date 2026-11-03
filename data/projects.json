@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T16:49:26Z",
+  "generated_at": "2026-11-03T17:38:21Z",
   "projects": [
     {
       "name": "proxyhut",
@@ -120,7 +120,7 @@
       "rank": 1400,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T16:48:52Z"
+      "pushed_at": "2026-11-03T16:52:35Z"
     },
     {
       "name": "youtube-commentguard",
@@ -143,29 +143,6 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-03T16:43:07Z"
-    },
-    {
-      "name": "wireguard-without-encryption",
-      "description": "Lab fork of wireguard-go with optional flags that disable encryption on both peers. Measures whether a WireGuard-shaped cleartext UDP tunnel buys throughput or CPU on SBCs, phones, and cellular. Lab flags are not compatible with stock WireGuard.",
-      "status": "building",
-      "tags": [
-        "wireguard",
-        "networking",
-        "research",
-        "iot"
-      ],
-      "languages": [
-        "Shell",
-        "Python"
-      ],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": true,
-      "rank": 1600,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T16:43:09Z"
     },
     {
       "name": "universal-ev-evse-power-adapter-kit",
@@ -269,31 +246,6 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-03T16:43:22Z"
-    },
-    {
-      "name": "android-ai-agent-environment",
-      "description": "Private source for the Jasiri Android APK: agent runtime, persistent Linux prefix, terminal, and shared chat workspaces on the phone. Play-bound applicationId app.jasiri. Public site and sideload releases live in the jasiri repo.",
-      "status": "building",
-      "tags": [
-        "android",
-        "ai",
-        "termux"
-      ],
-      "languages": [
-        "Kotlin",
-        "Java",
-        "JavaScript",
-        "Shell",
-        "C"
-      ],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": true,
-      "rank": 2200,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T16:43:25Z"
     },
     {
       "name": "youtube-comments-scraper",
@@ -565,30 +517,6 @@
       "pushed_at": "2026-11-03T16:41:55Z"
     },
     {
-      "name": "flask-mysql-car-rental",
-      "description": "Flask + MySQL car rental management app with roles for managers, receptionists, and customers. Covers rentals, payments, and SQL schema/sample data. Learning / course project; not under active product development.",
-      "status": "paused",
-      "tags": [
-        "flask",
-        "mysql",
-        "python",
-        "learning",
-        "web"
-      ],
-      "languages": [
-        "HTML",
-        "Python"
-      ],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 9000,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T16:41:58Z"
-    },
-    {
       "name": "cursor-termux",
       "description": "Run the Cursor Agent CLI natively on Termux (Android ARM64) \u2014 no proot or glibc chroot. Supports the interactive TUI, login/resume, and phone-as-cloud-worker mode. Installer plus patch scripts for node-pty, SQLite, and Android tmp quirks.",
       "status": "live",
@@ -837,6 +765,73 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-03T16:42:40Z"
+    },
+    {
+      "name": "socks5-reverse-tunnel-yamux",
+      "description": "Reverse SOCKS5 tunnel using HashiCorp yamux: public VPS server plus NAT-side client. Supports CONNECT and UDP ASSOCIATE over a multiplexed control session. Current preferred variant of the reverse-tunnel experiments.",
+      "status": "building",
+      "tags": [
+        "go",
+        "socks5",
+        "yamux",
+        "reverse-tunnel"
+      ],
+      "languages": [
+        "Go"
+      ],
+      "private": true,
+      "visibility": "private",
+      "listed": true,
+      "featured": false,
+      "rank": 10600,
+      "website": null,
+      "fork": false,
+      "pushed_at": "2026-11-03T17:38:16Z"
+    },
+    {
+      "name": "socks5server-go",
+      "description": "Go SOCKS5 server with optional reverse-tunnel relay for TCP CONNECT and UDP ASSOCIATE. Work tool for exposing a NAT-side proxy through a public peer. Related to the socks5-reverse-tunnel* experiments.",
+      "status": "building",
+      "tags": [
+        "go",
+        "socks5",
+        "proxy",
+        "reverse-tunnel"
+      ],
+      "languages": [
+        "Go"
+      ],
+      "private": true,
+      "visibility": "private",
+      "listed": true,
+      "featured": false,
+      "rank": 10700,
+      "website": null,
+      "fork": false,
+      "pushed_at": "2026-11-03T17:38:18Z"
+    },
+    {
+      "name": "socks5-reverse-tunnel",
+      "description": "Go SOCKS5 over a reverse tunnel: public VPS accepts SOCKS clients; NAT-side host runs the SOCKS5 server and dials out. Spec plus tunnel.go and socks5.go. Sibling yamux and handrolled variants exist.",
+      "status": "building",
+      "tags": [
+        "go",
+        "socks5",
+        "tunnel",
+        "proxy",
+        "networking"
+      ],
+      "languages": [
+        "Go"
+      ],
+      "private": true,
+      "visibility": "private",
+      "listed": true,
+      "featured": false,
+      "rank": 10800,
+      "website": null,
+      "fork": false,
+      "pushed_at": "2026-11-03T17:38:20Z"
     }
   ]
 }
