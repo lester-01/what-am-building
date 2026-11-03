@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T14:44:13Z",
+  "generated_at": "2026-11-03T14:57:39Z",
   "projects": [
     {
       "name": "proxyhut",
@@ -36,18 +36,19 @@
       "html_url": "https://github.com/lester-01/jasiri"
     },
     {
-      "name": "fineract-rafiki-bridge",
-      "description": "Enables real-time inter-bank transfers over the Interledger network by bridging Apache Fineract (open-source core banking) and Rafiki (Open Payments node) \u2014 a lean, standards-based alternative to enterprise payment middleware.",
+      "name": "fineract-rafiki-bridge-showcase",
+      "description": "Case study: Fineract \u2194 Rafiki Open Payments bridge \u2014 live site at fineract-rafiki.benlester.me",
       "status": "idea",
       "tags": [],
-      "private": true,
-      "visibility": "private",
+      "private": false,
+      "visibility": "public",
       "listed": true,
       "featured": true,
       "rank": 1200,
       "website": "https://fineract-rafiki.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-03T14:44:10Z"
+      "pushed_at": "2026-11-03T14:57:38Z",
+      "html_url": "https://github.com/lester-01/fineract-rafiki-bridge-showcase"
     },
     {
       "name": "sinc_crm",
@@ -80,7 +81,7 @@
       "rank": 1400,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T14:22:08Z"
+      "pushed_at": "2026-11-03T14:47:56Z"
     },
     {
       "name": "youtube-commentguard",
@@ -198,6 +199,20 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-03T14:18:06Z"
+    },
+    {
+      "name": "fineract-rafiki-bridge",
+      "description": "Enables real-time inter-bank transfers over the Interledger network by bridging Apache Fineract (open-source core banking) and Rafiki (Open Payments node) \u2014 a lean, standards-based alternative to enterprise payment middleware.",
+      "status": "idea",
+      "tags": [],
+      "private": true,
+      "visibility": "private",
+      "listed": true,
+      "featured": false,
+      "rank": 1200,
+      "website": null,
+      "fork": false,
+      "pushed_at": "2026-11-03T14:57:36Z"
     },
     {
       "name": "youtube-comments-scraper",
