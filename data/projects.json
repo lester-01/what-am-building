@@ -1,6 +1,69 @@
 {
-  "generated_at": "2026-11-03T13:38:01Z",
+  "generated_at": "2026-11-03T14:18:33Z",
   "projects": [
+    {
+      "name": "proxyhut",
+      "description": "ProxyHut \u2014 residential and mobile proxies on hardware you control",
+      "status": "active",
+      "tags": [
+        "proxy",
+        "networking",
+        "hardware"
+      ],
+      "private": false,
+      "visibility": "public",
+      "listed": true,
+      "featured": true,
+      "rank": 1000,
+      "website": null,
+      "fork": false,
+      "pushed_at": "2026-11-03T14:17:37Z",
+      "html_url": "https://github.com/lester-01/proxyhut"
+    },
+    {
+      "name": "jasiri",
+      "description": "Put your phone to work. An AI agent with its own Linux computer inside your Android phone.",
+      "status": "idea",
+      "tags": [],
+      "private": false,
+      "visibility": "public",
+      "listed": true,
+      "featured": true,
+      "rank": 1100,
+      "website": null,
+      "fork": false,
+      "pushed_at": "2026-11-03T14:17:46Z",
+      "html_url": "https://github.com/lester-01/jasiri"
+    },
+    {
+      "name": "fineract-rafiki-bridge",
+      "description": "Enables real-time inter-bank transfers over the Interledger network by bridging Apache Fineract (open-source core banking) and Rafiki (Open Payments node) \u2014 a lean, standards-based alternative to enterprise payment middleware.",
+      "status": "idea",
+      "tags": [],
+      "private": true,
+      "visibility": "private",
+      "listed": true,
+      "featured": true,
+      "rank": 1200,
+      "website": null,
+      "fork": false,
+      "pushed_at": "2026-11-03T14:17:48Z"
+    },
+    {
+      "name": "sinc_crm",
+      "description": "CRM for education agencies placing students abroad. Manage student inquiries, conversations, and application pipelines in one place. Sales team coordinates placements; managers oversee progress.",
+      "status": "idea",
+      "tags": [],
+      "private": false,
+      "visibility": "public",
+      "listed": true,
+      "featured": true,
+      "rank": 1300,
+      "website": null,
+      "fork": false,
+      "pushed_at": "2026-11-03T14:17:50Z",
+      "html_url": "https://github.com/lester-01/sinc_crm"
+    },
     {
       "name": "projects-command-center",
       "description": "Private command center for project registry, agent rules, and workspace control \u2014 source of truth behind what-am-building.",
@@ -14,10 +77,10 @@
       "visibility": "private",
       "listed": true,
       "featured": true,
-      "rank": 1000,
+      "rank": 1400,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:37:59Z"
+      "pushed_at": "2026-11-03T14:17:52Z"
     },
     {
       "name": "youtube-commentguard",
@@ -28,10 +91,10 @@
       "visibility": "private",
       "listed": true,
       "featured": true,
-      "rank": 1100,
+      "rank": 1500,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:26:41Z"
+      "pushed_at": "2026-11-03T14:17:53Z"
     },
     {
       "name": "wireguard-without-encryption",
@@ -42,10 +105,10 @@
       "visibility": "private",
       "listed": true,
       "featured": true,
-      "rank": 1200,
+      "rank": 1600,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:26:43Z"
+      "pushed_at": "2026-11-03T14:17:55Z"
     },
     {
       "name": "universal-ev-evse-power-adapter-kit",
@@ -56,10 +119,10 @@
       "visibility": "private",
       "listed": true,
       "featured": true,
-      "rank": 1300,
+      "rank": 1700,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:26:45Z"
+      "pushed_at": "2026-11-03T14:17:57Z"
     },
     {
       "name": "stealth-browser-anti-bot-automation-lab",
@@ -70,10 +133,10 @@
       "visibility": "private",
       "listed": true,
       "featured": true,
-      "rank": 1400,
+      "rank": 1800,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:26:47Z"
+      "pushed_at": "2026-11-03T14:17:59Z"
     },
     {
       "name": "startup-devops-masterclass",
@@ -84,25 +147,10 @@
       "visibility": "private",
       "listed": true,
       "featured": true,
-      "rank": 1500,
+      "rank": 1900,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:26:49Z"
-    },
-    {
-      "name": "sinc_crm",
-      "description": "CRM for education agencies placing students abroad. Manage student inquiries, conversations, and application pipelines in one place. Sales team coordinates placements; managers oversee progress.",
-      "status": "idea",
-      "tags": [],
-      "private": false,
-      "visibility": "public",
-      "listed": true,
-      "featured": true,
-      "rank": 1600,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T13:26:50Z",
-      "html_url": "https://github.com/lester-01/sinc_crm"
+      "pushed_at": "2026-11-03T14:18:01Z"
     },
     {
       "name": "signalstack",
@@ -113,10 +161,10 @@
       "visibility": "public",
       "listed": true,
       "featured": true,
-      "rank": 1700,
+      "rank": 2000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:26:52Z",
+      "pushed_at": "2026-11-03T14:18:03Z",
       "html_url": "https://github.com/lester-01/signalstack"
     },
     {
@@ -128,24 +176,10 @@
       "visibility": "private",
       "listed": true,
       "featured": true,
-      "rank": 1800,
+      "rank": 2100,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:26:54Z"
-    },
-    {
-      "name": "fineract-rafiki-bridge",
-      "description": "Enables real-time inter-bank transfers over the Interledger network by bridging Apache Fineract (open-source core banking) and Rafiki (Open Payments node) \u2014 a lean, standards-based alternative to enterprise payment middleware.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": true,
-      "rank": 1900,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T13:26:56Z"
+      "pushed_at": "2026-11-03T14:18:05Z"
     },
     {
       "name": "android-ai-agent-environment",
@@ -160,25 +194,10 @@
       "visibility": "private",
       "listed": true,
       "featured": true,
-      "rank": 2000,
+      "rank": 2200,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:26:59Z"
-    },
-    {
-      "name": "jasiri",
-      "description": "Put your phone to work. An AI agent with its own Linux computer inside your Android phone.",
-      "status": "idea",
-      "tags": [],
-      "private": false,
-      "visibility": "public",
-      "listed": true,
-      "featured": true,
-      "rank": 2100,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T13:27:01Z",
-      "html_url": "https://github.com/lester-01/jasiri"
+      "pushed_at": "2026-11-03T14:18:06Z"
     },
     {
       "name": "youtube-comments-scraper",
@@ -195,20 +214,6 @@
       "pushed_at": "2026-11-03T13:28:38Z"
     },
     {
-      "name": "upwork-assistant",
-      "description": "Design notes for an automated Upwork job monitor and filter (Python anti-detect). Separate from the Chrome extension.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 7200,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T13:28:40Z"
-    },
-    {
       "name": "termux-cursor",
       "description": "Cursor Agent CLI natively on Termux (Android ARM64) \u2014 no proot, no container, no glibc shenanigans.",
       "status": "idea",
@@ -221,26 +226,6 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-03T13:28:42Z"
-    },
-    {
-      "name": "termux-ai-tui-agents-workspace",
-      "description": "Workspace notes and catalog for native Termux coding-agent TUIs.",
-      "status": "building",
-      "tags": [
-        "termux",
-        "android",
-        "ai",
-        "cli",
-        "docs"
-      ],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 7400,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T13:28:44Z"
     },
     {
       "name": "telegram-notifications-bot",
@@ -257,20 +242,6 @@
       "pushed_at": "2026-11-03T13:28:45Z"
     },
     {
-      "name": "senior-engineering-checklist",
-      "description": "Study roadmap for senior backend, infrastructure, and platform engineering.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 7600,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T13:28:47Z"
-    },
-    {
       "name": "rpi-phone-kiosk",
       "description": "Raspberry Pi OS Lite phone-mirroring kiosk: Cage, scrcpy, ADB, least-privilege kiosk user.",
       "status": "idea",
@@ -283,34 +254,6 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-03T13:28:50Z"
-    },
-    {
-      "name": "recall",
-      "description": "Personal media brain for content-based local search and cleanup",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 7800,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T13:28:52Z"
-    },
-    {
-      "name": "rambian",
-      "description": "Research toward a RAM-resident, Debian-compatible OS for Raspberry Pi.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 7900,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T13:28:54Z"
     },
     {
       "name": "quic-inside-linux-kernel",
@@ -403,20 +346,6 @@
       "pushed_at": "2026-11-03T13:29:06Z"
     },
     {
-      "name": "horizon-scanner",
-      "description": "Seed spec for TLD and SSL-log entity discovery, classification, and lead generation.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 8600,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T13:29:07Z"
-    },
-    {
       "name": "guardian-agent",
       "description": "Blueprint for a tri-tier Facebook group moderation assistant.",
       "status": "idea",
@@ -443,20 +372,6 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-03T13:29:11Z"
-    },
-    {
-      "name": "gcp-vm-provisioner",
-      "description": "Temporary GCP VM provisioning helpers and season docs",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 8900,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T13:29:14Z"
     },
     {
       "name": "flask-mysql-car-rental",
@@ -586,48 +501,6 @@
       "fork": false,
       "pushed_at": "2026-11-03T13:29:32Z",
       "html_url": "https://github.com/lester-01/go_usb_modeswitch"
-    },
-    {
-      "name": "gcp-spot-runner-for-ai-cli-agents",
-      "description": "Resilience-first orchestration for cheap GCP Spot VMs running resource-heavy AI CLI agents, with preemption recovery and state replication.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 9900,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T13:29:34Z"
-    },
-    {
-      "name": "cursor-worker-setup",
-      "description": "repository to deploy cursor self-hosted workers - these allow you to run long jobs in background from cursor so you can go offline and let the tasks continue for example.",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 10000,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T13:29:35Z"
-    },
-    {
-      "name": "cursor-cloud-context7",
-      "description": "explore how to set context7 API key so it works in cursor cloud. the chosen way should also support normal local development",
-      "status": "idea",
-      "tags": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 10100,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T13:29:37Z"
     },
     {
       "name": "ai-file-manager",
