@@ -468,6 +468,41 @@
       touch-action: manipulation;
       -webkit-tap-highlight-color: transparent;
     }
+    .status-legend {
+      margin: 0 0 var(--space-6);
+      padding: var(--space-4);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-control);
+      background: color-mix(in srgb, var(--color-bg-surface) 88%, transparent);
+    }
+    .legend-title {
+      margin: 0 0 var(--space-3);
+      font-family: var(--font-sans);
+      font-size: var(--text-caption);
+      font-weight: var(--weight-semibold);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+    }
+    .legend-list {
+      display: grid;
+      gap: var(--space-2) var(--space-6);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    @media (min-width: 720px) {
+      .legend-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    .legend-list li {
+      font-size: var(--text-caption);
+      line-height: var(--leading-caption);
+      color: var(--color-text-secondary);
+    }
+    .legend-list strong {
+      color: var(--color-text-primary);
+      font-weight: var(--weight-semibold);
+    }
     .site-foot {
       margin-block-start: var(--space-12);
       color: var(--color-text-secondary);
@@ -566,6 +601,11 @@
         </div>
         <button type="button" class="clear" id="clear" hidden>Clear filters</button>
       </form>
+
+      <aside class="status-legend" aria-label="Status meanings">
+        <h2 class="legend-title">Status meanings</h2>
+        <ul class="legend-list" id="status-legend"></ul>
+      </aside>
 
       <div class="meta-bar">
         <p class="count" id="count"></p>
@@ -682,7 +722,8 @@
           item.status,
           statusMeaning(item, statuses),
           item.website,
-          ...(item.tags || [])
+          ...(item.tags || []),
+          ...(item.languages || [])
         ].join(" ").toLowerCase();
         if (!hay.includes(q)) return false;
       }
@@ -695,8 +736,10 @@
     }
     function factsFor(item, statuses) {
       const ul = el("ul", { class: "facts" });
-      ul.appendChild(el("li", { class: "chip" }, statusMeaning(item, statuses)));
+      const statusId = item.status || "idea";
+      ul.appendChild(el("li", { class: "chip" }, statusId));
       ul.appendChild(el("li", { class: "chip chip-vis" }, visLabel(item)));
+      (item.languages || []).forEach(lang => ul.appendChild(el("li", { class: "chip" }, lang)));
       (item.tags || []).forEach(t => ul.appendChild(el("li", { class: "chip" }, t)));
       return ul;
     }
@@ -704,15 +747,25 @@
       const links = el("ul", { class: "links" });
       if (item.website) {
         const li = el("li");
-        li.appendChild(el("a", { href: item.website, rel: "noopener noreferrer" }, "Website"));
+        li.appendChild(el("a", { href: item.website, rel: "noopener noreferrer" }, "Open website"));
         links.appendChild(li);
       }
       if (item.html_url) {
         const li = el("li");
-        li.appendChild(el("a", { href: item.html_url, rel: "noopener noreferrer" }, "GitHub"));
+        li.appendChild(el("a", { href: item.html_url, rel: "noopener noreferrer" }, "Open on GitHub"));
         links.appendChild(li);
       }
       return links.childNodes.length ? links : null;
+    }
+    function fillStatusLegend(statuses) {
+      const root = document.getElementById("status-legend");
+      root.replaceChildren();
+      (statuses.statuses || []).forEach(row => {
+        const li = el("li");
+        li.appendChild(el("strong", null, row.id));
+        li.appendChild(document.createTextNode(" — " + (row.meaning || "")));
+        root.appendChild(li);
+      });
     }
     function cardFor(item, statuses, featured) {
       const node = el("article", { class: featured ? "card" : "row" });
@@ -769,7 +822,8 @@
       const clear = document.getElementById("clear");
       const visBtns = [...document.querySelectorAll(".vis button")];
 
-      fillSelect(status, statuses.statuses || [], params().status);
+      fillSelect(status, (statuses.statuses || []).map(s => ({ id: s.id, meaning: s.id })), params().status);
+      fillStatusLegend(statuses);
       const tags = [...new Set(projects.flatMap(p => p.tags || []))].sort();
       fillSelect(tag, tags, params().tag);
 

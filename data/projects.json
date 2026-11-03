@@ -1,15 +1,16 @@
 {
-  "generated_at": "2026-11-03T15:02:24Z",
+  "generated_at": "2026-11-03T16:45:26Z",
   "projects": [
     {
       "name": "proxyhut",
-      "description": "ProxyHut \u2014 residential and mobile proxies on hardware you control",
-      "status": "active",
+      "description": "ProxyHut runs residential and mobile proxies on hardware you control\u2014home broadband, office fiber, or your own 4G/5G SIMs. You keep the machine online; we run the hub and relays. Built for resellers, multi-account work, scraping, and geo checks. Free consultation; trials on spare gear are often possible.",
+      "status": "live",
       "tags": [
         "proxy",
         "networking",
         "hardware"
       ],
+      "languages": [],
       "private": false,
       "visibility": "public",
       "listed": true,
@@ -17,14 +18,25 @@
       "rank": 1000,
       "website": "https://proxyhut.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-03T14:44:06Z",
+      "pushed_at": "2026-11-03T16:44:43Z",
       "html_url": "https://github.com/lester-01/proxyhut"
     },
     {
       "name": "jasiri",
-      "description": "Put your phone to work. An AI agent with its own Linux computer inside your Android phone.",
-      "status": "idea",
-      "tags": [],
+      "description": "Jasiri puts an AI agent and a full Linux computer inside your Android phone. One APK shares files between chat and terminal; data stays on-device. Bring your own OpenRouter or OpenAI key. Sideload from jasiri.benlester.me\u2014not on Google Play yet.",
+      "status": "live",
+      "tags": [
+        "android",
+        "ai",
+        "agents",
+        "linux"
+      ],
+      "languages": [
+        "HTML",
+        "CSS",
+        "Python",
+        "JavaScript"
+      ],
       "private": false,
       "visibility": "public",
       "listed": true,
@@ -32,14 +44,22 @@
       "rank": 1100,
       "website": "https://jasiri.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-03T14:44:08Z",
+      "pushed_at": "2026-11-03T16:44:47Z",
       "html_url": "https://github.com/lester-01/jasiri"
     },
     {
       "name": "fineract-rafiki-bridge-showcase",
-      "description": "Case study: Fineract \u2194 Rafiki Open Payments bridge \u2014 live site at fineract-rafiki.benlester.me",
-      "status": "idea",
-      "tags": [],
+      "description": "Case study: an Apache Fineract ledger bridged to Rafiki Open Payments so wallets move money over Interledger while the bank ledger stays source of truth. Three-bank sandbox, CI, and a short walkthrough. Write-up at fineract-rafiki.benlester.me; live sandbox on request.",
+      "status": "live",
+      "tags": [
+        "fineract",
+        "rafiki",
+        "payments",
+        "case-study"
+      ],
+      "languages": [
+        "Shell"
+      ],
       "private": false,
       "visibility": "public",
       "listed": true,
@@ -47,14 +67,27 @@
       "rank": 1200,
       "website": "https://fineract-rafiki.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-03T14:57:38Z",
+      "pushed_at": "2026-11-03T16:44:50Z",
       "html_url": "https://github.com/lester-01/fineract-rafiki-bridge-showcase"
     },
     {
       "name": "sinc_crm",
-      "description": "CRM for education agencies placing students abroad. Manage student inquiries, conversations, and application pipelines in one place. Sales team coordinates placements; managers oversee progress.",
-      "status": "idea",
-      "tags": [],
+      "description": "CRM for education agencies placing students abroad. Sales manage inquiries and chats; managers watch the application pipeline. React on Cloudflare Pages, Hono API on Workers, Supabase for auth and data. Live demo with seeded manager, sales, and client accounts.",
+      "status": "live",
+      "tags": [
+        "crm",
+        "education",
+        "cloudflare",
+        "supabase"
+      ],
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "Shell",
+        "PLpgSQL",
+        "CSS",
+        "HTML"
+      ],
       "private": false,
       "visibility": "public",
       "listed": true,
@@ -62,17 +95,23 @@
       "rank": 1300,
       "website": "https://sinc-crm.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-03T14:44:11Z",
+      "pushed_at": "2026-11-03T16:44:54Z",
       "html_url": "https://github.com/lester-01/sinc_crm"
     },
     {
       "name": "projects-command-center",
-      "description": "Private command center for project registry, agent rules, and workspace control \u2014 source of truth behind what-am-building.",
-      "status": "building",
+      "description": "Private command center for Ben Lester's GitHub work: repo inventory, status and tags, portable agent kit, and the allowlisted public projects board. Source of truth behind what-am-building and projects.benlester.me.",
+      "status": "live",
       "tags": [
         "docs",
         "ai",
-        "infra"
+        "infra",
+        "github"
+      ],
+      "languages": [
+        "Python",
+        "HTML",
+        "Shell"
       ],
       "private": true,
       "visibility": "private",
@@ -81,13 +120,21 @@
       "rank": 1400,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T15:00:59Z"
+      "pushed_at": "2026-11-03T16:43:04Z"
     },
     {
       "name": "youtube-commentguard",
-      "description": "YouTube comment moderation CLI via Data API v3",
-      "status": "idea",
-      "tags": [],
+      "description": "Go CLI for YouTube creators to delete, hide, or shadowban comments through Data API v3. OAuth once, then batch comment IDs to stretch daily quota. Usable MVP with rebuild notes; parked after the first cut.",
+      "status": "paused",
+      "tags": [
+        "youtube",
+        "go",
+        "cli",
+        "moderation"
+      ],
+      "languages": [
+        "Go"
+      ],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -95,13 +142,22 @@
       "rank": 1500,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T14:17:53Z"
+      "pushed_at": "2026-11-03T16:43:07Z"
     },
     {
       "name": "wireguard-without-encryption",
-      "description": "Private lab: WireGuard-shaped UDP tunnel without encryption for IoT speed assessment (both ends modded).",
-      "status": "idea",
-      "tags": [],
+      "description": "Lab fork of wireguard-go with optional flags that disable encryption on both peers. Measures whether a WireGuard-shaped cleartext UDP tunnel buys throughput or CPU on SBCs, phones, and cellular. Lab flags are not compatible with stock WireGuard.",
+      "status": "building",
+      "tags": [
+        "wireguard",
+        "networking",
+        "research",
+        "iot"
+      ],
+      "languages": [
+        "Shell",
+        "Python"
+      ],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -109,13 +165,18 @@
       "rank": 1600,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T14:17:55Z"
+      "pushed_at": "2026-11-03T16:43:09Z"
     },
     {
       "name": "universal-ev-evse-power-adapter-kit",
-      "description": "Hardware spec for a universal EVSE-to-AC power adapter kit (Type 2 / J1772).",
+      "description": "Hardware concept for a compact Type 2 / J1772 EVSE handshake adapter that extracts single-phase AC for RV and field loads (working name OAPE). Spec and architecture notes only\u2014no PCB, firmware, or BOM checkout yet.",
       "status": "idea",
-      "tags": [],
+      "tags": [
+        "hardware",
+        "ev",
+        "evse"
+      ],
+      "languages": [],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -123,13 +184,19 @@
       "rank": 1700,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T14:17:57Z"
+      "pushed_at": "2026-11-03T16:43:12Z"
     },
     {
       "name": "stealth-browser-anti-bot-automation-lab",
-      "description": "Private research on anti-bot detection layers and stealth browser automation.",
+      "description": "Private research notes on anti-bot detection: TLS/JA3, browser fingerprints, CDP tells, and behavioral entropy. Maps stealth frameworks and an escalation model for automation labs. Notes only\u2014no runnable harness in this repo yet.",
       "status": "idea",
-      "tags": [],
+      "tags": [
+        "research",
+        "browser",
+        "anti-bot",
+        "automation"
+      ],
+      "languages": [],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -137,13 +204,18 @@
       "rank": 1800,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T14:17:59Z"
+      "pushed_at": "2026-11-03T16:43:15Z"
     },
     {
       "name": "startup-devops-masterclass",
-      "description": "Syllabus for a hands-on localhost-to-production DevOps tutorial series.",
+      "description": "Syllabus and technical blueprint for a hands-on series: Git, GitHub Actions, Docker, and taking a small app from localhost to production. Separate from ai-engineering-from-scratch. Outline stage\u2014recorded lessons not shipped yet.",
       "status": "idea",
-      "tags": [],
+      "tags": [
+        "devops",
+        "education",
+        "syllabus"
+      ],
+      "languages": [],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -151,13 +223,24 @@
       "rank": 1900,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T14:18:01Z"
+      "pushed_at": "2026-11-03T16:43:17Z"
     },
     {
       "name": "signalstack",
-      "description": "Realtime fullstack chat platform built with Go(backend), React/Next.js(frontend), and WebSockets. Developed to showcase scalable realtime architecture, bidirectional communication, and modern fullstack engineering.",
-      "status": "idea",
-      "tags": [],
+      "description": "Realtime chat demo in Go and Next.js. Hub-client WebSockets, public and private routing, graceful shutdown, and exponential-backoff reconnect. Built to show concurrent connection patterns\u2014not a consumer chat product.",
+      "status": "live",
+      "tags": [
+        "go",
+        "websocket",
+        "nextjs",
+        "realtime"
+      ],
+      "languages": [
+        "TypeScript",
+        "Go",
+        "CSS",
+        "JavaScript"
+      ],
       "private": false,
       "visibility": "public",
       "listed": true,
@@ -165,14 +248,19 @@
       "rank": 2000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T14:18:03Z",
+      "pushed_at": "2026-11-03T16:43:20Z",
       "html_url": "https://github.com/lester-01/signalstack"
     },
     {
       "name": "laptop-power-bank",
-      "description": "Hardware blueprints for a high-density laptop power bank (Stealth Brick).",
+      "description": "Hardware blueprints for a high-density laptop power bank (Stealth Brick): 4S pack, power-path switching, Dell ID pin, and USB-C PD. Draft design notes only\u2014no finalized BOM or enclosure CAD yet.",
       "status": "idea",
-      "tags": [],
+      "tags": [
+        "hardware",
+        "battery",
+        "usb-c"
+      ],
+      "languages": [],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -180,16 +268,23 @@
       "rank": 2100,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T14:18:05Z"
+      "pushed_at": "2026-11-03T16:43:22Z"
     },
     {
       "name": "android-ai-agent-environment",
-      "description": "One Android APK that gives an AI agent a persistent Linux environment, terminal, and shared workspace on the phone.",
+      "description": "Private source for the Jasiri Android APK: agent runtime, persistent Linux prefix, terminal, and shared chat workspaces on the phone. Play-bound applicationId app.jasiri. Public site and sideload releases live in the jasiri repo.",
       "status": "building",
       "tags": [
         "android",
         "ai",
         "termux"
+      ],
+      "languages": [
+        "Kotlin",
+        "Java",
+        "JavaScript",
+        "Shell",
+        "C"
       ],
       "private": true,
       "visibility": "private",
@@ -198,13 +293,20 @@
       "rank": 2200,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T14:18:06Z"
+      "pushed_at": "2026-11-03T16:43:25Z"
     },
     {
       "name": "youtube-comments-scraper",
-      "description": "Scrape YouTube comments into CSV and SQLite",
-      "status": "idea",
-      "tags": [],
+      "description": "Python tool that scrapes YouTube comments with yt-dlp into CSV and SQLite. Can watch channels for new videos and refresh comment tables on a timer. Small POC seed\u2014not a packaged product.",
+      "status": "paused",
+      "tags": [
+        "youtube",
+        "python",
+        "scraping"
+      ],
+      "languages": [
+        "Python"
+      ],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -212,13 +314,22 @@
       "rank": 7100,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:28:38Z"
+      "pushed_at": "2026-11-03T16:43:27Z"
     },
     {
       "name": "termux-cursor",
-      "description": "Cursor Agent CLI natively on Termux (Android ARM64) \u2014 no proot, no container, no glibc shenanigans.",
-      "status": "idea",
-      "tags": [],
+      "description": "Run Cursor Agent CLI natively on Termux (Android ARM64). Rebuilds Bionic native addons, stubs proprietary ones, and installs durable launchers\u2014no proot, no glibc userland. Re-run apply-patches after each agent update.",
+      "status": "live",
+      "tags": [
+        "termux",
+        "android",
+        "cursor",
+        "cli"
+      ],
+      "languages": [
+        "Shell",
+        "JavaScript"
+      ],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -226,13 +337,20 @@
       "rank": 7300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:28:42Z"
+      "pushed_at": "2026-11-03T16:43:31Z"
     },
     {
       "name": "telegram-notifications-bot",
-      "description": "Go Telegram bot for registration and notification workflows",
-      "status": "idea",
-      "tags": [],
+      "description": "Small Go Telegram bot that checks a registration API and notifies users. Secrets load from .env. Early scaffold with the registration flow in place; not under active development.",
+      "status": "paused",
+      "tags": [
+        "telegram",
+        "go",
+        "bot"
+      ],
+      "languages": [
+        "Go"
+      ],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -240,13 +358,21 @@
       "rank": 7500,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:28:45Z"
+      "pushed_at": "2026-11-03T16:43:33Z"
     },
     {
       "name": "rpi-phone-kiosk",
-      "description": "Raspberry Pi OS Lite phone-mirroring kiosk: Cage, scrcpy, ADB, least-privilege kiosk user.",
-      "status": "idea",
-      "tags": [],
+      "description": "Turn a Raspberry Pi OS Lite box into a phone-mirroring kiosk with Cage, scrcpy, and ADB. Modules cover a power-isolating USB Y-cable, udev attach, and a least-privilege kiosk user. Docs-first appliance build.",
+      "status": "building",
+      "tags": [
+        "raspberry-pi",
+        "android",
+        "kiosk",
+        "scrcpy"
+      ],
+      "languages": [
+        "Shell"
+      ],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -254,13 +380,21 @@
       "rank": 7700,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:28:50Z"
+      "pushed_at": "2026-11-03T16:43:36Z"
     },
     {
       "name": "quic-inside-linux-kernel",
-      "description": "C-first Linux kernel QUIC research (MsQuic + lxin references)",
-      "status": "idea",
-      "tags": [],
+      "description": "C-first research toward a Linux in-kernel QUIC datapath that can match top userspace stacks on throughput while keeping kernel CPU costs low. Uses MsQuic and lxin/quic as references; includes lab benches and design notes.",
+      "status": "building",
+      "tags": [
+        "quic",
+        "linux",
+        "kernel",
+        "networking"
+      ],
+      "languages": [
+        "C"
+      ],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -268,13 +402,21 @@
       "rank": 8000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:28:56Z"
+      "pushed_at": "2026-11-03T16:43:39Z"
     },
     {
       "name": "quant-research-lab",
-      "description": "Quantitative trading research lab: MT5 as a data/execution pipe, Python core, DuckDB ticks.",
-      "status": "idea",
-      "tags": [],
+      "description": "Quantitative trading research lab: MetaTrader 5 as a dumb tick and execution pipe, Python for ingestion and backtests, DuckDB for storage. Replaces the marketlab-ai stub. Tick collector lands first; strategy work follows.",
+      "status": "building",
+      "tags": [
+        "trading",
+        "python",
+        "mt5",
+        "duckdb"
+      ],
+      "languages": [
+        "Python"
+      ],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -282,13 +424,21 @@
       "rank": 8100,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:28:57Z"
+      "pushed_at": "2026-11-03T16:43:41Z"
     },
     {
       "name": "opencode-termux",
-      "description": "OpenCode AI coding agent prebuilt for Termux Android ARM64",
-      "status": "idea",
-      "tags": [],
+      "description": "Prebuilt OpenCode AI coding agent for Termux Android ARM64, plus a build script that compiles with Termux's patched Go. Avoids the faccessat2 crash from official linux/arm64 binaries. Packaging only\u2014upstream is opencode-ai/opencode.",
+      "status": "paused",
+      "tags": [
+        "termux",
+        "android",
+        "ai",
+        "go"
+      ],
+      "languages": [
+        "Shell"
+      ],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -296,18 +446,24 @@
       "rank": 8200,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:00Z"
+      "pushed_at": "2026-11-03T16:43:44Z"
     },
     {
       "name": "natbridge",
-      "description": "natbridge v6 \u2014 reverse SOCKS5/HTTP relay over QUIC",
+      "description": "Reverse SOCKS5/HTTP relay over QUIC for hosts behind NAT. An egress dials a public relay; clients use the relay as a normal proxy while traffic exits from the egress. Go PoC with scripted iperf labs; still in active development.",
       "status": "building",
       "tags": [
         "go",
         "networking",
         "proxy",
-        "cli",
-        "quic"
+        "quic",
+        "cli"
+      ],
+      "languages": [
+        "Go",
+        "Shell",
+        "Rust",
+        "Python"
       ],
       "private": true,
       "visibility": "private",
@@ -316,13 +472,19 @@
       "rank": 8300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:02Z"
+      "pushed_at": "2026-11-03T16:41:40Z"
     },
     {
       "name": "multiplexed-proxy-transport",
-      "description": "Design notes for multiplexed TCP/UDP forward and reverse proxy transport",
+      "description": "Design notes for a multiplexed forward and reverse proxy transport for TCP and UDP. Covers QUIC stream and datagram preferences, TCP fallback, auth, and Android/Windows clients. Concept stage \u2014 no implementation in this repo.",
       "status": "idea",
-      "tags": [],
+      "tags": [
+        "networking",
+        "proxy",
+        "quic",
+        "design"
+      ],
+      "languages": [],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -330,13 +492,25 @@
       "rank": 8400,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:04Z"
+      "pushed_at": "2026-11-03T16:41:44Z"
     },
     {
       "name": "iperf3-proxy",
-      "description": "iperf3 fork scaffold: SOCKS5 and HTTP CONNECT proxy support for proxy labs",
-      "status": "idea",
-      "tags": [],
+      "description": "Fork scaffold of iperf3 with planned SOCKS5 and HTTP CONNECT support on the client. Meant for measuring throughput through real proxies and reverse tunnels without a separate port-forward helper. Upstream snapshot is vendored; proxy paths are still being built.",
+      "status": "building",
+      "tags": [
+        "iperf",
+        "proxy",
+        "networking",
+        "c",
+        "lab"
+      ],
+      "languages": [
+        "C",
+        "Shell",
+        "Makefile",
+        "Python"
+      ],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -344,13 +518,19 @@
       "rank": 8500,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:06Z"
+      "pushed_at": "2026-11-03T16:41:48Z"
     },
     {
       "name": "guardian-agent",
-      "description": "Blueprint for a tri-tier Facebook group moderation assistant.",
+      "description": "Blueprint for GuardianAgent: a tri-tier Facebook group moderation assistant. Paths cover a Chrome extension, a local Chromium wrapper, and a cloud browser instance. Concept and architecture only \u2014 no product code in this repo yet.",
       "status": "idea",
-      "tags": [],
+      "tags": [
+        "facebook",
+        "moderation",
+        "browser-automation",
+        "blueprint"
+      ],
+      "languages": [],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -358,13 +538,23 @@
       "rank": 8700,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:09Z"
+      "pushed_at": "2026-11-03T16:41:51Z"
     },
     {
       "name": "google-gce-spot-vms-provisioner",
-      "description": "Creates spot vms in your google cloud account,with option to set maximum runtime of the vm e.g. 2 hours. I created this specifically for ai agents to be able to spi up vms to run ci/cd or tests on, and delete when done. the max runtime ensures if the ai agent forgets to delete the vm, it gets deleted automatically(this has downside too)",
-      "status": "idea",
-      "tags": [],
+      "description": "CLI that creates short-lived Google Compute Engine VMs for tests, batch jobs, and AI agents. Spot by default, required max run time, SSH key minting, and disks deleted with the VM so forgotten instances do not linger. Python tool (`gce-vm`); still gaining features from the roadmap.",
+      "status": "building",
+      "tags": [
+        "gcp",
+        "python",
+        "cli",
+        "spot-vms",
+        "ai-agents"
+      ],
+      "languages": [
+        "Python",
+        "Shell"
+      ],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -372,13 +562,23 @@
       "rank": 8800,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:11Z"
+      "pushed_at": "2026-11-03T16:41:55Z"
     },
     {
       "name": "flask-mysql-car-rental",
-      "description": "Flask + MySQL car rental management system with roles and SQL",
-      "status": "idea",
-      "tags": [],
+      "description": "Flask + MySQL car rental management app with roles for managers, receptionists, and customers. Covers rentals, payments, and SQL schema/sample data. Learning / course project; not under active product development.",
+      "status": "paused",
+      "tags": [
+        "flask",
+        "mysql",
+        "python",
+        "learning",
+        "web"
+      ],
+      "languages": [
+        "HTML",
+        "Python"
+      ],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -386,13 +586,23 @@
       "rank": 9000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:16Z"
+      "pushed_at": "2026-11-03T16:41:58Z"
     },
     {
       "name": "cursor-termux",
-      "description": "Cursor Agent CLI on Termux (Android ARM64) \u2014 native TUI, resume, and worker mode",
-      "status": "idea",
-      "tags": [],
+      "description": "Run the Cursor Agent CLI natively on Termux (Android ARM64) \u2014 no proot or glibc chroot. Supports the interactive TUI, login/resume, and phone-as-cloud-worker mode. Installer plus patch scripts for node-pty, SQLite, and Android tmp quirks.",
+      "status": "live",
+      "tags": [
+        "android",
+        "termux",
+        "cursor",
+        "cli",
+        "arm64"
+      ],
+      "languages": [
+        "Shell",
+        "JavaScript"
+      ],
       "private": false,
       "visibility": "public",
       "listed": true,
@@ -400,14 +610,21 @@
       "rank": 9100,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:18Z",
+      "pushed_at": "2026-11-03T16:42:02Z",
       "html_url": "https://github.com/lester-01/cursor-termux"
     },
     {
       "name": "android-headless-chromium",
-      "description": "Research notes for a headless Chromium on Android that Playwright or Selenium can drive. Not a build yet.",
+      "description": "Research notes for a full Chromium on Android that Playwright or Selenium can drive over CDP, including a path toward headless/off-screen use. Not a build, fork, or library yet. Working order starts with a loopback debugging port.",
       "status": "idea",
-      "tags": [],
+      "tags": [
+        "android",
+        "chromium",
+        "research",
+        "playwright",
+        "cdp"
+      ],
+      "languages": [],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -415,13 +632,20 @@
       "rank": 9200,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:20Z"
+      "pushed_at": "2026-11-03T16:42:06Z"
     },
     {
       "name": "android-adb-fleet-manager",
-      "description": "Self-healing Android ADB device lab / fleet reliability for cellular browser automation.",
+      "description": "Planned self-healing Android ADB device lab for cellular browser automation. Goal: keep USB-connected phones reliable for Playwright/CDP fleets (reconnect, health checks, recovery). Requirements captured; implementation not started.",
       "status": "idea",
-      "tags": [],
+      "tags": [
+        "android",
+        "adb",
+        "fleet",
+        "automation",
+        "playwright"
+      ],
+      "languages": [],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -429,13 +653,23 @@
       "rank": 9300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:22Z"
+      "pushed_at": "2026-11-03T16:42:10Z"
     },
     {
       "name": "ai-content-moderation",
-      "description": "FastAPI service for Hugging Face comment-moderation classification",
-      "status": "idea",
-      "tags": [],
+      "description": "Small HTTP service that scores comment text with a Hugging Face sequence-classification model. Starlette/uvicorn API with local or Hub model load, plus Termux-oriented install notes. Prototype for offline-friendly moderation scoring.",
+      "status": "building",
+      "tags": [
+        "python",
+        "moderation",
+        "huggingface",
+        "fastapi",
+        "nlp"
+      ],
+      "languages": [
+        "Python",
+        "Shell"
+      ],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -443,13 +677,20 @@
       "rank": 9400,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:24Z"
+      "pushed_at": "2026-11-03T16:42:14Z"
     },
     {
       "name": "ai-agent-harness-research",
-      "description": "A hands-on research and prototyping sandbox dedicated to studying open-source AI agent coding harnesses\u2014focusing on terminal tool-calling execution and native Linux environment integration.",
+      "description": "Research sandbox for studying open-source AI coding agent harnesses. Focus: terminal tool-calling, PTY/tmux integration, token budgets, and compaction. Seed repo \u2014 planned third_party references and notes; little code checked in yet.",
       "status": "idea",
-      "tags": [],
+      "tags": [
+        "ai",
+        "agents",
+        "research",
+        "harness",
+        "linux"
+      ],
+      "languages": [],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -457,13 +698,19 @@
       "rank": 9500,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:26Z"
+      "pushed_at": "2026-11-03T16:42:18Z"
     },
     {
       "name": "remoteTerminal",
-      "description": "remote Linux terminal access over websocket connection. No ssh used. Works even without public IP(NAT).check README for more details",
+      "description": "Concept for remote Linux terminal access over WebSocket without SSH, including hosts behind NAT. README outlines use cases and security questions. Seed only \u2014 superseded in spirit by later PTY host work.",
       "status": "idea",
-      "tags": [],
+      "tags": [
+        "websocket",
+        "terminal",
+        "networking",
+        "nat"
+      ],
+      "languages": [],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -471,13 +718,23 @@
       "rank": 9600,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:28Z"
+      "pushed_at": "2026-11-03T16:42:21Z"
     },
     {
       "name": "nodered-mqtt-esp32-dashboard",
-      "description": "A project on IOT, showcasing how node-red can be used to build a dashboard for display and control of iot devices like the esp32. mqtt is used as it is the go-to solution for most iot projects.",
-      "status": "idea",
-      "tags": [],
+      "description": "IoT demo: Node-RED dashboard plus Mosquitto MQTT for display and control of devices such as ESP32. Docker Compose brings up Node-RED and the broker; flows and screenshots are included. Working showcase; documentation and secrets hygiene are incomplete.",
+      "status": "paused",
+      "tags": [
+        "iot",
+        "mqtt",
+        "nodered",
+        "esp32",
+        "docker"
+      ],
+      "languages": [
+        "JavaScript",
+        "Shell"
+      ],
       "private": false,
       "visibility": "public",
       "listed": true,
@@ -485,14 +742,23 @@
       "rank": 9700,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:30Z",
+      "pushed_at": "2026-11-03T16:42:26Z",
       "html_url": "https://github.com/lester-01/nodered-mqtt-esp32-dashboard"
     },
     {
       "name": "go_usb_modeswitch",
-      "description": "A wrapper around usb-modeswitch package in linux,using go language. Runs in background, switching Huawei USB dongles from storage mode to modem mode",
-      "status": "idea",
-      "tags": [],
+      "description": "Small Go helper around Linux usb-modeswitch. Watches for Huawei USB dongles in mass-storage mode and switches them to modem mode in the background. Utility for modem/proxy lab hosts; not under active development.",
+      "status": "paused",
+      "tags": [
+        "go",
+        "usb",
+        "modem",
+        "linux",
+        "huawei"
+      ],
+      "languages": [
+        "Go"
+      ],
       "private": false,
       "visibility": "public",
       "listed": true,
@@ -500,14 +766,21 @@
       "rank": 9800,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:32Z",
+      "pushed_at": "2026-11-03T16:42:30Z",
       "html_url": "https://github.com/lester-01/go_usb_modeswitch"
     },
     {
       "name": "ai-file-manager",
-      "description": "An AI-powered personal file manager for understanding, searching, organizing, and managing photos, videos, documents, and other digital files.",
+      "description": "Product notes for an AI-assisted personal file manager: understand photos, videos, and documents enough to dedupe, suggest folders, and search by memory (\u201cvideo next to a red car\u201d). Starts with phone gallery cleanup. Concept and requirements only \u2014 no app code yet.",
       "status": "idea",
-      "tags": [],
+      "tags": [
+        "ai",
+        "files",
+        "gallery",
+        "personal",
+        "search"
+      ],
+      "languages": [],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -515,13 +788,20 @@
       "rank": 10200,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:40Z"
+      "pushed_at": "2026-11-03T16:42:33Z"
     },
     {
       "name": "ai-engineering-from-scratch",
-      "description": "Build ai assistant platform from bare fundamentals, covering everything from ai chatbots,RAG, semantic search, tool calling, web search to harness. by the end of the series, you will have all the building blocks to build most ai systems e.g. lightweight openclaw, website chatbots for companies using their internal data etc",
+      "description": "Hands-on series plan to build an AI assistant platform from fundamentals: chat, RAG, semantic search, tool calling, web search, and a lightweight harness. Target outcomes include internal-data chatbots and small agent systems. Curriculum/outline stage.",
       "status": "idea",
-      "tags": [],
+      "tags": [
+        "ai",
+        "education",
+        "rag",
+        "agents",
+        "series"
+      ],
+      "languages": [],
       "private": true,
       "visibility": "private",
       "listed": true,
@@ -529,17 +809,25 @@
       "rank": 10300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:43Z"
+      "pushed_at": "2026-11-03T16:42:37Z"
     },
     {
       "name": "pty-shuttle",
-      "description": "PTY host with thin clients. Spawn TUI programs and attach from the CLI, Android, or a browser.",
+      "description": "PTY host with thin clients: spawn TUI programs (or a shell) and attach from CLI, Android, or a browser. Unix socket and WebSocket shuttles; not a cloud IDE and not an agent harness. Phases 0\u20133 done (host, LAN WebSocket, Android PoC); more RPC/status work planned.",
       "status": "building",
       "tags": [
         "python",
         "android",
         "cli",
-        "web"
+        "web",
+        "pty"
+      ],
+      "languages": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML",
+        "Shell"
       ],
       "private": true,
       "visibility": "private",
@@ -548,7 +836,7 @@
       "rank": 10500,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T13:29:45Z"
+      "pushed_at": "2026-11-03T16:42:40Z"
     }
   ]
 }
