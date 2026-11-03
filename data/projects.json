@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T17:38:21Z",
+  "generated_at": "2026-11-03T18:13:14Z",
   "projects": [
     {
       "name": "proxyhut",
@@ -99,19 +99,18 @@
       "html_url": "https://github.com/lester-01/sinc_crm"
     },
     {
-      "name": "projects-command-center",
-      "description": "Private command center for Ben Lester's GitHub work: repo inventory, status and tags, portable agent kit, and the allowlisted public projects board. Source of truth behind what-am-building and projects.benlester.me.",
-      "status": "live",
+      "name": "wireguard-without-encryption",
+      "description": "Lab research on WireGuard for constrained IoT and SBC devices that lack hardware crypto acceleration. Measures CPU and throughput when both peers optionally skip transport encryption on hops you own. PC results: about 42% lower per-packet time; fast VM tunnels show little gain. Phone and board field work still open. Lab only\u2014not a production VPN.",
+      "status": "building",
       "tags": [
-        "docs",
-        "ai",
-        "infra",
-        "github"
+        "wireguard",
+        "networking",
+        "research",
+        "iot"
       ],
       "languages": [
-        "Python",
-        "HTML",
-        "Shell"
+        "Shell",
+        "Python"
       ],
       "private": true,
       "visibility": "private",
@@ -120,7 +119,33 @@
       "rank": 1400,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T16:52:35Z"
+      "pushed_at": "2026-11-03T18:12:47Z"
+    },
+    {
+      "name": "signalstack",
+      "description": "Realtime chat demo in Go and Next.js. Hub-client WebSockets, public and private routing, graceful shutdown, and exponential-backoff reconnect. Built to show concurrent connection patterns\u2014not a consumer chat product.",
+      "status": "live",
+      "tags": [
+        "go",
+        "websocket",
+        "nextjs",
+        "realtime"
+      ],
+      "languages": [
+        "TypeScript",
+        "Go",
+        "CSS",
+        "JavaScript"
+      ],
+      "private": false,
+      "visibility": "public",
+      "listed": true,
+      "featured": true,
+      "rank": 1500,
+      "website": null,
+      "fork": false,
+      "pushed_at": "2026-11-03T18:12:49Z",
+      "html_url": "https://github.com/lester-01/signalstack"
     },
     {
       "name": "youtube-commentguard",
@@ -139,10 +164,10 @@
       "visibility": "private",
       "listed": true,
       "featured": true,
-      "rank": 1500,
+      "rank": 1600,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T16:43:07Z"
+      "pushed_at": "2026-11-03T18:12:53Z"
     },
     {
       "name": "universal-ev-evse-power-adapter-kit",
@@ -201,32 +226,6 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-03T16:43:17Z"
-    },
-    {
-      "name": "signalstack",
-      "description": "Realtime chat demo in Go and Next.js. Hub-client WebSockets, public and private routing, graceful shutdown, and exponential-backoff reconnect. Built to show concurrent connection patterns\u2014not a consumer chat product.",
-      "status": "live",
-      "tags": [
-        "go",
-        "websocket",
-        "nextjs",
-        "realtime"
-      ],
-      "languages": [
-        "TypeScript",
-        "Go",
-        "CSS",
-        "JavaScript"
-      ],
-      "private": false,
-      "visibility": "public",
-      "listed": true,
-      "featured": true,
-      "rank": 2000,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T16:43:20Z",
-      "html_url": "https://github.com/lester-01/signalstack"
     },
     {
       "name": "laptop-power-bank",
@@ -427,26 +426,6 @@
       "pushed_at": "2026-11-03T16:41:40Z"
     },
     {
-      "name": "multiplexed-proxy-transport",
-      "description": "Design notes for a multiplexed forward and reverse proxy transport for TCP and UDP. Covers QUIC stream and datagram preferences, TCP fallback, auth, and Android/Windows clients. Concept stage \u2014 no implementation in this repo.",
-      "status": "idea",
-      "tags": [
-        "networking",
-        "proxy",
-        "quic",
-        "design"
-      ],
-      "languages": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 8400,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T16:41:44Z"
-    },
-    {
       "name": "iperf3-proxy",
       "description": "Fork scaffold of iperf3 with planned SOCKS5 and HTTP CONNECT support on the client. Meant for measuring throughput through real proxies and reverse tunnels without a separate port-forward helper. Upstream snapshot is vendored; proxy paths are still being built.",
       "status": "building",
@@ -517,6 +496,30 @@
       "pushed_at": "2026-11-03T16:41:55Z"
     },
     {
+      "name": "projects-command-center",
+      "description": "I use this private hub to inventory my GitHub repos, track status and tags, ship a portable agent kit, and publish the allowlisted public board (what-am-building / projects.benlester.me).",
+      "status": "live",
+      "tags": [
+        "docs",
+        "ai",
+        "infra",
+        "github"
+      ],
+      "languages": [
+        "Python",
+        "HTML",
+        "Shell"
+      ],
+      "private": true,
+      "visibility": "private",
+      "listed": true,
+      "featured": false,
+      "rank": 9000,
+      "website": null,
+      "fork": false,
+      "pushed_at": "2026-11-03T18:12:51Z"
+    },
+    {
       "name": "cursor-termux",
       "description": "Run the Cursor Agent CLI natively on Termux (Android ARM64) \u2014 no proot or glibc chroot. Supports the interactive TUI, login/resume, and phone-as-cloud-worker mode. Installer plus patch scripts for node-pty, SQLite, and Android tmp quirks.",
       "status": "live",
@@ -542,48 +545,6 @@
       "html_url": "https://github.com/lester-01/cursor-termux"
     },
     {
-      "name": "android-headless-chromium",
-      "description": "Research notes for a full Chromium on Android that Playwright or Selenium can drive over CDP, including a path toward headless/off-screen use. Not a build, fork, or library yet. Working order starts with a loopback debugging port.",
-      "status": "idea",
-      "tags": [
-        "android",
-        "chromium",
-        "research",
-        "playwright",
-        "cdp"
-      ],
-      "languages": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 9200,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T16:42:06Z"
-    },
-    {
-      "name": "android-adb-fleet-manager",
-      "description": "Planned self-healing Android ADB device lab for cellular browser automation. Goal: keep USB-connected phones reliable for Playwright/CDP fleets (reconnect, health checks, recovery). Requirements captured; implementation not started.",
-      "status": "idea",
-      "tags": [
-        "android",
-        "adb",
-        "fleet",
-        "automation",
-        "playwright"
-      ],
-      "languages": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 9300,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T16:42:10Z"
-    },
-    {
       "name": "ai-content-moderation",
       "description": "Small HTTP service that scores comment text with a Hugging Face sequence-classification model. Starlette/uvicorn API with local or Hub model load, plus Termux-oriented install notes. Prototype for offline-friendly moderation scoring.",
       "status": "building",
@@ -606,27 +567,6 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-03T16:42:14Z"
-    },
-    {
-      "name": "ai-agent-harness-research",
-      "description": "Research sandbox for studying open-source AI coding agent harnesses. Focus: terminal tool-calling, PTY/tmux integration, token budgets, and compaction. Seed repo \u2014 planned third_party references and notes; little code checked in yet.",
-      "status": "idea",
-      "tags": [
-        "ai",
-        "agents",
-        "research",
-        "harness",
-        "linux"
-      ],
-      "languages": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 9500,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T16:42:18Z"
     },
     {
       "name": "remoteTerminal",
@@ -672,30 +612,6 @@
       "fork": false,
       "pushed_at": "2026-11-03T16:42:26Z",
       "html_url": "https://github.com/lester-01/nodered-mqtt-esp32-dashboard"
-    },
-    {
-      "name": "go_usb_modeswitch",
-      "description": "Small Go helper around Linux usb-modeswitch. Watches for Huawei USB dongles in mass-storage mode and switches them to modem mode in the background. Utility for modem/proxy lab hosts; not under active development.",
-      "status": "paused",
-      "tags": [
-        "go",
-        "usb",
-        "modem",
-        "linux",
-        "huawei"
-      ],
-      "languages": [
-        "Go"
-      ],
-      "private": false,
-      "visibility": "public",
-      "listed": true,
-      "featured": false,
-      "rank": 9800,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T16:42:30Z",
-      "html_url": "https://github.com/lester-01/go_usb_modeswitch"
     },
     {
       "name": "ai-file-manager",
@@ -767,28 +683,6 @@
       "pushed_at": "2026-11-03T16:42:40Z"
     },
     {
-      "name": "socks5-reverse-tunnel-yamux",
-      "description": "Reverse SOCKS5 tunnel using HashiCorp yamux: public VPS server plus NAT-side client. Supports CONNECT and UDP ASSOCIATE over a multiplexed control session. Current preferred variant of the reverse-tunnel experiments.",
-      "status": "building",
-      "tags": [
-        "go",
-        "socks5",
-        "yamux",
-        "reverse-tunnel"
-      ],
-      "languages": [
-        "Go"
-      ],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 10600,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T17:38:16Z"
-    },
-    {
       "name": "socks5server-go",
       "description": "Go SOCKS5 server with optional reverse-tunnel relay for TCP CONNECT and UDP ASSOCIATE. Work tool for exposing a NAT-side proxy through a public peer. Related to the socks5-reverse-tunnel* experiments.",
       "status": "building",
@@ -809,29 +703,6 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-03T17:38:18Z"
-    },
-    {
-      "name": "socks5-reverse-tunnel",
-      "description": "Go SOCKS5 over a reverse tunnel: public VPS accepts SOCKS clients; NAT-side host runs the SOCKS5 server and dials out. Spec plus tunnel.go and socks5.go. Sibling yamux and handrolled variants exist.",
-      "status": "building",
-      "tags": [
-        "go",
-        "socks5",
-        "tunnel",
-        "proxy",
-        "networking"
-      ],
-      "languages": [
-        "Go"
-      ],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 10800,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T17:38:20Z"
     }
   ]
 }
