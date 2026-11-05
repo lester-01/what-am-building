@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T00:55:28Z",
+  "generated_at": "2026-11-05T09:57:54Z",
   "projects": [
     {
       "name": "proxyhut",
@@ -288,7 +288,7 @@
       "rank": 7300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-05T00:54:16Z"
+      "pushed_at": "2026-11-05T01:22:00Z"
     },
     {
       "name": "telegram-notifications-bot",
@@ -517,7 +517,7 @@
       "rank": 9000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-04T10:36:02Z"
+      "pushed_at": "2026-11-05T00:56:49Z"
     },
     {
       "name": "cursor-termux",
@@ -587,31 +587,6 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-03T16:42:21Z"
-    },
-    {
-      "name": "nodered-mqtt-esp32-dashboard",
-      "description": "IoT demo: Node-RED dashboard plus Mosquitto MQTT for display and control of devices such as ESP32. Docker Compose brings up Node-RED and the broker; flows and screenshots are included. Working showcase; documentation and secrets hygiene are incomplete.",
-      "status": "paused",
-      "tags": [
-        "iot",
-        "mqtt",
-        "nodered",
-        "esp32",
-        "docker"
-      ],
-      "languages": [
-        "JavaScript",
-        "Shell"
-      ],
-      "private": false,
-      "visibility": "public",
-      "listed": true,
-      "featured": false,
-      "rank": 9700,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-03T16:42:26Z",
-      "html_url": "https://github.com/lester-01/nodered-mqtt-esp32-dashboard"
     },
     {
       "name": "ai-file-manager",
