@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T09:41:46Z",
+  "generated_at": "2026-11-08T09:56:01Z",
   "projects": [
     {
       "name": "proxyhut",
@@ -288,7 +288,7 @@
       "rank": 7300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-06T14:00:27Z"
+      "pushed_at": "2026-11-07T12:44:42Z"
     },
     {
       "name": "telegram-notifications-bot",
@@ -517,7 +517,7 @@
       "rank": 9000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-06T10:30:25Z"
+      "pushed_at": "2026-11-07T09:43:06Z"
     },
     {
       "name": "cursor-termux",
