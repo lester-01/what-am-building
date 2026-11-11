@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T10:50:30Z",
+  "generated_at": "2026-11-11T10:27:44Z",
   "projects": [
     {
       "name": "proxyhut",
@@ -288,7 +288,7 @@
       "rank": 7300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-09T15:45:32Z"
+      "pushed_at": "2026-11-10T14:40:04Z"
     },
     {
       "name": "telegram-notifications-bot",
@@ -517,7 +517,7 @@
       "rank": 9000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-09T11:01:22Z"
+      "pushed_at": "2026-11-10T10:52:03Z"
     },
     {
       "name": "cursor-termux",
@@ -534,15 +534,14 @@
         "Shell",
         "JavaScript"
       ],
-      "private": false,
-      "visibility": "public",
+      "private": true,
+      "visibility": "private",
       "listed": true,
       "featured": false,
       "rank": 9100,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T16:42:02Z",
-      "html_url": "https://github.com/lester-01/cursor-termux"
+      "pushed_at": "2026-11-10T22:25:48Z"
     },
     {
       "name": "ai-content-moderation",
