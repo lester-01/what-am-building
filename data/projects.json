@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T10:27:44Z",
+  "generated_at": "2026-11-12T10:43:52Z",
   "projects": [
     {
       "name": "proxyhut",
@@ -517,7 +517,7 @@
       "rank": 9000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-10T10:52:03Z"
+      "pushed_at": "2026-11-11T10:29:08Z"
     },
     {
       "name": "cursor-termux",
