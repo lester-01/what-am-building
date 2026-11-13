@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T10:43:52Z",
+  "generated_at": "2026-11-13T10:39:30Z",
   "projects": [
     {
       "name": "proxyhut",
@@ -288,7 +288,7 @@
       "rank": 7300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-10T14:40:04Z"
+      "pushed_at": "2026-11-12T14:58:20Z"
     },
     {
       "name": "telegram-notifications-bot",
@@ -493,7 +493,7 @@
       "rank": 8800,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T16:41:55Z"
+      "pushed_at": "2026-11-12T18:00:07Z"
     },
     {
       "name": "projects-command-center",
@@ -517,7 +517,7 @@
       "rank": 9000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-11T10:29:08Z"
+      "pushed_at": "2026-11-12T10:45:12Z"
     },
     {
       "name": "cursor-termux",
