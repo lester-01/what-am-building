@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T16:29:45Z",
+  "generated_at": "2026-11-26T19:29:31Z",
   "extras_min_rank": 9000,
   "projects": [
     {
@@ -49,14 +49,14 @@
       "rank": 1100,
       "website": "https://jasiri.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T04:18:41Z",
+      "pushed_at": "2026-11-26T19:28:23Z",
       "extra": false,
       "display_name": "Jasiri",
       "html_url": "https://github.com/lester-01/jasiri"
     },
     {
       "name": "jasiri-apt",
-      "description": "A public Debian-style apt repository at apt.benlester.me with downloadable .deb releases (aarch64 and x86_64), serving Linux packages rebuilt for Jasiri, the Android app with a built-in Linux system and AI assistant. Add the source, run apt update, install.",
+      "description": "The public apt repository for the Jasiri Linux system, which runs on Android phones. A signed Debian-style repository at apt.benlester.me with downloadable .deb releases for aarch64 and x86_64, built and published with a Go pipeline. Add the source, run apt update, install.",
       "status": "live",
       "tags": [
         "apt",
@@ -73,7 +73,7 @@
       "rank": 1200,
       "website": "https://jasiri.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T15:48:10Z",
+      "pushed_at": "2026-11-26T19:27:52Z",
       "extra": false,
       "display_name": "Jasiri apt repository",
       "html_url": "https://github.com/lester-01/jasiri-apt"
@@ -161,29 +161,6 @@
       "display_name": "SignalStack",
       "demo": "local",
       "html_url": "https://github.com/lester-01/signalstack"
-    },
-    {
-      "name": "termux-prefix-patch",
-      "description": "Go tool that patches official Termux .deb packages to install under app.jasiri with plain dpkg, skipping a full recompile. Builds, signs and publishes a signed apt catalog at apt.benlester.me: about 5,400 package entries each for aarch64 and x86_64. Resumable pipeline, 26 test files. Scheduled daily CI planned.",
-      "status": "live",
-      "tags": [
-        "apt",
-        "packaging",
-        "termux",
-        "linux",
-        "go"
-      ],
-      "languages": [],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 2000,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-26T16:15:37Z",
-      "extra": false,
-      "display_name": "Jasiri package patcher"
     },
     {
       "name": "wireguard-without-encryption",
@@ -471,7 +448,7 @@
       "display_name": "Cursor Agent on Android (Termux)"
     },
     {
-      "name": "recall",
+      "name": "ai-media-search-and-cleanup",
       "description": "Design-first project for on-device media search and cleanup: one structured text record per photo, document or video, to find files by describing them and to spot duplicates and old versions. Done: JSON schema, validator, example data, 11 design docs. Pipeline not built yet; may become a Jasiri plug-in.",
       "status": "building",
       "tags": [
@@ -492,9 +469,9 @@
       "rank": 3200,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:13:30Z",
+      "pushed_at": "2026-11-26T19:28:52Z",
       "extra": false,
-      "display_name": "Recall: on-device media search and cleanup"
+      "display_name": "AI media search and cleanup"
     },
     {
       "name": "telegram-notifications-bot",
@@ -516,7 +493,7 @@
       "rank": 3300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:15:07Z",
+      "pushed_at": "2026-11-26T19:26:54Z",
       "extra": false,
       "display_name": "Telegram registration bot"
     },
