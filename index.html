@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>What I am building – Ben Lester</title>
-  <meta name="description" content="A curated list of projects Ben Lester shares publicly. Repository and website links appear when each exists.">
-  <meta property="og:title" content="What I am building – Ben Lester">
-  <meta property="og:description" content="A curated list of projects Ben Lester shares publicly. Repository and website links appear when each exists.">
+  <title>Ben Lester – software and systems engineer: selected work</title>
+  <meta name="description" content="Ben Lester, software and systems engineer: products and engineering work across Android, Linux, networking and cloud, kept up to date automatically from GitHub.">
+  <meta property="og:title" content="Ben Lester – software and systems engineer: selected work">
+  <meta property="og:description" content="Ben Lester, software and systems engineer: products and engineering work across Android, Linux, networking and cloud, kept up to date automatically from GitHub.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://projects.benlester.me/">
   <meta property="og:image" content="https://projects.benlester.me/assets/profile.jpg">
@@ -527,6 +527,38 @@
       font-weight: var(--weight-medium);
     }
     .how p { margin: 0 0 var(--space-3); }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin: 0 0 var(--space-6);
+    }
+    .cta a {
+      min-height: var(--target);
+      display: inline-flex;
+      align-items: center;
+      padding: 0 var(--space-5);
+      border-radius: 999px;
+      background: var(--color-accent-solid);
+      border: 1px solid var(--color-accent-solid);
+      color: var(--color-text-on-accent);
+      font-weight: var(--weight-medium);
+      text-decoration: none;
+      touch-action: manipulation;
+    }
+    .cta a:hover { background: var(--color-accent-solid-hover); }
+    .tools { margin: 0 0 var(--space-4); }
+    .tools > summary {
+      min-height: var(--target);
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: var(--color-accent-text);
+      font-weight: var(--weight-medium);
+    }
+    .walk { margin: var(--space-2) 0 0; font-size: var(--text-caption); }
+    .walk a { color: var(--color-accent-text); }
     .counts {
       display: flex;
       flex-wrap: wrap;
@@ -617,7 +649,7 @@
       <img class="portrait" src="assets/profile.jpg" width="1254" height="1254" alt="Portrait of Ben Lester">
       <div>
         <p class="who">Ben Lester</p>
-        <p class="role">Freelance Software &amp; Systems Engineer</p>
+        <p class="role">Software &amp; Systems Engineer</p>
       </div>
       <div class="elsewhere">
         <nav aria-label="Elsewhere">
@@ -630,14 +662,20 @@
     </header>
 
     <main id="main" aria-busy="true">
-      <h1>What I am building</h1>
-      <p class="lead">A curated list of projects I share publicly. Repository and website links appear when each exists.</p>
+      <h1>Software and systems engineer</h1>
+      <p class="lead">I build and run products end to end: Android and Linux, networking, backend and cloud. Open to remote full-time roles and contract work.</p>
+      <p class="cta">
+        <a href="#featured-section">See my work</a>
+        <a href="mailto:contact@benlester.me">Email me</a>
+      </p>
       <details class="how" id="how">
         <summary>How this page is made</summary>
         <p>Every day a GitHub Actions job scans my repositories. Each one carries a small <code>project.json</code> file with a status, tags and languages, plus its GitHub description. The job turns the ones I have marked as shareable into a catalog and publishes this static page. Nothing here is written by hand, so the dates and counts are real, and a project only appears if I chose to list it.</p>
-        <p>Some entries are private repositories. For those you see only the name and a short summary, never the code. Several projects deal with automation, scraping, proxies and anti-bot systems. I treat understanding those techniques from both the building side and the defending side as legitimate engineering work, and the projects are listed in that spirit.</p>
+        <p>Some entries are private repositories. For those you see only the name and a short summary, never the code. Some of the work is in networking and automation: knowing how automated traffic behaves helps me build services that handle it well. If you would like to see how one of the private projects works, ask for a walkthrough.</p>
       </details>
 
+      <details class="tools" id="tools" open>
+        <summary>Search and filter</summary>
       <form class="toolbar" id="filters" aria-label="Filter projects">
         <div class="field">
           <label for="q">Search projects</label>
@@ -669,6 +707,8 @@
         <h2 class="legend-title">Status meanings</h2>
         <ul class="legend-list" id="status-legend"></ul>
       </aside>
+
+      </details>
 
       <div class="meta-bar">
         <p class="count" id="count"></p>
@@ -860,6 +900,11 @@
       }
       const links = linksFor(item);
       if (links) node.appendChild(links);
+      if (visOf(item) === "private") {
+        const walk = el("p", { class: "walk" });
+        walk.appendChild(el("a", { href: "mailto:contact@benlester.me?subject=" + encodeURIComponent("Walkthrough request: " + titleOf(item)) }, "Ask for a walkthrough"));
+        node.appendChild(walk);
+      }
       node.appendChild(factsFor(item, statuses));
       return node;
     }
@@ -874,6 +919,10 @@
     }
 
     syncThemeChrome();
+    (function () {
+      const tools = document.getElementById("tools");
+      if (tools && !window.location.search && window.matchMedia("(max-width: 700px)").matches) tools.open = false;
+    })();
     document.getElementById("theme-toggle").addEventListener("click", () => {
       setTheme(currentTheme() === "dark" ? "light" : "dark");
     });
