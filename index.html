@@ -373,6 +373,14 @@
       letter-spacing: -0.01em;
     }
 
+    .extras {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 2px dashed var(--line, #8886);
+      opacity: 0.88;
+    }
+    .extras > summary { cursor: pointer; font-weight: 600; font-size: 1.1rem; padding: 0.5rem 0; }
+    .extras-note { margin: 0.25rem 0 1rem; font-size: 0.9rem; opacity: 0.8; }
     .featured-grid {
       display: grid;
       gap: var(--space-4);
@@ -679,6 +687,11 @@
         <h2 id="rest-heading">More work</h2>
         <div id="rest"></div>
       </section>
+      <details id="extras-section" class="extras" hidden>
+        <summary id="extras-summary">On hold / ideas</summary>
+        <p class="extras-note">Early thoughts and parked work. Not counted above.</p>
+        <div id="extras"></div>
+      </details>
       <div id="empty" hidden></div>
     </main>
 
@@ -773,6 +786,7 @@
         const q = state.q.toLowerCase();
         const hay = [
           item.name,
+          item.display_name || "",
           item.description,
           item.status,
           statusMeaning(item, statuses),
@@ -784,11 +798,14 @@
       }
       return true;
     }
-    function projectCount(n) {
+    function projectCount(n, extras) {
       const num = new Intl.NumberFormat().format(n);
       const word = new Intl.PluralRules(document.documentElement.lang).select(n) === "one" ? "project" : "projects";
-      return num + " " + word;
+      let text = num + " " + word;
+      if (extras) text += ", plus " + new Intl.NumberFormat().format(extras) + (extras === 1 ? " idea" : " ideas") + " on hold";
+      return text;
     }
+    function titleOf(item) { return item.display_name || item.name; }
     const DEMO_LABEL = { "hosted": "Demo: hosted", "local": "Demo: run locally", "on-request": "Demo: on request" };
     function updatedLabel(item) {
       const d = new Date(item.pushed_at || "");
@@ -832,7 +849,7 @@
     function cardFor(item, statuses, featured) {
       const node = el("article", { class: featured ? "card" : "row" });
       const title = el("h3");
-      title.appendChild(el("bdi", { translate: "no" }, item.name));
+      title.appendChild(el("bdi", { translate: "no", title: item.name }, titleOf(item)));
       node.appendChild(title);
       if (item.description) node.appendChild(el("p", { class: "blurb" }, item.description));
       const updated = updatedLabel(item);
@@ -876,8 +893,11 @@
       const count = document.getElementById("count");
       const countLive = document.getElementById("count-live");
       let countTimer = 0;
-      function showCount(n) {
-        const text = projectCount(n);
+      const extrasRoot = document.getElementById("extras");
+      const extrasSection = document.getElementById("extras-section");
+      const extrasSummary = document.getElementById("extras-summary");
+      function showCount(n, extras) {
+        const text = projectCount(n, extras);
         count.textContent = text;
         window.clearTimeout(countTimer);
         countTimer = window.setTimeout(() => {
@@ -903,7 +923,7 @@
       function drawCounts(current) {
         countsRoot.replaceChildren();
         (statuses.statuses || []).forEach(s => {
-          const n = projects.filter(p => (p.status || "idea") === s.id).length;
+          const n = projects.filter(p => !p.extra && (p.status || "idea") === s.id).length;
           if (!n) return;
           const li = el("li");
           const b = el("button", { type: "button", "aria-pressed": current === s.id ? "true" : "false", "data-status": s.id });
@@ -946,8 +966,10 @@
         writeParams(state);
         drawCounts(state.status);
         const shown = projects.filter(item => matches(item, state, statuses));
-        const featured = shown.filter(item => item.featured);
-        const rest = shown.filter(item => !item.featured);
+        const extras = shown.filter(item => item.extra);
+        const main = shown.filter(item => !item.extra);
+        const featured = main.filter(item => item.featured);
+        const rest = main.filter(item => !item.featured);
         const filtersOn = state.vis !== "all" || state.q || state.status || state.tag;
         clear.hidden = !filtersOn;
         loading.hidden = true;
@@ -961,7 +983,12 @@
         featured.forEach(item => featuredRoot.appendChild(cardFor(item, statuses, true)));
         rest.forEach(item => restRoot.appendChild(cardFor(item, statuses, false)));
         document.getElementById("main").setAttribute("aria-busy", "false");
-        showCount(shown.length);
+        extrasRoot.replaceChildren();
+        extras.forEach(item => extrasRoot.appendChild(cardFor(item, statuses, false)));
+        extrasSection.hidden = !extras.length;
+        extrasSummary.textContent = "On hold / ideas (" + extras.length + ")";
+        if (filtersOn && extras.length) extrasSection.open = true;
+        showCount(main.length, extras.length);
         if (!shown.length) {
           empty.hidden = false;
           const title = el("p", { class: "empty" }, filtersOn ? "No projects in this view." : "No projects to show.");
