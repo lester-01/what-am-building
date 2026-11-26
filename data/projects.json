@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T16:25:56Z",
+  "generated_at": "2026-11-26T16:29:45Z",
   "extras_min_rank": 9000,
   "projects": [
     {
@@ -20,7 +20,7 @@
       "rank": 1000,
       "website": "https://proxyhut.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T16:20:56Z",
+      "pushed_at": "2026-11-26T04:56:04Z",
       "extra": false,
       "display_name": "ProxyHut",
       "html_url": "https://github.com/lester-01/proxyhut"
@@ -49,7 +49,7 @@
       "rank": 1100,
       "website": "https://jasiri.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T16:21:00Z",
+      "pushed_at": "2026-11-26T04:18:41Z",
       "extra": false,
       "display_name": "Jasiri",
       "html_url": "https://github.com/lester-01/jasiri"
@@ -73,7 +73,7 @@
       "rank": 1200,
       "website": "https://jasiri.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T16:21:04Z",
+      "pushed_at": "2026-11-26T15:48:10Z",
       "extra": false,
       "display_name": "Jasiri apt repository",
       "html_url": "https://github.com/lester-01/jasiri-apt"
@@ -96,7 +96,7 @@
       "rank": 1300,
       "website": "https://fineract-rafiki.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T16:21:12Z",
+      "pushed_at": "2026-11-26T04:18:24Z",
       "extra": false,
       "display_name": "Fineract and Rafiki bridge",
       "html_url": "https://github.com/lester-01/fineract-rafiki-bridge-showcase"
@@ -127,7 +127,7 @@
       "rank": 1400,
       "website": "https://sinc-crm.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T16:21:16Z",
+      "pushed_at": "2026-11-26T04:55:41Z",
       "extra": false,
       "display_name": "SINC Student CRM",
       "html_url": "https://github.com/lester-01/sinc_crm"
@@ -156,7 +156,7 @@
       "rank": 1500,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:21:20Z",
+      "pushed_at": "2026-11-26T04:18:07Z",
       "extra": false,
       "display_name": "SignalStack",
       "demo": "local",
@@ -181,7 +181,7 @@
       "rank": 2000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:21:24Z",
+      "pushed_at": "2026-11-26T16:15:37Z",
       "extra": false,
       "display_name": "Jasiri package patcher"
     },
@@ -206,7 +206,7 @@
       "rank": 2100,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:21:29Z",
+      "pushed_at": "2026-11-26T03:25:16Z",
       "extra": false,
       "display_name": "WireGuard for IoT: encryption-optional research"
     },
@@ -232,7 +232,7 @@
       "rank": 2200,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:25:32Z",
+      "pushed_at": "2026-11-26T16:29:24Z",
       "extra": false,
       "display_name": "Projects command center"
     },
@@ -260,7 +260,7 @@
       "rank": 2300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:21:34Z",
+      "pushed_at": "2026-10-23T21:05:46Z",
       "extra": false,
       "display_name": "NATBridge: reverse proxy over QUIC"
     },
@@ -284,7 +284,7 @@
       "rank": 2400,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:21:38Z",
+      "pushed_at": "2026-10-09T20:10:15Z",
       "extra": false,
       "display_name": "QUIC in the Linux kernel"
     },
@@ -308,7 +308,7 @@
       "rank": 2500,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:21:43Z",
+      "pushed_at": "2026-09-15T07:59:21Z",
       "extra": false,
       "display_name": "SOCKS5 server with reverse tunnel"
     },
@@ -337,7 +337,7 @@
       "rank": 2600,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:21:47Z",
+      "pushed_at": "2026-10-22T16:16:21Z",
       "extra": false,
       "display_name": "PTY Shuttle"
     },
@@ -363,7 +363,7 @@
       "rank": 2700,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:21:51Z",
+      "pushed_at": "2026-09-15T17:27:53Z",
       "extra": false,
       "display_name": "Comment moderation API"
     },
@@ -389,7 +389,7 @@
       "rank": 2800,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:21:55Z",
+      "pushed_at": "2026-10-21T15:29:52Z",
       "extra": false,
       "display_name": "GCE spot VM provisioner"
     },
@@ -416,7 +416,7 @@
       "rank": 2900,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:22:00Z",
+      "pushed_at": "2026-11-05T00:06:31Z",
       "extra": false,
       "display_name": "iperf3 through proxies"
     },
@@ -440,7 +440,7 @@
       "rank": 3000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:22:04Z",
+      "pushed_at": "2026-06-28T11:00:00Z",
       "extra": false,
       "display_name": "Raspberry Pi phone-mirroring kiosk"
     },
@@ -466,7 +466,7 @@
       "rank": 3100,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:22:09Z",
+      "pushed_at": "2026-11-26T04:56:48Z",
       "extra": false,
       "display_name": "Cursor Agent on Android (Termux)"
     },
@@ -492,7 +492,7 @@
       "rank": 3200,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:22:13Z",
+      "pushed_at": "2026-11-26T16:13:30Z",
       "extra": false,
       "display_name": "Recall: on-device media search and cleanup"
     },
@@ -516,7 +516,7 @@
       "rank": 3300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:22:17Z",
+      "pushed_at": "2026-11-26T16:15:07Z",
       "extra": false,
       "display_name": "Telegram registration bot"
     },
@@ -537,7 +537,7 @@
       "rank": 9000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:22:22Z",
+      "pushed_at": "2026-10-23T22:09:34Z",
       "extra": true,
       "display_name": "Universal EV charger adapter kit"
     },
@@ -558,7 +558,7 @@
       "rank": 9100,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:22:26Z",
+      "pushed_at": "2026-10-23T22:09:26Z",
       "extra": true,
       "display_name": "Laptop power bank"
     }
