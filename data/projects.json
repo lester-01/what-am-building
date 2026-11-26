@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-26T04:18:03Z",
+  "generated_at": "2026-11-26T11:58:44Z",
   "projects": [
     {
       "name": "proxyhut",
-      "description": "ProxyHut gives you real residential and mobile 4G/5G proxies from hardware you control: your broadband, modems and SIMs. A product I have built over several years. You keep the client online; ProxyHut runs the hub and relays. Free consultation and trial. Public page; the code is not in this repo.",
+      "description": "ProxyHut gives you real residential and mobile 4G/5G proxies from hardware you control: your broadband, modems and SIMs. A product I have built over several years. You keep the client online; ProxyHut runs the hub and relays. Free consultation and trial. GitHub home for the product; the code is not in this repo.",
       "status": "live",
       "tags": [
         "proxy",
@@ -19,7 +19,7 @@
       "rank": 1000,
       "website": "https://proxyhut.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T04:17:52Z",
+      "pushed_at": "2026-11-26T04:56:06Z",
       "html_url": "https://github.com/lester-01/proxyhut"
     },
     {
@@ -30,7 +30,8 @@
         "android",
         "ai",
         "agents",
-        "linux"
+        "linux",
+        "terminal"
       ],
       "languages": [
         "HTML",
@@ -45,7 +46,7 @@
       "rank": 1100,
       "website": "https://jasiri.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-20T19:02:38Z",
+      "pushed_at": "2026-11-26T04:37:04Z",
       "html_url": "https://github.com/lester-01/jasiri"
     },
     {
@@ -58,9 +59,7 @@
         "payments",
         "case-study"
       ],
-      "languages": [
-        "Shell"
-      ],
+      "languages": [],
       "private": false,
       "visibility": "public",
       "listed": true,
@@ -68,7 +67,7 @@
       "rank": 1200,
       "website": "https://fineract-rafiki.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-03T16:44:50Z",
+      "pushed_at": "2026-11-26T04:35:51Z",
       "html_url": "https://github.com/lester-01/fineract-rafiki-bridge-showcase"
     },
     {
@@ -97,7 +96,7 @@
       "rank": 1300,
       "website": "https://sinc-crm.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T04:17:06Z",
+      "pushed_at": "2026-11-26T04:55:44Z",
       "html_url": "https://github.com/lester-01/sinc_crm"
     },
     {
@@ -125,7 +124,7 @@
     },
     {
       "name": "signalstack",
-      "description": "Realtime chat demo in Go and Next.js. Hub-client WebSockets, public and private routing, graceful shutdown, and exponential-backoff reconnect. Built to show concurrent connection patterns\u2014not a consumer chat product.",
+      "description": "A realtime chat server in Go with a Next.js client, built to explore how a WebSocket server handles many concurrent connections: routing, backpressure, graceful shutdown and reconnects. Includes tests run with the race detector and a load-test harness. A systems exercise, not a chat product.",
       "status": "finished",
       "tags": [
         "go",
@@ -147,7 +146,7 @@
       "rank": 1500,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-09T21:45:53Z",
+      "pushed_at": "2026-11-26T04:38:44Z",
       "demo": "local",
       "html_url": "https://github.com/lester-01/signalstack"
     },
@@ -521,7 +520,7 @@
       "rank": 9000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T04:17:46Z"
+      "pushed_at": "2026-11-26T04:19:07Z"
     },
     {
       "name": "cursor-termux",
@@ -545,7 +544,7 @@
       "rank": 9100,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-10T22:25:48Z"
+      "pushed_at": "2026-11-26T05:07:34Z"
     },
     {
       "name": "ai-content-moderation",
@@ -699,9 +698,9 @@
       "listed": true,
       "featured": false,
       "rank": 100000,
-      "website": null,
+      "website": "https://jasiri.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T04:17:23Z",
+      "pushed_at": "2026-11-26T04:29:33Z",
       "html_url": "https://github.com/lester-01/jasiri-apt"
     }
   ]
