@@ -9,10 +9,25 @@
   <meta property="og:description" content="Ben Lester, software and systems engineer: products and engineering work across Android, Linux, networking and cloud, kept up to date automatically from GitHub.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://projects.benlester.me/">
-  <meta property="og:image" content="https://projects.benlester.me/assets/profile.jpg">
+  <meta property="og:image" content="https://projects.benlester.me/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ben Lester, software and systems engineer, projects.benlester.me">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ben Lester – software and systems engineer: selected work">
+  <meta name="twitter:description" content="Ben Lester, software and systems engineer: products and engineering work across Android, Linux, networking and cloud, kept up to date automatically from GitHub.">
+  <meta name="twitter:image" content="https://projects.benlester.me/assets/og-card.png">
+  <meta name="twitter:image:alt" content="Ben Lester, software and systems engineer, projects.benlester.me">
   <meta name="theme-color" content="#F2F0EB" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#161814" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://projects.benlester.me/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Ben Lester","jobTitle":"Software and Systems Engineer","url":"https://projects.benlester.me","sameAs":["https://benlester.me","https://github.com/lester-01"]}
+  </script>
+  <noscript><style>.tools, .toolbar, .vis, #clear, #theme-toggle { display: none !important; }</style></noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap">
@@ -238,13 +253,20 @@
     .elsewhere nav {
       display: flex;
       flex-wrap: wrap;
-      gap: var(--space-3) var(--space-4);
+      gap: 0 var(--space-2);
     }
-    .elsewhere a {
+    .elsewhere a,
+    .site-foot .more a {
+      display: inline-flex;
+      align-items: center;
+      min-height: var(--target);
+      padding-inline: var(--space-2);
       color: var(--color-text-secondary);
       text-decoration: none;
       border-block-end: 1px solid transparent;
     }
+    .site-foot .more a { text-decoration: underline; text-underline-offset: 0.2em; }
+    .site-foot .more { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--space-1); }
     .elsewhere a:hover {
       color: var(--color-accent-text);
       border-block-end-color: color-mix(in srgb, var(--color-accent-text) 45%, transparent);
@@ -646,14 +668,14 @@
   <a class="skip" href="#main">Skip to projects</a>
   <div class="wrap">
     <header class="masthead">
-      <img class="portrait" src="assets/profile.jpg" width="1254" height="1254" alt="Portrait of Ben Lester">
+      <img class="portrait" src="assets/profile-256.jpg" width="256" height="256" alt="Portrait of Ben Lester">
       <div>
         <p class="who">Ben Lester</p>
         <p class="role">Freelance Software &amp; Systems Engineer</p>
       </div>
       <div class="elsewhere">
         <nav aria-label="Elsewhere">
-          <a href="https://benlester.me">Portfolio</a>
+          <a href="https://benlester.me">CV</a>
           <a href="https://github.com/lester-01">GitHub</a>
           <a href="mailto:contact@benlester.me">Email</a>
         </nav>
@@ -661,11 +683,11 @@
       </div>
     </header>
 
-    <main id="main" aria-busy="true">
+    <main id="main" aria-busy="false">
       <h1>Software and systems engineer</h1>
       <p class="lead">I build and run products end to end: Android and Linux, networking, backend and cloud. Open to remote full-time roles and contract work.</p>
       <p class="cta">
-        <a href="#featured-section">See my work</a>
+        <a href="https://benlester.me">View my CV</a>
         <a href="mailto:contact@benlester.me">Email me</a>
       </p>
       <details class="how" id="how">
@@ -711,36 +733,37 @@
       </details>
 
       <div class="meta-bar">
-        <p class="count" id="count"></p>
+        <p class="count" id="count"><!-- prerender:count -->19 projects, plus 2 ideas on hold<!-- /prerender:count --></p>
         <p id="count-live" class="sr-only" role="status"></p>
-        <p id="stamp"></p>
+        <p id="stamp"><!-- prerender:stamp -->Updated Nov 26, 2026<!-- /prerender:stamp --></p>
       </div>
 
-      <p class="loading" id="loading">Loading projects…</p>
+      <p class="loading" id="loading" hidden>Loading projects…</p>
       <div id="error" role="alert" hidden></div>
 
-      <section id="featured-section" hidden>
+      <section id="featured-section">
         <h2>Featured</h2>
-        <div class="featured-grid" id="featured"></div>
+        <div class="featured-grid" id="featured"><!-- prerender:featured --><article class="card"><h3><bdi translate="no" title="proxyhut">ProxyHut</bdi></h3><p class="blurb">ProxyHut gives you real residential and mobile 4G/5G proxies from hardware you control: your broadband, modems and SIMs. A product I have built over several years. You keep the client online; ProxyHut runs the hub and relays. Free consultation and trial. GitHub home for the product; the code is not in this repo.</p><p class="updated"><time datetime="2026-11-26T04:56:04Z">Last updated Nov 2026</time></p><ul class="links"><li><a href="https://proxyhut.benlester.me" rel="noopener noreferrer">Open website</a></li><li><a href="https://github.com/lester-01/proxyhut" rel="noopener noreferrer">Open on GitHub</a></li></ul><ul class="facts"><li class="chip chip-status chip-live">live</li><li class="chip chip-vis">Public</li><li class="chip">proxy</li><li class="chip">networking</li><li class="chip">hardware</li><li class="chip">saas</li></ul></article><article class="card"><h3><bdi translate="no" title="jasiri">Jasiri</bdi></h3><p class="blurb">Jasiri puts an AI agent and a full Linux computer inside your Android phone. One APK shares files between chat and terminal; data stays on-device. Bring your own OpenRouter or OpenAI key. Sideload from jasiri.benlester.me—not on Google Play yet.</p><p class="updated"><time datetime="2026-11-26T19:28:23Z">Last updated Nov 2026</time></p><ul class="links"><li><a href="https://jasiri.benlester.me" rel="noopener noreferrer">Open website</a></li><li><a href="https://github.com/lester-01/jasiri" rel="noopener noreferrer">Open on GitHub</a></li></ul><ul class="facts"><li class="chip chip-status chip-live">live</li><li class="chip chip-vis">Public</li><li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">Python</li><li class="chip">JavaScript</li><li class="chip">android</li><li class="chip">ai</li><li class="chip">ai-agents</li><li class="chip">linux</li><li class="chip">terminal</li></ul></article><article class="card"><h3><bdi translate="no" title="jasiri-apt">Jasiri apt repository</bdi></h3><p class="blurb">The public apt repository for the Jasiri Linux system, which runs on Android phones. A signed Debian-style repository at apt.benlester.me with downloadable .deb releases for aarch64 and x86_64, built and published with a Go pipeline. Add the source, run apt update, install.</p><p class="updated"><time datetime="2026-11-26T19:27:52Z">Last updated Nov 2026</time></p><ul class="links"><li><a href="https://jasiri.benlester.me" rel="noopener noreferrer">Open website</a></li><li><a href="https://github.com/lester-01/jasiri-apt" rel="noopener noreferrer">Open on GitHub</a></li></ul><ul class="facts"><li class="chip chip-status chip-live">live</li><li class="chip chip-vis">Public</li><li class="chip">apt</li><li class="chip">packaging</li><li class="chip">linux</li><li class="chip">android</li><li class="chip">debian</li></ul></article><article class="card"><h3><bdi translate="no" title="fineract-rafiki-bridge-showcase">Fineract and Rafiki bridge</bdi></h3><p class="blurb">Case study: an Apache Fineract ledger bridged to Rafiki Open Payments so wallets move money over Interledger while the bank ledger stays source of truth. Three-bank sandbox, CI, and a short walkthrough. Write-up at fineract-rafiki.benlester.me; live sandbox on request.</p><p class="updated"><time datetime="2026-11-26T04:18:24Z">Last updated Nov 2026</time></p><ul class="links"><li><a href="https://fineract-rafiki.benlester.me" rel="noopener noreferrer">Open website</a></li><li><a href="https://github.com/lester-01/fineract-rafiki-bridge-showcase" rel="noopener noreferrer">Open on GitHub</a></li></ul><ul class="facts"><li class="chip chip-status chip-live">live</li><li class="chip chip-vis">Public</li><li class="chip">fineract</li><li class="chip">rafiki</li><li class="chip">payments</li><li class="chip">case-study</li></ul></article><article class="card"><h3><bdi translate="no" title="sinc_crm">SINC Student CRM</bdi></h3><p class="blurb">CRM for education agencies placing students abroad. Sales manage inquiries and chats; managers watch the application pipeline. React on Cloudflare Pages, Hono API on Workers, Supabase for auth and data. Live demo with seeded manager, sales, and client accounts.</p><p class="updated"><time datetime="2026-11-26T04:55:41Z">Last updated Nov 2026</time></p><ul class="links"><li><a href="https://sinc-crm.benlester.me" rel="noopener noreferrer">Open website</a></li><li><a href="https://github.com/lester-01/sinc_crm" rel="noopener noreferrer">Open on GitHub</a></li></ul><ul class="facts"><li class="chip chip-status chip-live">live</li><li class="chip chip-vis">Public</li><li class="chip">TypeScript</li><li class="chip">JavaScript</li><li class="chip">Shell</li><li class="chip">PLpgSQL</li><li class="chip">CSS</li><li class="chip">HTML</li><li class="chip">crm</li><li class="chip">education</li><li class="chip">react</li><li class="chip">cloudflare</li><li class="chip">supabase</li></ul></article><article class="card"><h3><bdi translate="no" title="signalstack">SignalStack</bdi></h3><p class="blurb">A realtime chat server in Go with a Next.js client, built to explore how a WebSocket server handles many concurrent connections: routing, backpressure, graceful shutdown and reconnects. Includes tests run with the race detector and a load-test harness. A systems exercise, not a chat product.</p><p class="updated"><time datetime="2026-11-26T04:18:07Z">Last updated Nov 2026</time></p><ul class="links"><li><a href="https://github.com/lester-01/signalstack" rel="noopener noreferrer">Open on GitHub</a></li></ul><ul class="facts"><li class="chip chip-status chip-finished">finished</li><li class="chip chip-vis">Public</li><li class="chip">Demo: run locally</li><li class="chip">Go</li><li class="chip">TypeScript</li><li class="chip">CSS</li><li class="chip">JavaScript</li><li class="chip">go</li><li class="chip">websocket</li><li class="chip">nextjs</li><li class="chip">realtime</li><li class="chip">typescript</li></ul></article><!-- /prerender:featured --></div>
       </section>
-      <section id="rest-section" hidden>
-        <h2 id="rest-heading">More work</h2>
-        <div id="rest"></div>
+      <section id="rest-section">
+        <h2 id="rest-heading"><!-- prerender:rest-heading -->More work<!-- /prerender:rest-heading --></h2>
+        <div id="rest"><!-- prerender:rest --><article class="row"><h3><bdi translate="no" title="wireguard-without-encryption">WireGuard for IoT: encryption-optional research</bdi></h3><p class="blurb">Lab research on WireGuard for constrained IoT and SBC devices that lack hardware crypto acceleration. Measures CPU and throughput when both peers optionally skip transport encryption on hops you own. PC results: about 42% lower per-packet time; fast VM tunnels show little gain. Phone and board field work still open. Lab only—not a production VPN.</p><p class="updated"><time datetime="2026-11-26T03:25:16Z">Last updated Nov 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20WireGuard%20for%20IoT%3A%20encryption-optional%20research">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-building">building</li><li class="chip chip-vis">Private</li><li class="chip">Shell</li><li class="chip">Python</li><li class="chip">wireguard</li><li class="chip">networking</li><li class="chip">research</li><li class="chip">iot</li></ul></article><article class="row"><h3><bdi translate="no" title="projects-command-center">Projects command center</bdi></h3><p class="blurb">I use this private hub to inventory my GitHub repos, track status and tags, ship a portable agent kit, and publish the allowlisted public board (what-am-building / projects.benlester.me).</p><p class="updated"><time datetime="2026-11-26T19:58:15Z">Last updated Nov 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20Projects%20command%20center">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-live">live</li><li class="chip chip-vis">Private</li><li class="chip">Python</li><li class="chip">HTML</li><li class="chip">Shell</li><li class="chip">docs</li><li class="chip">ai</li><li class="chip">devops</li><li class="chip">github</li></ul></article><article class="row"><h3><bdi translate="no" title="natbridge">NATBridge: reverse proxy over QUIC</bdi></h3><p class="blurb">Reverse SOCKS5/HTTP relay over QUIC for hosts behind NAT. An egress dials a public relay; clients use the relay as a normal proxy while traffic exits from the egress. Go PoC with scripted iperf labs; still in active development.</p><p class="updated"><time datetime="2026-10-23T21:05:46Z">Last updated Oct 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20NATBridge%3A%20reverse%20proxy%20over%20QUIC">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-building">building</li><li class="chip chip-vis">Private</li><li class="chip">Go</li><li class="chip">Shell</li><li class="chip">Rust</li><li class="chip">Python</li><li class="chip">go</li><li class="chip">networking</li><li class="chip">proxy</li><li class="chip">quic</li><li class="chip">cli</li></ul></article><article class="row"><h3><bdi translate="no" title="quic-inside-linux-kernel">QUIC in the Linux kernel</bdi></h3><p class="blurb">C-first research toward a Linux in-kernel QUIC datapath that can match top userspace stacks on throughput while keeping kernel CPU costs low. Uses MsQuic and lxin/quic as references; includes lab benches and design notes.</p><p class="updated"><time datetime="2026-10-09T20:10:15Z">Last updated Oct 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20QUIC%20in%20the%20Linux%20kernel">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-building">building</li><li class="chip chip-vis">Private</li><li class="chip">C</li><li class="chip">quic</li><li class="chip">linux</li><li class="chip">kernel</li><li class="chip">networking</li></ul></article><article class="row"><h3><bdi translate="no" title="socks5server-go">SOCKS5 server with reverse tunnel</bdi></h3><p class="blurb">Go SOCKS5 server with optional reverse-tunnel relay for TCP CONNECT and UDP ASSOCIATE. Work tool for exposing a NAT-side proxy through a public peer. Related to the socks5-reverse-tunnel* experiments.</p><p class="updated"><time datetime="2026-09-15T07:59:21Z">Last updated Sep 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20SOCKS5%20server%20with%20reverse%20tunnel">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-building">building</li><li class="chip chip-vis">Private</li><li class="chip">Go</li><li class="chip">go</li><li class="chip">socks5</li><li class="chip">proxy</li><li class="chip">reverse-tunnel</li></ul></article><article class="row"><h3><bdi translate="no" title="pty-shuttle">PTY Shuttle</bdi></h3><p class="blurb">PTY host with thin clients: spawn TUI programs (or a shell) and attach from CLI, Android, or a browser. Unix socket and WebSocket shuttles; not a cloud IDE and not an agent harness. Phases 0–3 done (host, LAN WebSocket, Android PoC); more RPC/status work planned.</p><p class="updated"><time datetime="2026-10-22T16:16:21Z">Last updated Oct 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20PTY%20Shuttle">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-building">building</li><li class="chip chip-vis">Private</li><li class="chip">Java</li><li class="chip">Python</li><li class="chip">JavaScript</li><li class="chip">HTML</li><li class="chip">Shell</li><li class="chip">python</li><li class="chip">android</li><li class="chip">cli</li><li class="chip">web</li><li class="chip">pty</li></ul></article><article class="row"><h3><bdi translate="no" title="ai-content-moderation">Comment moderation API</bdi></h3><p class="blurb">Small HTTP service that scores comment text with a Hugging Face sequence-classification model. Starlette/uvicorn API with local or Hub model load, plus Termux-oriented install notes. Prototype for offline-friendly moderation scoring.</p><p class="updated"><time datetime="2026-09-15T17:27:53Z">Last updated Sep 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20Comment%20moderation%20API">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-building">building</li><li class="chip chip-vis">Private</li><li class="chip">Python</li><li class="chip">Shell</li><li class="chip">python</li><li class="chip">moderation</li><li class="chip">huggingface</li><li class="chip">fastapi</li><li class="chip">nlp</li></ul></article><article class="row"><h3><bdi translate="no" title="google-gce-spot-vms-provisioner">GCE spot VM provisioner</bdi></h3><p class="blurb">CLI that creates short-lived Google Compute Engine VMs for tests, batch jobs, and AI agents. Spot by default, required max run time, SSH key minting, and disks deleted with the VM so forgotten instances do not linger. Python tool (`gce-vm`); still gaining features from the roadmap.</p><p class="updated"><time datetime="2026-10-21T15:29:52Z">Last updated Oct 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20GCE%20spot%20VM%20provisioner">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-building">building</li><li class="chip chip-vis">Private</li><li class="chip">Python</li><li class="chip">Shell</li><li class="chip">gcp</li><li class="chip">python</li><li class="chip">cli</li><li class="chip">spot-vm</li><li class="chip">ai-agents</li></ul></article><article class="row"><h3><bdi translate="no" title="iperf3-proxy">iperf3 through proxies</bdi></h3><p class="blurb">Fork scaffold of iperf3 with planned SOCKS5 and HTTP CONNECT support on the client. Meant for measuring throughput through real proxies and reverse tunnels without a separate port-forward helper. Upstream snapshot is vendored; proxy paths are still being built.</p><p class="updated"><time datetime="2026-11-05T00:06:31Z">Last updated Nov 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20iperf3%20through%20proxies">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-building">building</li><li class="chip chip-vis">Private</li><li class="chip">C</li><li class="chip">Shell</li><li class="chip">Makefile</li><li class="chip">Python</li><li class="chip">iperf</li><li class="chip">proxy</li><li class="chip">networking</li><li class="chip">c</li></ul></article><article class="row"><h3><bdi translate="no" title="rpi-phone-kiosk">Raspberry Pi phone-mirroring kiosk</bdi></h3><p class="blurb">Turn a Raspberry Pi OS Lite box into a phone-mirroring kiosk with Cage, scrcpy, and ADB. Modules cover a power-isolating USB Y-cable, udev attach, and a least-privilege kiosk user. Docs-first appliance build.</p><p class="updated"><time datetime="2026-06-28T11:00:00Z">Last updated Jun 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20Raspberry%20Pi%20phone-mirroring%20kiosk">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-building">building</li><li class="chip chip-vis">Private</li><li class="chip">Shell</li><li class="chip">raspberry-pi</li><li class="chip">android</li><li class="chip">kiosk</li><li class="chip">scrcpy</li></ul></article><article class="row"><h3><bdi translate="no" title="cursor-termux">Cursor Agent on Android (Termux)</bdi></h3><p class="blurb">Run the Cursor Agent CLI natively on Termux (Android ARM64) — no proot or glibc chroot. Supports the interactive TUI, login/resume, and phone-as-cloud-worker mode. Installer plus patch scripts for node-pty, SQLite, and Android tmp quirks.</p><p class="updated"><time datetime="2026-11-26T04:56:48Z">Last updated Nov 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20Cursor%20Agent%20on%20Android%20(Termux)">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-live">live</li><li class="chip chip-vis">Private</li><li class="chip">Shell</li><li class="chip">JavaScript</li><li class="chip">android</li><li class="chip">termux</li><li class="chip">cursor</li><li class="chip">cli</li><li class="chip">arm64</li></ul></article><article class="row"><h3><bdi translate="no" title="ai-media-search-and-cleanup">AI media search and cleanup</bdi></h3><p class="blurb">Design-first project for on-device media search and cleanup: one structured text record per photo, document or video, to find files by describing them and to spot duplicates and old versions. Done: JSON schema, validator, example data, 11 design docs. Pipeline not built yet; may become a Jasiri plug-in.</p><p class="updated"><time datetime="2026-11-26T19:28:52Z">Last updated Nov 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20AI%20media%20search%20and%20cleanup">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-building">building</li><li class="chip chip-vis">Private</li><li class="chip">Python</li><li class="chip">search</li><li class="chip">android</li><li class="chip">python</li><li class="chip">privacy</li><li class="chip">media</li><li class="chip">design</li></ul></article><article class="row"><h3><bdi translate="no" title="telegram-notifications-bot">Telegram registration bot</bdi></h3><p class="blurb">Telegram bot written in Go that signs users up for notifications. It checks whether a Telegram account is already registered through an HTTP API, asks new users for an email address, validates it and registers them. Configured by environment variables; sending alerts is left to the backend.</p><p class="updated"><time datetime="2026-11-26T19:26:54Z">Last updated Nov 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20Telegram%20registration%20bot">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-finished">finished</li><li class="chip chip-vis">Private</li><li class="chip">Go</li><li class="chip">telegram</li><li class="chip">go</li><li class="chip">bot</li><li class="chip">notifications</li></ul></article><!-- /prerender:rest --></div>
       </section>
-      <details id="extras-section" class="extras" hidden>
-        <summary id="extras-summary">On hold / ideas</summary>
+      <details id="extras-section" class="extras">
+        <summary id="extras-summary"><!-- prerender:extras-summary -->On hold / ideas (2)<!-- /prerender:extras-summary --></summary>
         <p class="extras-note">Early thoughts and parked work. Not counted above.</p>
-        <div id="extras"></div>
+        <div id="extras"><!-- prerender:extras --><article class="row"><h3><bdi translate="no" title="universal-ev-evse-power-adapter-kit">Universal EV charger adapter kit</bdi></h3><p class="blurb">Hardware concept for a compact Type 2 / J1772 EVSE handshake adapter that extracts single-phase AC for RV and field loads (working name OAPE). Spec and architecture notes only—no PCB, firmware, or BOM checkout yet.</p><p class="updated"><time datetime="2026-10-23T22:09:34Z">Last updated Oct 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20Universal%20EV%20charger%20adapter%20kit">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-idea">idea</li><li class="chip chip-vis">Private</li><li class="chip">hardware</li><li class="chip">ev</li><li class="chip">evse</li></ul></article><article class="row"><h3><bdi translate="no" title="laptop-power-bank">Laptop power bank</bdi></h3><p class="blurb">Hardware blueprints for a high-density laptop power bank (Stealth Brick): 4S pack, power-path switching, Dell ID pin, and USB-C PD. Draft design notes only—no finalized BOM or enclosure CAD yet.</p><p class="updated"><time datetime="2026-10-23T22:09:26Z">Last updated Oct 2026</time></p><p class="walk"><a href="mailto:contact@benlester.me?subject=Walkthrough%20request%3A%20Laptop%20power%20bank">Ask for a walkthrough</a></p><ul class="facts"><li class="chip chip-status chip-idea">idea</li><li class="chip chip-vis">Private</li><li class="chip">hardware</li><li class="chip">battery</li><li class="chip">usb-c</li></ul></article><!-- /prerender:extras --></div>
       </details>
       <div id="empty" hidden></div>
     </main>
 
     <footer class="site-foot">
       <p>This page lists only work I have chosen to share. It is rebuilt daily from my repositories.</p>
+      <p class="more">More from me: <a href="https://benlester.me">CV</a>, <a href="https://github.com/lester-01">GitHub</a>, <a href="https://jasiri.benlester.me">Jasiri</a>, <a href="https://proxyhut.benlester.me">ProxyHut</a></p>
     </footer>
   </div>
   <noscript>
-    <p class="wrap">This page needs JavaScript to load the project list.</p>
+    <p class="wrap">Filters need JavaScript.</p>
   </noscript>
   <script>
     function el(tag, attrs, text) {
@@ -1010,6 +1033,7 @@
         status.value = state.status;
         tag.value = state.tag;
       }
+      // draw() replaces any prerendered (publish-time) markup with the live render.
       function draw() {
         const state = stateFromUi();
         writeParams(state);
