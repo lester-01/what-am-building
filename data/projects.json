@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T16:17:19Z",
+  "generated_at": "2026-11-26T16:25:56Z",
   "extras_min_rank": 9000,
   "projects": [
     {
@@ -20,8 +20,9 @@
       "rank": 1000,
       "website": "https://proxyhut.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T04:56:04Z",
+      "pushed_at": "2026-11-26T16:20:56Z",
       "extra": false,
+      "display_name": "ProxyHut",
       "html_url": "https://github.com/lester-01/proxyhut"
     },
     {
@@ -48,8 +49,9 @@
       "rank": 1100,
       "website": "https://jasiri.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T04:37:01Z",
+      "pushed_at": "2026-11-26T16:21:00Z",
       "extra": false,
+      "display_name": "Jasiri",
       "html_url": "https://github.com/lester-01/jasiri"
     },
     {
@@ -71,8 +73,9 @@
       "rank": 1200,
       "website": "https://jasiri.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T16:12:52Z",
+      "pushed_at": "2026-11-26T16:21:04Z",
       "extra": false,
+      "display_name": "Jasiri apt repository",
       "html_url": "https://github.com/lester-01/jasiri-apt"
     },
     {
@@ -93,8 +96,9 @@
       "rank": 1300,
       "website": "https://fineract-rafiki.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T16:12:35Z",
+      "pushed_at": "2026-11-26T16:21:12Z",
       "extra": false,
+      "display_name": "Fineract and Rafiki bridge",
       "html_url": "https://github.com/lester-01/fineract-rafiki-bridge-showcase"
     },
     {
@@ -123,8 +127,9 @@
       "rank": 1400,
       "website": "https://sinc-crm.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-26T16:13:35Z",
+      "pushed_at": "2026-11-26T16:21:16Z",
       "extra": false,
+      "display_name": "SINC Student CRM",
       "html_url": "https://github.com/lester-01/sinc_crm"
     },
     {
@@ -151,8 +156,9 @@
       "rank": 1500,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T04:38:41Z",
+      "pushed_at": "2026-11-26T16:21:20Z",
       "extra": false,
+      "display_name": "SignalStack",
       "demo": "local",
       "html_url": "https://github.com/lester-01/signalstack"
     },
@@ -175,8 +181,9 @@
       "rank": 2000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:15:37Z",
-      "extra": false
+      "pushed_at": "2026-11-26T16:21:24Z",
+      "extra": false,
+      "display_name": "Jasiri package patcher"
     },
     {
       "name": "wireguard-without-encryption",
@@ -199,8 +206,35 @@
       "rank": 2100,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:14:15Z",
-      "extra": false
+      "pushed_at": "2026-11-26T16:21:29Z",
+      "extra": false,
+      "display_name": "WireGuard for IoT: encryption-optional research"
+    },
+    {
+      "name": "projects-command-center",
+      "description": "I use this private hub to inventory my GitHub repos, track status and tags, ship a portable agent kit, and publish the allowlisted public board (what-am-building / projects.benlester.me).",
+      "status": "live",
+      "tags": [
+        "docs",
+        "ai",
+        "devops",
+        "github"
+      ],
+      "languages": [
+        "Python",
+        "HTML",
+        "Shell"
+      ],
+      "private": true,
+      "visibility": "private",
+      "listed": true,
+      "featured": false,
+      "rank": 2200,
+      "website": null,
+      "fork": false,
+      "pushed_at": "2026-11-26T16:25:32Z",
+      "extra": false,
+      "display_name": "Projects command center"
     },
     {
       "name": "natbridge",
@@ -226,8 +260,9 @@
       "rank": 2300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:13:02Z",
-      "extra": false
+      "pushed_at": "2026-11-26T16:21:34Z",
+      "extra": false,
+      "display_name": "NATBridge: reverse proxy over QUIC"
     },
     {
       "name": "quic-inside-linux-kernel",
@@ -249,8 +284,9 @@
       "rank": 2400,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:13:21Z",
-      "extra": false
+      "pushed_at": "2026-11-26T16:21:38Z",
+      "extra": false,
+      "display_name": "QUIC in the Linux kernel"
     },
     {
       "name": "socks5server-go",
@@ -272,8 +308,9 @@
       "rank": 2500,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:13:40Z",
-      "extra": false
+      "pushed_at": "2026-11-26T16:21:43Z",
+      "extra": false,
+      "display_name": "SOCKS5 server with reverse tunnel"
     },
     {
       "name": "pty-shuttle",
@@ -300,8 +337,9 @@
       "rank": 2600,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:13:10Z",
-      "extra": false
+      "pushed_at": "2026-11-26T16:21:47Z",
+      "extra": false,
+      "display_name": "PTY Shuttle"
     },
     {
       "name": "ai-content-moderation",
@@ -325,8 +363,9 @@
       "rank": 2700,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:12:15Z",
-      "extra": false
+      "pushed_at": "2026-11-26T16:21:51Z",
+      "extra": false,
+      "display_name": "Comment moderation API"
     },
     {
       "name": "google-gce-spot-vms-provisioner",
@@ -350,8 +389,9 @@
       "rank": 2800,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:12:40Z",
-      "extra": false
+      "pushed_at": "2026-11-26T16:21:55Z",
+      "extra": false,
+      "display_name": "GCE spot VM provisioner"
     },
     {
       "name": "iperf3-proxy",
@@ -376,8 +416,9 @@
       "rank": 2900,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:12:49Z",
-      "extra": false
+      "pushed_at": "2026-11-26T16:22:00Z",
+      "extra": false,
+      "display_name": "iperf3 through proxies"
     },
     {
       "name": "rpi-phone-kiosk",
@@ -399,8 +440,9 @@
       "rank": 3000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:13:31Z",
-      "extra": false
+      "pushed_at": "2026-11-26T16:22:04Z",
+      "extra": false,
+      "display_name": "Raspberry Pi phone-mirroring kiosk"
     },
     {
       "name": "cursor-termux",
@@ -424,8 +466,9 @@
       "rank": 3100,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:12:31Z",
-      "extra": false
+      "pushed_at": "2026-11-26T16:22:09Z",
+      "extra": false,
+      "display_name": "Cursor Agent on Android (Termux)"
     },
     {
       "name": "recall",
@@ -449,8 +492,9 @@
       "rank": 3200,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:13:30Z",
-      "extra": false
+      "pushed_at": "2026-11-26T16:22:13Z",
+      "extra": false,
+      "display_name": "Recall: on-device media search and cleanup"
     },
     {
       "name": "telegram-notifications-bot",
@@ -472,33 +516,9 @@
       "rank": 3300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:15:07Z",
-      "extra": false
-    },
-    {
-      "name": "projects-command-center",
-      "description": "I use this private hub to inventory my GitHub repos, track status and tags, ship a portable agent kit, and publish the allowlisted public board (what-am-building / projects.benlester.me).",
-      "status": "live",
-      "tags": [
-        "docs",
-        "ai",
-        "devops",
-        "github"
-      ],
-      "languages": [
-        "Python",
-        "HTML",
-        "Shell"
-      ],
-      "private": true,
-      "visibility": "private",
-      "listed": true,
-      "featured": false,
-      "rank": 9000,
-      "website": null,
-      "fork": false,
-      "pushed_at": "2026-11-26T16:16:46Z",
-      "extra": false
+      "pushed_at": "2026-11-26T16:22:17Z",
+      "extra": false,
+      "display_name": "Telegram registration bot"
     },
     {
       "name": "universal-ev-evse-power-adapter-kit",
@@ -517,8 +537,9 @@
       "rank": 9000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:14:09Z",
-      "extra": true
+      "pushed_at": "2026-11-26T16:22:22Z",
+      "extra": true,
+      "display_name": "Universal EV charger adapter kit"
     },
     {
       "name": "laptop-power-bank",
@@ -537,8 +558,9 @@
       "rank": 9100,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-26T16:12:57Z",
-      "extra": true
+      "pushed_at": "2026-11-26T16:22:26Z",
+      "extra": true,
+      "display_name": "Laptop power bank"
     }
   ]
 }
