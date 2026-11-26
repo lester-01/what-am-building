@@ -8,11 +8,11 @@
   <meta property="og:title" content="What I am building – Ben Lester">
   <meta property="og:description" content="A curated list of projects Ben Lester shares publicly. Repository and website links appear when each exists.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://lester-01.github.io/what-am-building/">
-  <meta property="og:image" content="https://lester-01.github.io/what-am-building/assets/profile.jpg">
+  <meta property="og:url" content="https://projects.benlester.me/">
+  <meta property="og:image" content="https://projects.benlester.me/assets/profile.jpg">
   <meta name="theme-color" content="#F2F0EB" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#161814" media="(prefers-color-scheme: dark)">
-  <link rel="canonical" href="https://lester-01.github.io/what-am-building/">
+  <link rel="canonical" href="https://projects.benlester.me/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap">
@@ -503,6 +503,54 @@
       color: var(--color-text-primary);
       font-weight: var(--weight-semibold);
     }
+    .how {
+      margin: 0 0 var(--space-6);
+      max-width: var(--measure);
+      color: var(--color-text-secondary);
+      font-size: var(--text-caption);
+      line-height: var(--leading-body);
+    }
+    .how summary {
+      min-height: var(--target);
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: var(--color-accent-text);
+      font-weight: var(--weight-medium);
+    }
+    .how p { margin: 0 0 var(--space-3); }
+    .counts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin: 0 0 var(--space-4);
+      padding: 0;
+      list-style: none;
+    }
+    .counts button {
+      min-height: var(--target);
+      padding-inline: var(--space-3);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-control);
+      background: var(--color-bg-surface);
+      color: var(--color-text-secondary);
+      font: inherit;
+      font-size: var(--text-caption);
+      touch-action: manipulation;
+    }
+    .counts button[aria-pressed="true"] {
+      background: var(--color-accent-solid);
+      border-color: var(--color-accent-solid);
+      color: var(--color-text-on-accent);
+    }
+    .counts strong { font-weight: var(--weight-semibold); }
+    .chip-status { font-weight: var(--weight-medium); }
+    .chip-finished { background: var(--color-accent-subtle); }
+    .updated {
+      margin: 0 0 var(--space-3);
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+    }
     .site-foot {
       margin-block-start: var(--space-12);
       color: var(--color-text-secondary);
@@ -576,11 +624,16 @@
     <main id="main" aria-busy="true">
       <h1>What I am building</h1>
       <p class="lead">A curated list of projects I share publicly. Repository and website links appear when each exists.</p>
+      <details class="how" id="how">
+        <summary>How this page is made</summary>
+        <p>Every day a GitHub Actions job scans my repositories. Each one carries a small <code>project.json</code> file with a status, tags and languages, plus its GitHub description. The job turns the ones I have marked as shareable into a catalog and publishes this static page. Nothing here is written by hand, so the dates and counts are real, and a project only appears if I chose to list it.</p>
+        <p>Some entries are private repositories. For those you see only the name and a short summary, never the code. Several projects deal with automation, scraping, proxies and anti-bot systems. I treat understanding those techniques from both the building side and the defending side as legitimate engineering work, and the projects are listed in that spirit.</p>
+      </details>
 
       <form class="toolbar" id="filters" aria-label="Filter projects">
         <div class="field">
           <label for="q">Search projects</label>
-          <input id="q" name="q" type="search" inputmode="search" placeholder="natbridge…" spellcheck="false" autocomplete="off" enterkeyhint="search">
+          <input id="q" name="q" type="search" inputmode="search" placeholder="Name, tag or language" spellcheck="false" autocomplete="off" enterkeyhint="search">
         </div>
         <div class="vis" role="group" aria-label="Visibility">
           <button type="button" data-filter="all" aria-pressed="true">All</button>
@@ -596,11 +649,13 @@
         <div class="field field-narrow">
           <label for="tag">Tag</label>
           <select id="tag" name="tag" autocomplete="off">
-            <option value="">Any tag</option>
+            <option value="">Top tags</option>
           </select>
         </div>
         <button type="button" class="clear" id="clear" hidden>Clear filters</button>
       </form>
+
+      <ul class="counts" id="status-counts" aria-label="Projects by status"></ul>
 
       <aside class="status-legend" aria-label="Status meanings">
         <h2 class="legend-title">Status meanings</h2>
@@ -628,7 +683,7 @@
     </main>
 
     <footer class="site-foot">
-      <p>This page lists only work I have chosen to share.</p>
+      <p>This page lists only work I have chosen to share. It is rebuilt daily from my repositories.</p>
     </footer>
   </div>
   <noscript>
@@ -734,11 +789,18 @@
       const word = new Intl.PluralRules(document.documentElement.lang).select(n) === "one" ? "project" : "projects";
       return num + " " + word;
     }
+    const DEMO_LABEL = { "hosted": "Demo: hosted", "local": "Demo: run locally", "on-request": "Demo: on request" };
+    function updatedLabel(item) {
+      const d = new Date(item.pushed_at || "");
+      if (Number.isNaN(d.getTime())) return "";
+      return "Last updated " + new Intl.DateTimeFormat(undefined, { year: "numeric", month: "short" }).format(d);
+    }
     function factsFor(item, statuses) {
       const ul = el("ul", { class: "facts" });
       const statusId = item.status || "idea";
-      ul.appendChild(el("li", { class: "chip" }, statusId));
+      ul.appendChild(el("li", { class: "chip chip-status chip-" + statusId }, statusId));
       ul.appendChild(el("li", { class: "chip chip-vis" }, visLabel(item)));
+      if (DEMO_LABEL[item.demo]) ul.appendChild(el("li", { class: "chip" }, DEMO_LABEL[item.demo]));
       (item.languages || []).forEach(lang => ul.appendChild(el("li", { class: "chip" }, lang)));
       (item.tags || []).forEach(t => ul.appendChild(el("li", { class: "chip" }, t)));
       return ul;
@@ -773,6 +835,12 @@
       title.appendChild(el("bdi", { translate: "no" }, item.name));
       node.appendChild(title);
       if (item.description) node.appendChild(el("p", { class: "blurb" }, item.description));
+      const updated = updatedLabel(item);
+      if (updated) {
+        const u = el("p", { class: "updated" });
+        u.appendChild(el("time", { datetime: item.pushed_at }, updated));
+        node.appendChild(u);
+      }
       const links = linksFor(item);
       if (links) node.appendChild(links);
       node.appendChild(factsFor(item, statuses));
@@ -824,8 +892,31 @@
 
       fillSelect(status, (statuses.statuses || []).map(s => ({ id: s.id, meaning: s.id })), params().status);
       fillStatusLegend(statuses);
-      const tags = [...new Set(projects.flatMap(p => p.tags || []))].sort();
-      fillSelect(tag, tags, params().tag);
+      const tagUse = new Map();
+      projects.forEach(p => (p.tags || []).forEach(t => tagUse.set(t, (tagUse.get(t) || 0) + 1)));
+      const ranked = [...tagUse.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+      const topTags = ranked.slice(0, 12).map(([t]) => t);
+      const wanted = params().tag;
+      if (wanted && tagUse.has(wanted) && !topTags.includes(wanted)) topTags.push(wanted);
+      fillSelect(tag, topTags.sort().map(t => ({ id: t, meaning: t + " (" + tagUse.get(t) + ")" })), wanted);
+      const countsRoot = document.getElementById("status-counts");
+      function drawCounts(current) {
+        countsRoot.replaceChildren();
+        (statuses.statuses || []).forEach(s => {
+          const n = projects.filter(p => (p.status || "idea") === s.id).length;
+          if (!n) return;
+          const li = el("li");
+          const b = el("button", { type: "button", "aria-pressed": current === s.id ? "true" : "false", "data-status": s.id });
+          b.appendChild(el("strong", null, String(n)));
+          b.appendChild(document.createTextNode(" " + s.id));
+          b.addEventListener("click", () => {
+            status.value = status.value === s.id ? "" : s.id;
+            draw();
+          });
+          li.appendChild(b);
+          countsRoot.appendChild(li);
+        });
+      }
 
       if (bundle.generated_at) {
         const d = new Date(bundle.generated_at);
@@ -853,6 +944,7 @@
       function draw() {
         const state = stateFromUi();
         writeParams(state);
+        drawCounts(state.status);
         const shown = projects.filter(item => matches(item, state, statuses));
         const featured = shown.filter(item => item.featured);
         const rest = shown.filter(item => !item.featured);

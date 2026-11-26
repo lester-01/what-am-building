@@ -7,11 +7,15 @@
     },
     {
       "id": "building",
-      "meaning": "Active development; not the main live product"
+      "meaning": "Active development; not yet in use or offered to others"
     },
     {
       "id": "live",
-      "meaning": "In production or actively used and maintained"
+      "meaning": "In use or offered to others (hosted, downloadable or published)"
+    },
+    {
+      "id": "finished",
+      "meaning": "Complete; maintained only when needed; may be unhosted"
     },
     {
       "id": "paused",

@@ -1,14 +1,15 @@
 {
-  "generated_at": "2026-11-25T12:15:11Z",
+  "generated_at": "2026-11-26T04:18:03Z",
   "projects": [
     {
       "name": "proxyhut",
-      "description": "ProxyHut runs residential and mobile proxies on hardware you control\u2014home broadband, office fiber, or your own 4G/5G SIMs. You keep the machine online; we run the hub and relays. Built for resellers, multi-account work, scraping, and geo checks. Free consultation; trials on spare gear are often possible.",
+      "description": "ProxyHut gives you real residential and mobile 4G/5G proxies from hardware you control: your broadband, modems and SIMs. A product I have built over several years. You keep the client online; ProxyHut runs the hub and relays. Free consultation and trial. Public page; the code is not in this repo.",
       "status": "live",
       "tags": [
         "proxy",
         "networking",
-        "hardware"
+        "hardware",
+        "saas"
       ],
       "languages": [],
       "private": false,
@@ -18,7 +19,7 @@
       "rank": 1000,
       "website": "https://proxyhut.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-03T16:44:43Z",
+      "pushed_at": "2026-11-26T04:17:52Z",
       "html_url": "https://github.com/lester-01/proxyhut"
     },
     {
@@ -77,6 +78,7 @@
       "tags": [
         "crm",
         "education",
+        "react",
         "cloudflare",
         "supabase"
       ],
@@ -95,7 +97,7 @@
       "rank": 1300,
       "website": "https://sinc-crm.benlester.me",
       "fork": false,
-      "pushed_at": "2026-11-08T23:10:47Z",
+      "pushed_at": "2026-11-26T04:17:06Z",
       "html_url": "https://github.com/lester-01/sinc_crm"
     },
     {
@@ -119,21 +121,22 @@
       "rank": 1400,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-03T18:12:47Z"
+      "pushed_at": "2026-11-26T03:25:19Z"
     },
     {
       "name": "signalstack",
       "description": "Realtime chat demo in Go and Next.js. Hub-client WebSockets, public and private routing, graceful shutdown, and exponential-backoff reconnect. Built to show concurrent connection patterns\u2014not a consumer chat product.",
-      "status": "live",
+      "status": "finished",
       "tags": [
         "go",
         "websocket",
         "nextjs",
-        "realtime"
+        "realtime",
+        "typescript"
       ],
       "languages": [
-        "TypeScript",
         "Go",
+        "TypeScript",
         "CSS",
         "JavaScript"
       ],
@@ -145,6 +148,7 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-09T21:45:53Z",
+      "demo": "local",
       "html_url": "https://github.com/lester-01/signalstack"
     },
     {
@@ -288,7 +292,7 @@
       "rank": 7300,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-24T17:19:26Z"
+      "pushed_at": "2026-11-25T16:59:37Z"
     },
     {
       "name": "telegram-notifications-bot",
@@ -517,7 +521,7 @@
       "rank": 9000,
       "website": null,
       "fork": false,
-      "pushed_at": "2026-11-24T13:23:15Z"
+      "pushed_at": "2026-11-26T04:17:46Z"
     },
     {
       "name": "cursor-termux",
@@ -677,6 +681,28 @@
       "website": null,
       "fork": false,
       "pushed_at": "2026-11-03T17:38:18Z"
+    },
+    {
+      "name": "jasiri-apt",
+      "description": "A public Debian-style apt repository at apt.benlester.me with downloadable .deb releases (aarch64 and x86_64), serving Linux packages rebuilt for Jasiri, the Android app with a built-in Linux system and AI assistant. Add the source, run apt update, install.",
+      "status": "live",
+      "tags": [
+        "apt",
+        "packaging",
+        "linux",
+        "android",
+        "debian"
+      ],
+      "languages": [],
+      "private": false,
+      "visibility": "public",
+      "listed": true,
+      "featured": false,
+      "rank": 100000,
+      "website": null,
+      "fork": false,
+      "pushed_at": "2026-11-26T04:17:23Z",
+      "html_url": "https://github.com/lester-01/jasiri-apt"
     }
   ]
 }
